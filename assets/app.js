@@ -53,7 +53,39 @@
     setScript(saved === "trad" ? "trad" : "simp");
   }
 
+
+  /* ---------- 竖排 / 横排切换 ---------- */
+  var layoutButtons = Array.prototype.slice.call(document.querySelectorAll(".layout-switch .layout-btn"));
+  function setLayout(mode) {
+    body.setAttribute("data-layout", mode === "horizontal" ? "horizontal" : "vertical");
+    layoutButtons.forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-layout") === mode ? "true" : "false");
+    });
+    try { localStorage.setItem("sishu-layout", mode); } catch (e) {}
+  }
+  layoutButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () { setLayout(btn.getAttribute("data-layout")); });
+  });
+  if (layoutButtons.length) {
+    var savedLayout = "vertical";
+    try {
+      var layoutParam = new URLSearchParams(window.location.search).get("layout");
+      savedLayout = layoutParam || localStorage.getItem("sishu-layout") || body.getAttribute("data-layout") || "vertical";
+    } catch (e) {}
+    setLayout(savedLayout === "horizontal" ? "horizontal" : "vertical");
+    var vflowEl = document.getElementById("vflow");
+    if (vflowEl) {
+      vflowEl.addEventListener("wheel", function (ev) {
+        if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
+          vflowEl.scrollLeft -= ev.deltaY;
+          ev.preventDefault();
+        }
+      }, { passive: false });
+    }
+  }
+
   /* ---------- 字号 ---------- */
+
 
   var fs = 1;
   function applyFs() { document.documentElement.style.setProperty("--fs", fs.toFixed(2)); }

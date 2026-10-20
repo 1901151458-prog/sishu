@@ -226,3 +226,51 @@ body[data-script="trad"] .zh-simp{display:none!important}
 .pian-name b{display:block;font-size:calc(17px * var(--fs));color:var(--ink);letter-spacing:.08em;font-weight:700}
 .pian-sub{display:block;margin-top:2px;font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
 .pian-arrow{margin-left:auto;color:var(--gold);font-size:18px}
+
+
+/* ===== 竖排传统版式（大学试行） ===== */
+.layout-switch{display:flex;border:1px solid rgba(216,184,120,.35);border-radius:999px;overflow:hidden}
+.layout-btn{background:transparent;border:0;color:#d9cbb0;padding:4px 12px;font-family:var(--sans);font-size:12.5px;letter-spacing:.06em}
+.layout-btn[aria-pressed="true"]{background:var(--gold);color:#241f1a}
+.hero-lite-v{position:relative;background:radial-gradient(1000px 500px at 50% -10%,#2b241b 0%,#17130f 55%,#0f0c0a 100%);color:#f1e6d2;padding:56px 0 46px}
+.v-hero{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.v-hero-title .badge{margin-bottom:14px}
+.v-hero-title h1{margin:0;font-size:clamp(38px,6vw,66px);letter-spacing:.14em;color:#f6ecd8;font-weight:700}
+.v-hero-title h1 span{display:block;margin-top:10px;font-size:clamp(14px,2vw,17px);letter-spacing:.42em;color:#cbb68f;font-weight:400}
+.v-hero-hint{margin:16px 0 0;font-family:var(--sans);font-size:12.5px;letter-spacing:.08em;color:#a8916c;line-height:1.9}
+.v-hero-side{border-left:1px solid rgba(216,184,120,.3);padding-left:26px}
+.v-hero-side p{margin:0 0 8px;color:#d9cbb0;font-family:var(--serif);font-size:14px;letter-spacing:.1em}
+.v-hero-side .v-small{color:#a8916c;font-family:var(--sans);font-size:12.5px;letter-spacing:.12em}
+.v-hero-side .hero-actions{margin-top:16px;justify-content:flex-start}
+.v-tip{margin:18px 0 0;padding:12px 16px;border-left:3px solid var(--gold);background:rgba(169,123,53,.08);font-family:var(--sans);font-size:13px;color:#6b5740;line-height:1.9}
+.vwrap{background:var(--card);border:1px solid var(--line-strong);border-radius:8px;padding:18px 20px 10px;box-shadow:0 18px 50px rgba(84,63,39,.07)}
+.vflow{writing-mode:vertical-rl;text-orientation:upright;width:100%;max-width:100%;box-sizing:border-box;height:clamp(540px,74vh,840px);overflow-x:auto;overflow-y:hidden;padding:10px 4px 4px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);cursor:grab}
+.vflow:active{cursor:grabbing}
+.vflow::-webkit-scrollbar{height:8px}
+.vflow::-webkit-scrollbar-thumb{background:rgba(169,123,53,.5);border-radius:999px}
+.v-chapter{margin:0 0 0 26px;padding:0 0 0 6px;border-left:1px solid rgba(84,63,39,.16)}
+.v-no{display:inline-block;margin:0 0 10px;color:var(--cinnabar);font-size:calc(13px * var(--fs));letter-spacing:.12em;font-weight:600}
+.mtext{font-size:calc(24px * var(--fs));font-weight:600;color:var(--ink);letter-spacing:.04em}
+.mzhu{font-size:calc(12.5px * var(--fs));color:#8a7358;font-weight:400;letter-spacing:.01em}
+.mzhu::before{content:"〔注〕";color:var(--gold);font-size:.9em;letter-spacing:.08em}
+.v-hint{margin:10px 0 6px;text-align:right;font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--muted)}
+body[data-layout="horizontal"] .vflow{writing-mode:horizontal-tb;height:auto;overflow:visible;padding:0;border:0}
+body[data-layout="horizontal"] .v-chapter{display:block;margin:0 0 16px;padding:22px 26px;border:1px solid var(--line);border-left:1px solid var(--line);border-radius:8px;background:var(--card)}
+body[data-layout="horizontal"] .v-no{display:block;margin-bottom:8px}
+body[data-layout="horizontal"] .mtext{display:block;margin:0 0 10px}
+body[data-layout="horizontal"] .mzhu{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:calc(14.5px * var(--fs))}
+body[data-layout="horizontal"] .mzhu::before{content:"朱熹《大学章句》　";color:var(--gold)}
+.en-block{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px 24px;margin:0 0 16px}
+.en-block h3{margin:0 0 10px;font-size:15px;letter-spacing:.1em;color:var(--cinnabar)}
+.en-block p{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:calc(14.5px * var(--fs));line-height:1.85;color:#4a3c2c}
+.en-block p:last-child{margin-bottom:0}
+.en-note{color:#8a735a!important;font-style:italic}
+@media(max-width:640px){.v-hero-side{border-left:0;padding-left:0}.vflow{height:66vh}}
+@media print{
+  .layout-switch,.v-hint{display:none!important}
+  .vflow{writing-mode:horizontal-tb;height:auto;overflow:visible;border:0}
+  .v-chapter{display:block;margin:0 0 4mm;padding:0;border:0}
+  .v-no{display:block;margin-bottom:2mm}
+  .mtext{display:block;margin-bottom:2mm}
+  .mzhu{display:block;font-size:9.5pt}
+}
