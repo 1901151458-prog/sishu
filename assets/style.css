@@ -323,3 +323,10 @@ body[data-layout="vertical"] .h-only{display:none!important}
 body[data-layout="horizontal"] .v-seg{display:none!important}
 .h-text p{margin:0 0 10px;font-size:calc(20px * var(--fs-main, 1));line-height:1.95;color:var(--ink);font-weight:600}
 .h-text p:last-child{margin-bottom:0}
+/* 横排中英对照（大学） */
+.h-bilingual{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+@media(max-width:800px){.h-bilingual{grid-template-columns:1fr}}
+.hb-cn p{margin:0;font-size:calc(18px * var(--fs-main, 1));line-height:1.95;color:var(--ink);font-weight:600}
+.hb-en p{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:calc(13.5px * var(--fs-main, 1));line-height:1.8;color:#6b5740}
+.hb-en p:last-child{margin-bottom:0}
+.hb-en .en-note{color:#8a735a;font-style:italic}
