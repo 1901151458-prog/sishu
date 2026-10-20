@@ -305,3 +305,12 @@ body[data-layout="horizontal"] .mtext{display:block;margin:0 0 4px;font-size:cal
 body[data-layout="horizontal"] .mzhu{display:none!important;font-size:calc(14px * var(--fs-zhu, 1));color:#6b5740;margin-right:0;padding-left:14px;border-left:2px solid rgba(169,123,53,.25)}
 body[data-layout="horizontal"] .vstage:fullscreen .vflow{height:auto;overflow-y:auto}
 @media(max-width:640px){.vflow{height:66vh}.vstage-head{padding:22px 14px 4px}}
+
+
+/* 竖排去标点：竖排显示无标点版，横排显示原标点版 */
+body[data-layout="vertical"] .h-punct{display:none!important}
+body[data-layout="horizontal"] .v-nopunct{display:none!important}
+@media print{
+  .v-nopunct{display:none!important}
+  .h-punct{display:inline!important}
+}
