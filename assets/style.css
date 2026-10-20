@@ -314,3 +314,7 @@ body[data-layout="horizontal"] .v-nopunct{display:none!important}
   .v-nopunct{display:none!important}
   .h-punct{display:inline!important}
 }
+
+/* 竖排：半角空格保留（避免连续空格被折叠） */
+body[data-layout="vertical"] .mtext,
+body[data-layout="vertical"] .mzhu{white-space:pre-wrap}
