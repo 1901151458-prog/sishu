@@ -349,3 +349,15 @@ body[data-hmode="wide"][data-layout="horizontal"] .v-chapter{display:none!import
 /* 竖排：相邻两句之间保留半角空隙（无注时也不黏连） */
 .v-space{white-space:pre}
 body[data-layout="horizontal"] .v-space{display:none!important}
+
+/* 竖排：短文整体居中，长文自然滚动 */
+body[data-layout="horizontal"] .vflow-inner{width:auto;margin:0}
+
+/* 短篇竖排：内容整体居中 */
+.vstage-short .vflow{width:fit-content;max-width:100%;margin-left:auto;margin-right:auto}
+body[data-layout="horizontal"] .vstage-short .vflow{width:auto}
+
+/* 四句类短篇：每句单独成列 */
+body[data-layout="vertical"] .four-lines .v-chapter:first-child .v-seg{display:block;margin:0 0 0 .2em}
+body[data-layout="vertical"] .four-lines .v-chapter:first-child .v-seg .mzhu{display:block}
+body[data-layout="vertical"] .four-lines .v-chapter:first-child{padding-right:.6em}
