@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四书经典 · 中华经典三语对照阅读</title>
+<meta name="description" content="四书经典阅读：以中华书局权威注译本为主要依据，提供《论语》《大学》《中庸》《孟子》的简体、繁體、English 三语对照阅读、注释、思想解读与学习任务。">
+<meta name="theme-color" content="#141210">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#books">跳到书目</a>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html" aria-label="四书经典阅读 · 返回首页">
+      <span class="brand-mark" aria-hidden="true">经</span>
+      <span class="brand-text"><b>四书经典</b><small>中华经典 · 三语对照</small></span>
+    </a>
+    <div class="topbar-actions">
+      <a class="top-link" href="lunyu/xueer-1.html">论语·学而</a>
+      <a class="top-link" href="#biblio">参考书目</a>
+      <a class="top-link" href="https://1901151458-prog.github.io/english-materials/" rel="noopener">初中英语资料站 ↗</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ======================= 首屏 ======================= -->
+  <section class="hero">
+    <canvas id="inkCanvas" aria-hidden="true"></canvas>
+    <div class="wrap hero-inner">
+      <p class="badge"><span class="dot"></span>中华经典 · 中华书局版本 · 三语对照</p>
+      <h1 class="hero-title">四书<span class="t-dot">·</span>经典<small>论语 · 大学 · 中庸 · 孟子</small></h1>
+      <p class="hero-en">The Four Books · Chinese Classics in Three Languages</p>
+      <blockquote class="hero-quote">
+        <p class="line line-cn">学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？</p>
+        <p class="line line-tw">學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？</p>
+        <p class="line line-en">Is it not pleasant to learn with a constant perseverance and application? Is it not delightful to have friends coming from distant quarters?</p>
+        <footer>— 《论语·学而篇第一》</footer>
+      </blockquote>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="lunyu/xueer-1.html">阅读《论语·学而》第一章</a>
+        <a class="btn btn-line" href="#books">查看书目</a>
+        <a class="btn btn-line" href="#biblio">参考书目</a>
+      </div>
+      <p class="hero-hint">原文三语 · 中华书局注译 · 逐句对照 · 王阳明解读 · 可打印</p>
+    </div>
+  </section>
+
+  <!-- ======================= 书目 ======================= -->
+  <section class="section" id="books">
+    <div class="wrap">
+      <h2 class="sec-title"><span class="en">The Four Books</span>书目</h2>
+      <p class="lead">“四书”指《论语》《大学》《中庸》《孟子》。本站从《论语·学而》第一章开始，逐章整理原文、中华书局注译、英译对照与读解；后续按同样的体例扩展《大学》《中庸》《孟子》。</p>
+      <div class="books">
+        <a class="book" href="lunyu/xueer-1.html">
+          <div class="book-top"><span class="book-tag">已上线 · 第一章</span><span class="book-tag soon">论语</span></div>
+          <h3>论语 · 学而</h3>
+          <p class="en-name">The Analects · Xue Er · Chapter One</p>
+          <p>《论语》开篇第一章，三句反问，从“学”说到“友”，再说到“己”。简体、繁體、English 三语对照；白话译文以中华书局杨伯峻《论语译注》为主要依据，注释采朱熹《四书章句集注》，并附王阳明心学视角的延伸解读。</p>
+          <span class="book-cta">开始阅读 →</span>
+        </a>
+        <div class="book soon" aria-disabled="true">
+          <div class="book-top"><span class="book-tag soon">筹备中</span><span class="book-tag soon">大学</span></div>
+          <h3>大学</h3>
+          <p class="en-name">The Great Learning</p>
+          <p>“三纲领”“八条目”，从格物致知到治国平天下。将参照中华书局《四书章句集注》与《大学·中庸》权威译注本整理，附英译对照与读解。</p>
+          <span class="book-cta">敬请期待</span>
+        </div>
+        <div class="book soon" aria-disabled="true">
+          <div class="book-top"><span class="book-tag soon">筹备中</span><span class="book-tag soon">中庸</span></div>
+          <h3>中庸</h3>
+          <p class="en-name">The Doctrine of the Mean</p>
+          <p>“天命之谓性，率性之谓道，修道之谓教。”将按章节整理原文、中华书局注译、英译对照与思想解读，并补充朱熹与王阳明的不同读法。</p>
+          <span class="book-cta">敬请期待</span>
+        </div>
+        <div class="book soon" aria-disabled="true">
+          <div class="book-top"><span class="book-tag soon">筹备中</span><span class="book-tag soon">孟子</span></div>
+          <h3>孟子</h3>
+          <p class="en-name">The Mencius</p>
+          <p>“性善”“仁政”“养浩然之气”。将以中华书局杨伯峻《孟子译注》等权威注本为主要依据，逐章整理原文、译文、注释与英译对照。</p>
+          <span class="book-cta">敬请期待</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 体例 ======================= -->
+  <section class="section alt" id="method">
+    <div class="wrap narrow">
+      <h2 class="sec-title"><span class="en">How to Read</span>阅读体例</h2>
+      <div class="reading-body">
+        <p><b>一、三语对照。</b>每句给出简体原文、繁體原文与英文对照（英文采用 James Legge 公版译本，仅作理解参考），可在页面顶部切换「三语 / 简 / 繁 / EN」。</p>
+        <p><b>二、以中华书局版本为主要依据。</b>白话译文参照中华书局杨伯峻《论语译注》等权威注本，由编者改写为易懂白话；字词注释采朱熹《四书章句集注》（中华书局）；不逐字迻录版权文本，引文均注明出处。</p>
+        <p><b>三、逐句注释与思想解读。</b>先字词、后句意、再义理；既讲“这句话怎么说”，也讲“这句话为什么重要”。</p>
+        <p><b>四、王阳明视角的延伸。</b>在朱熹集注之外，另设“王阳明心学视角”，以“知行合一”“心即理”“立志”等观念回看本章，提供另一种读法，供比较与讨论。</p>
+        <p><b>五、可学可练。</b>每章附学习任务（正音、背诵、翻译、联系生活、英文任务、拓展思考），可直接用于课堂或自读。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 说明 ======================= -->
+  <section class="section" id="about">
+    <div class="wrap narrow">
+      <h2 class="sec-title"><span class="en">About</span>关于本站</h2>
+      <p class="lead">本站是“初中英语资料站”的拓展阅读站点，面向中学国学启蒙、中英对照阅读与课堂拓展。</p>
+      <p class="sub">内容以中华书局权威注译本为主要依据，注重准确、清楚、可读；所有引文均标注出处，白话译文为编者据注本改写，仅供学习与教学参考，不替代原书。</p>
+      <p class="test-note">当前为《论语·学而》第一章的测试版：版式、注释深度、三语呈现与解读角度都可以按反馈继续调整；后续将按同一体例扩展到《大学》《中庸》《孟子》，以及《论语》其余篇章。</p>
+    </div>
+  </section>
+
+  <!-- ======================= 参考书目 ======================= -->
+  <section class="section alt" id="biblio">
+    <div class="wrap narrow">
+      <h2 class="sec-title"><span class="en">Bibliography</span>参考书目（中华书局）</h2>
+      <ul class="biblio">
+        <li><b>杨伯峻《论语译注》</b><span class="pub">中华书局</span><br>白话译文与章句解释的主要依据；本站译文据其释义改写为易懂白话。</li>
+        <li><b>朱熹《四书章句集注》</b><span class="pub">中华书局</span><br>字词训释与义理阐发的主要依据；《论语集注》引程子、尹氏等说，本站择要引用。</li>
+        <li><b>王阳明《传习录》</b><span class="pub">中华书局</span><br>“知行合一”“心即理”“事上磨”等心学观点的出处；用于本章的延伸解读。</li>
+        <li><b>王阳明《示弟立志说》</b><span class="pub">《王阳明全集》本（中华书局）</span><br>“夫学，莫先于立志”的出处，用于说明“学”的方向感。</li>
+      </ul>
+      <p class="source" style="margin-top:16px">后续《大学》《中庸》《孟子》将沿用中华书局权威注译本（如《四书章句集注》、杨伯峻《孟子译注》等），并保持同样的体例与出处标注。</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap narrow">
+      <p class="foot-brand">四书经典 · 中华经典三语对照阅读</p>
+      <p class="foot-meta">测试版 · 更新于 2026-10-20</p>
+      <p class="foot-note">原文以通行本为底本；白话译文与注释以中华书局权威注译本为主要依据，由编者改写、择要引用；英译采用 James Legge 公版译本，仅作对照参考。内容仅供学习与教学参考。</p>
+      <p class="foot-links"><a href="lunyu/xueer-1.html">论语·学而第一章</a><span>·</span><a href="#books">书目</a><span>·</span><a href="https://1901151458-prog.github.io/english-materials/" rel="noopener">初中英语资料站</a></p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
