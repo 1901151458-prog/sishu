@@ -34,7 +34,27 @@
   } catch (e) { /* ignore */ }
   setLang(initial);
 
+
+  /* ---------- 简繁体切换 ---------- */
+  var scriptButtons = Array.prototype.slice.call(document.querySelectorAll(".script-switch .script-btn"));
+  function setScript(mode) {
+    body.setAttribute("data-script", mode === "trad" ? "trad" : "simp");
+    scriptButtons.forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-script") === mode ? "true" : "false");
+    });
+    try { localStorage.setItem("sishu-script", mode); } catch (e) {}
+  }
+  scriptButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () { setScript(btn.getAttribute("data-script")); });
+  });
+  if (scriptButtons.length) {
+    var saved = "simp";
+    try { saved = localStorage.getItem("sishu-script") || "simp"; } catch (e) {}
+    setScript(saved === "trad" ? "trad" : "simp");
+  }
+
   /* ---------- 字号 ---------- */
+
   var fs = 1;
   function applyFs() { document.documentElement.style.setProperty("--fs", fs.toFixed(2)); }
   var fMinus = document.getElementById("fontMinus");

@@ -196,3 +196,33 @@ body[data-lang="en"] .lang-cn,body[data-lang="en"] .lang-tw{display:none!importa
 /* 新增：繁体原文与先儒小标题 */
 .tri-row p.tw{font-family:var(--kai)}
 .line-card h3.view-title{margin:0 0 6px;font-size:18px;letter-spacing:.14em;color:var(--cinnabar)}
+
+/* ===== 论语阅读页新增 ===== */
+.hero-lite{padding:64px 0 52px}
+.hero-lite .hero-title small{letter-spacing:.2em}
+.script-switch{display:flex;border:1px solid rgba(216,184,120,.35);border-radius:999px;overflow:hidden}
+.script-btn{background:transparent;border:0;color:#d9cbb0;padding:4px 12px;font-family:var(--sans);font-size:12.5px;letter-spacing:.06em}
+.script-btn[aria-pressed="true"]{background:var(--gold);color:#241f1a}
+body[data-script="simp"] .zh-trad{display:none!important}
+body[data-script="trad"] .zh-simp{display:none!important}
+.preamble{margin:0 0 10px;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-radius:8px;font-family:var(--kai);font-size:calc(15.5px * var(--fs));line-height:1.95;color:#4a3c2c}
+.chapter{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px 26px;margin:0 0 16px;box-shadow:0 10px 30px rgba(84,63,39,.05)}
+.chapter h3{margin:0 0 10px;font-size:15px;letter-spacing:.12em;color:var(--cinnabar);font-weight:600}
+.ch-text{margin:0 0 12px;font-size:calc(18.5px * var(--fs));line-height:2.05;color:var(--ink);font-weight:600;letter-spacing:.02em}
+.ch-zhu{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.zhu-label{margin:0 0 6px;font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;color:var(--gold);font-weight:600}
+.zhu-text{margin:0;font-size:calc(14.5px * var(--fs));line-height:1.95;color:#4a3c2c;text-align:justify}
+.ch-en{margin:14px 0 0;padding-top:12px;border-top:1px dotted var(--line);font-family:Georgia,"Times New Roman",serif;font-size:calc(14px * var(--fs));line-height:1.8;color:#6b5740}
+.en-chapter{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin:0 0 14px}
+.en-chapter p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:calc(14.5px * var(--fs));line-height:1.85;color:#4a3c2c}
+.en-chap-no{margin:0 0 8px!important;font-family:var(--sans);font-size:11.5px!important;letter-spacing:.14em;color:var(--gold)}
+.pian-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pian-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:640px){.pian-list{grid-template-columns:1fr}}
+.pian-list li{margin:0}
+.pian-list a{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 18px;color:var(--text)}
+.pian-list a:hover{text-decoration:none;box-shadow:0 10px 26px rgba(84,63,39,.1);border-color:var(--line-strong)}
+.pian-no{font-family:var(--kai);font-size:22px;color:rgba(168,50,45,.55);min-width:26px;text-align:center}
+.pian-name b{display:block;font-size:calc(17px * var(--fs));color:var(--ink);letter-spacing:.08em;font-weight:700}
+.pian-sub{display:block;margin-top:2px;font-family:var(--sans);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.pian-arrow{margin-left:auto;color:var(--gold);font-size:18px}
