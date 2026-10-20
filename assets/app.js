@@ -84,6 +84,19 @@
     }
   }
 
+  /* ---------- 竖排：句间留半角空格（无注也不黏连） ---------- */
+  (function () {
+    var segs = document.querySelectorAll(".v-seg");
+    for (var i = 0; i < segs.length; i++) {
+      var seg = segs[i];
+      if (seg.querySelector(".v-space")) continue;
+      var sp = document.createElement("span");
+      sp.className = "v-space";
+      sp.textContent = "\u3000";
+      seg.appendChild(sp);
+    }
+  })();
+
 
   /* ---------- 注释开关 / 字号 / 全屏 / 竖排起点 ---------- */
   var zhuBtn = document.getElementById("zhuBtn");

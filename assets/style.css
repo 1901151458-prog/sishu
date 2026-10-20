@@ -345,3 +345,7 @@ body[data-hmode="wide"][data-layout="horizontal"] .v-chapter{display:none!import
 
 /* 礼记样张：注疏来源小字 */
 .src-note{margin:8px 0 0;font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.7}
+
+/* 竖排：相邻两句之间保留半角空隙（无注时也不黏连） */
+.v-space{white-space:pre}
+body[data-layout="horizontal"] .v-space{display:none!important}
