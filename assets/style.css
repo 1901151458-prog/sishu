@@ -193,3 +193,6 @@ body[data-lang="en"] .lang-cn,body[data-lang="en"] .lang-tw{display:none!importa
   a{color:#000;text-decoration:none}
   .reading-body p{text-align:justify}
 }
+/* 新增：繁体原文与先儒小标题 */
+.tri-row p.tw{font-family:var(--kai)}
+.line-card h3.view-title{margin:0 0 6px;font-size:18px;letter-spacing:.14em;color:var(--cinnabar)}

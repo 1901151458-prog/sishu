@@ -3,243 +3,179 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>《论语·学而》第一章 · 三语对照阅读 · 四书经典</title>
-<meta name="description" content="《论语·学而篇》第一章三语对照阅读：简体、繁體、English 对照；白话译文以中华书局杨伯峻《论语译注》为主要依据，注释采朱熹《四书章句集注》，并附王阳明心学视角解读与学习任务。">
+<title>《论语·学而》第一章 · 朱熹《四书章句集注》本 · 四书经典</title>
+<meta name="description" content="《论语·学而篇》第一章：简体、繁體原文；以中华书局朱熹《四书章句集注》为主要依据，附王阳明、曾子、子思、孟子相关见解。">
 <meta name="theme-color" content="#141210">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<a class="skip-link" href="#reading">跳到正文</a>
+<a class="skip-link" href="#text">跳到原文</a>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
 <header class="topbar">
   <div class="wrap topbar-inner">
     <a class="brand" href="../index.html" aria-label="四书经典 · 返回首页">
       <span class="brand-mark" aria-hidden="true">经</span>
-      <span class="brand-text"><b>四书经典</b><small>论语 · 学而 · 第一章</small></span>
+      <span class="brand-text"><b>四书经典</b><small>朱熹《四书章句集注》本</small></span>
     </a>
     <div class="topbar-actions">
-      <div class="lang-switch" role="group" aria-label="原文显示语言（只切换原文与逐句对照，注释和解读仍为中文）" title="只切换原文与逐句对照的显示语言">
-        <button type="button" data-lang="all" aria-pressed="true">三语</button>
-        <button type="button" data-lang="cn" aria-pressed="false">简</button>
-        <button type="button" data-lang="tw" aria-pressed="false">繁</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
       <button type="button" class="icon-btn" id="fontMinus" aria-label="缩小字号">A−</button>
       <button type="button" class="icon-btn" id="fontPlus" aria-label="放大字号">A+</button>
       <button type="button" class="icon-btn" id="printBtn" aria-label="打印">打印</button>
+      <a class="top-link" href="#biblio">参考书目</a>
       <a class="top-link" href="../index.html">四书首页</a>
     </div>
   </div>
 </header>
 
-<main id="reading">
+<main>
 
   <!-- ======================= 首屏 ======================= -->
   <section class="hero">
     <canvas id="inkCanvas" aria-hidden="true"></canvas>
     <div class="wrap hero-inner">
-      <p class="badge"><span class="dot"></span>论语 · 学而篇第一 · 三语对照 · 测试版</p>
+      <p class="badge"><span class="dot"></span>论语 · 学而篇第一 · 朱熹《四书章句集注》本</p>
       <h1 class="hero-title">论语<span class="t-dot">·</span>学而<small>第一章</small></h1>
-      <p class="hero-en">The Analects · Book I · Xue Er · Chapter One</p>
       <blockquote class="hero-quote">
-        <p class="line lang-cn">子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”</p>
-        <p class="line lang-tw">子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」</p>
-        <p class="line lang-en">The Master said, “Is it not pleasant to learn with a constant perseverance and application? Is it not delightful to have friends coming from distant quarters? Is he not a man of complete virtue, who feels no discomposure though men may take no note of him?”</p>
+        <p class="line line-cn">子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”</p>
+        <p class="line line-tw">子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」</p>
         <footer>— 《论语·学而篇第一》</footer>
       </blockquote>
       <div class="hero-actions">
-        <a class="btn btn-solid" href="#original">开始阅读</a>
-        <a class="btn btn-line" href="#tasks">学习任务</a>
+        <a class="btn btn-solid" href="#text">读原文与集注</a>
+        <a class="btn btn-line" href="#views">先儒见解</a>
         <button type="button" class="btn btn-line" id="copyBtn" data-copy="子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”
 ——《论语·学而篇第一》">复制原文</button>
       </div>
-      <p class="hero-hint">原文三语 · 中华书局注译 · 朱熹集注 · 王阳明视角 · 逐句对照</p>
+      <p class="hero-hint">原文 · 朱熹集注 · 先儒见解 · 中华书局版本</p>
     </div>
   </section>
 
-  <!-- ======================= 导读 ======================= -->
-  <section class="section">
+  <!-- ======================= 版本依据 ======================= -->
+  <section class="section" id="basis">
     <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Introduction</span>导读</h2>
-      <p class="lead">《论语》是记录孔子及其弟子言行的语录体著作，共二十篇。“学而”为第一篇，本章是开篇第一章，也是全书最广为传诵的一章。三句反问，层层递进，从“学”说到“友”，再说到“己”，既是学习之道，也是君子修养的起点。</p>
-      <div class="two-col">
-        <div class="panel">
-          <h3>底本与注译</h3>
-          <p class="source">原文以通行本为底本；白话译文以中华书局<b>杨伯峻《论语译注》</b>为主要依据，由编者改写为易懂白话；字词注释采中华书局<b>朱熹《四书章句集注》</b>；另设王阳明心学视角，引文据中华书局<b>《传习录》</b>等。英译采用 James Legge 公版译本，仅作对照参考。引文均注明出处，不逐字迻录版权文本。</p>
-        </div>
-        <div class="panel">
-          <h3>怎么读</h3>
-          <p class="source">先读简体原文，再看繁體与英译；然后逐句看白话与注释；接着读朱熹集注与王阳明视角，比较两种读法；最后完成学习任务。建议出声朗读三遍，再动笔。</p>
-        </div>
-      </div>
+      <h2 class="sec-title"><span class="en">Source</span>版本与依据</h2>
+      <p class="lead">本页原文、朱熹集注及曾子、子思、孟子引文，据中华书局《四书章句集注》；王阳明引文据中华书局《传习录》《王阳明全集》本。</p>
+      <p class="sub">本页不设白话译文、不设练习题，也不增收编者按语与解读；仅在朱熹集注之外，附王阳明、曾子、子思、孟子的相关见解，供对照阅读。</p>
     </div>
   </section>
 
-  <!-- ======================= 原文对照 ======================= -->
-  <section class="section alt" id="original">
+  <!-- ======================= 原文 ======================= -->
+  <section class="section alt" id="text">
     <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Text</span>原文对照</h2>
+      <h2 class="sec-title"><span class="en">Text</span>原文</h2>
       <div class="text-card">
         <div class="text-head">
           <span class="tag">学而篇第一 · 第一章</span>
-          <span class="tag ghost">简体 / 繁體 / English</span>
+          <span class="tag ghost">简体 / 繁體</span>
         </div>
         <div class="tri">
-          <div class="tri-row lang-cn">
+          <div class="tri-row">
             <span class="tri-label">简体</span>
             <p>子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”</p>
           </div>
-          <div class="tri-row lang-tw">
+          <div class="tri-row">
             <span class="tri-label">繁體</span>
-            <p>子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」</p>
-          </div>
-          <div class="tri-row lang-en">
-            <span class="tri-label">EN</span>
-            <p>The Master said, “Is it not pleasant to learn with a constant perseverance and application? Is it not delightful to have friends coming from distant quarters? Is he not a man of complete virtue, who feels no discomposure though men may take no note of him?”</p>
+            <p class="tw">子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」</p>
           </div>
         </div>
-        <p class="text-meta">英译：James Legge（理雅各，public domain）；原文 3 句 · 48 字（不含标点）。上方「三语 / 简 / 繁 / EN」只切换<b>原文与逐句对照</b>的显示语言；注释与解读仍为中文。</p>
+        <p class="text-meta">据中华书局《四书章句集注·论语集注》卷一。原文 3 句 · 48 字（不含标点）。</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ======================= 逐句对照 ======================= -->
-  <section class="section" id="lines">
-    <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Sentence by Sentence</span>逐句对照</h2>
-
-      <article class="line-card">
-        <div class="line-no">壹</div>
-        <p class="line-cn lang-cn">学而时习之，不亦说乎？</p>
-        <p class="line-tw lang-tw">學而時習之，不亦說乎？</p>
-        <p class="line-en lang-en">Is it not pleasant to learn with a constant perseverance and application?</p>
-        <div class="line-body">
-          <p class="trans"><b>白话</b>学了，然后按一定的时间去实习它，不也高兴吗？<span class="source">（据杨伯峻《论语译注》释义改写）</span></p>
-          <p class="note"><b>注释</b>习：温习、实习；时习：按时温习、时时实践。说：同“悦”，喜悦。朱熹：“学之为言效也”“习，鸟数飞也”“说，喜意也”。不亦……乎：反问句式，相当于“不也……吗”。</p>
-        </div>
-      </article>
-
-      <article class="line-card">
-        <div class="line-no">贰</div>
-        <p class="line-cn lang-cn">有朋自远方来，不亦乐乎？</p>
-        <p class="line-tw lang-tw">有朋自遠方來，不亦樂乎？</p>
-        <p class="line-en lang-en">Is it not delightful to have friends coming from distant quarters?</p>
-        <div class="line-body">
-          <p class="trans"><b>白话</b>有志同道合的人从远处来，不也快乐吗？<span class="source">（据杨伯峻《论语译注》释义改写）</span></p>
-          <p class="note"><b>注释</b>朋：志同道合的人。乐：快乐。朱熹称“说在心，乐主发散在外”，可体会“悦”与“乐”的层次差别：一是自得于心，一是与友共乐。</p>
-        </div>
-      </article>
-
-      <article class="line-card">
-        <div class="line-no">叁</div>
-        <p class="line-cn lang-cn">人不知而不愠，不亦君子乎？</p>
-        <p class="line-tw lang-tw">人不知而不慍，不亦君子乎？</p>
-        <p class="line-en lang-en">Is he not a man of complete virtue, who feels no discomposure though men may take no note of him?</p>
-        <div class="line-body">
-          <p class="trans"><b>白话</b>人家不了解我，我却不怨恨，不也是君子吗？<span class="source">（据杨伯峻《论语译注》释义改写）</span></p>
-          <p class="note"><b>注释</b>愠（yùn）：含怒、怨恨。君子：成德之名，指有德行、有修养的人。朱熹引尹氏：“学在己，知不知在人，何愠之有！”</p>
-        </div>
-      </article>
     </div>
   </section>
 
   <!-- ======================= 朱熹集注 ======================= -->
-  <section class="section alt" id="zhuxi">
+  <section class="section" id="zhuxi">
     <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Zhu Xi's Commentary</span>朱熹《论语集注》选读</h2>
-      <p class="lead">朱熹《四书章句集注》是四书注释的经典之作。以下择要引其注语，并作白话说明。</p>
-      <div class="reading-body">
-        <blockquote class="quote">
-          <p>“学之为言效也。人性皆善，而觉有先后，后觉者必效先觉之所为，乃可以明善而复其初也。”</p>
-          <footer>—— 朱熹《论语集注·学而第一》（中华书局）</footer>
-        </blockquote>
-        <p>朱熹把“学”解释为“效”：效法先觉者。人都有善性，但觉悟有先后，后来者效法先觉者的所作所为，才能“明善而复其初”。这为“学”给出了方向：不是累积零碎知识，而是恢复、彰显本有的善。</p>
-        <blockquote class="quote">
-          <p>“习，鸟数飞也。学之不已，如鸟数飞也。说，喜意也。”</p>
-          <footer>—— 朱熹《论语集注·学而第一》（中华书局）</footer>
-        </blockquote>
-        <p>“习”本义是雏鸟反复试飞。朱熹用它说明：学要反复实践、不断温习，像鸟一次次练飞，直到熟练自如；这时心中自然生出喜悦（“说，喜意也”）。</p>
-        <blockquote class="quote">
-          <p>“愠，含怒意。君子，成德之名。”又引尹氏曰：“学在己，知不知在人，何愠之有！”</p>
-          <footer>—— 朱熹《论语集注·学而第一》（中华书局）</footer>
-        </blockquote>
-        <p>“人不知”之所以能“不愠”，是因为把“学”的落脚点放回自己：学得好不好，在于自己；别人知不知，是别人的事。这正是“为己之学”的态度。</p>
+      <h2 class="sec-title"><span class="en">Zhu Xi</span>朱熹《论语集注》</h2>
+      <p class="lead">朱熹《四书章句集注》（中华书局）为本章主要依据。以下按句引集注原文，不增白话。</p>
+
+      <div class="line-card">
+        <div class="line-no">壹</div>
+        <p class="line-cn">学而时习之，不亦说乎？</p>
+        <div class="line-body">
+          <p class="note"><b>集注</b>学之为言效也。人性皆善，而觉有先后，后觉者必效先觉之所为，乃可以明善而复其初也。习，鸟数飞也。学之不已，如鸟数飞也。说，喜意也。既学而又时时习之，则所学者熟，而中心喜说，其进自不能已矣。程子曰：“习，重习也。时复思绎，浃洽于中，则说也。”又曰：“学者，将以行之也。时习之，则所学者在我，故说。”谢氏曰：“时习者，无时而不习。坐如尸，坐时习也；立如齐，立时习也。”</p>
+        </div>
       </div>
+
+      <div class="line-card">
+        <div class="line-no">贰</div>
+        <p class="line-cn">有朋自远方来，不亦乐乎？</p>
+        <div class="line-body">
+          <p class="note"><b>集注</b>朋，同类也。自远方来，则近者可知。程子曰：“以善及人，而信从者众，故可乐。”又曰：“说在心，乐主发散在外。”</p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <div class="line-no">叁</div>
+        <p class="line-cn">人不知而不愠，不亦君子乎？</p>
+        <div class="line-body">
+          <p class="note"><b>集注</b>愠，含怒意。君子，成德之名。尹氏曰：“学在己，知不知在人，何愠之有！”</p>
+        </div>
+      </div>
+
+      <p class="source">据中华书局《四书章句集注·论语集注》卷一。集注所引程子、谢氏、尹氏诸说，随朱熹原书录入，不另作解释。</p>
     </div>
   </section>
 
-  <!-- ======================= 王阳明 ======================= -->
-  <section class="section" id="yangming">
+  <!-- ======================= 先儒见解 ======================= -->
+  <section class="section alt" id="views">
     <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Wang Yangming's Reading</span>王阳明心学视角</h2>
-      <p class="lead">朱熹重“效法先觉”与“积累”，王阳明则把“学”收回到“心”与“行”上。以阳明读法回看本章，可以读出另一层意思。</p>
-      <div class="reading-body">
-        <blockquote class="quote">
-          <p>“知是行之始，行是知之成。”</p>
-          <footer>—— 王阳明《传习录》上（中华书局）</footer>
-        </blockquote>
-        <p><b>习就是行。</b>“学而时习之”不是“先学完、再复习”，而是“学”与“行”本是一体：知道只是开始，做到才算完成。“时习”就是把所学不断放到事上去做，在做中验证、在做中深化——这与阳明“知行合一”的精神相通。</p>
-        <blockquote class="quote">
-          <p>“人须在事上磨，方立得住。”</p>
-          <footer>—— 王阳明《传习录》下（中华书局）</footer>
-        </blockquote>
-        <p>“时习”的“时”，不是偶尔温习，而是在一件件事上反复磨炼。学习之“说”、交友之“乐”、不被人知时的“不愠”，都要在具体处境中练出来，而不是只在书面上成立。</p>
-        <blockquote class="quote">
-          <p>“心即理也。天下又有心外之事、心外之理乎？”</p>
-          <footer>—— 王阳明《传习录》上（中华书局）</footer>
-        </blockquote>
-        <p><b>说与不愠，都回到心上。</b>阳明认为理不在心外。学习的喜悦不是别人给的奖赏，而是此心对天理的体认；“人不知而不愠”也不是强压情绪，而是回到自己心上做工夫，不求外在的认可。</p>
-        <blockquote class="quote">
-          <p>“夫学，莫先于立志。”</p>
-          <footer>—— 王阳明《示弟立志说》（《王阳明全集》本，中华书局）</footer>
-        </blockquote>
-        <p><b>学先立志。</b>立志是“学”的根本方向。有了志，时习才有主心骨，朋友讲习才有共同追求，人不知时也不至于动摇。这与《论语》本章把“学”放在首句，正可互相发明。</p>
-        <p>把朱熹与王阳明对读：朱子强调“效先觉”“学不已”，路径是涵养与积累；阳明强调“知行合一”“事上磨”，路径是力行与自得。二者并非对立：一个重“学什么、怎么学”，一个重“谁来学、在哪里学”。读本章时，不妨两种读法都试一试。</p>
-      </div>
-    </div>
-  </section>
+      <h2 class="sec-title"><span class="en">Views</span>先儒见解</h2>
+      <p class="lead">朱熹集注之外，附王阳明、曾子、子思、孟子相关言论，各注出处，供对照。</p>
 
-  <!-- ======================= 综合解读 ======================= -->
-  <section class="section alt" id="reading">
-    <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Reading</span>综合解读</h2>
-      <div class="reading-body">
-        <p>回到本章本身，三句是三个层次。第一层是<b>学习之乐</b>：学而不习，所学容易落空；时习是把知识放回生活里反复印证，因此有“说”——由内而生的满足，不依赖别人是否看见。第二层是<b>友道之乐</b>：志同道合的人从远处来，彼此切磋、相互印证，所以有“乐”。第三层是<b>君子之德</b>：别人不了解自己时仍能不怨不怒，把注意力放回自身修养，这就是君子。</p>
-        <p>三句从“学”到“友”再到“己”，从个人向学，到与人相处，再到独处时的定力，正是一个“成己—成物”的修养次序。孔子并不是在讲抽象的快乐，而是在讲一种可以练习的生活态度：学要时习，友要相求，遇不理解则反求诸己。</p>
-        <p><b>放到今天</b>：终身学习需要“时习”，把知识变成能力；真正的朋友能互相切磋、彼此成就；而在被误解、被低估的时候，能否不愠不怒、继续做自己该做的事，正是修养的试金石。</p>
+      <div class="line-card">
+        <div class="line-no">王</div>
+        <h3 class="view-title">王阳明</h3>
+        <div class="line-body">
+          <p class="note"><b>《传习录》上</b>知是行之始，行是知之成。</p>
+          <p class="note"><b>《传习录》下</b>人须在事上磨，方立得住。</p>
+          <p class="note"><b>《传习录》上</b>心即理也。天下又有心外之事、心外之理乎？</p>
+          <p class="note"><b>《示弟立志说》</b>夫学，莫先于立志。</p>
+          <p class="source">据中华书局《传习录》、《王阳明全集》本《示弟立志说》。</p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ======================= 学习任务 ======================= -->
-  <section class="section" id="tasks">
-    <div class="wrap narrow">
-      <h2 class="sec-title"><span class="en">Tasks</span>学习任务</h2>
-      <ol class="tasks">
-        <li><b>正音朗读</b>：朗读三遍，注意“说（yuè）”“愠（yùn）”的读音，标出三句反问的语气。</li>
-        <li><b>背诵默写</b>：默写简体原文，并写出三句的白话译文（参考杨伯峻《论语译注》的释义）。</li>
-        <li><b>辨析“学”与“习”</b>：结合朱熹“习，鸟数飞也”与王阳明“知行合一”，说说“学”和“习”的关系，并举一个自己“时习”的例子。</li>
-        <li><b>联系生活</b>：用一句话解释“人不知而不愠”，并举一个自己或身边人的例子。</li>
-        <li><b>英文任务</b>：对照 Legge 英译，找出“不亦……乎”反问语气在英文中是怎样表达的；再用 3 句英文向外国朋友介绍这一章。</li>
-        <li><b>拓展思考</b>：朱熹说“学之为言效也”，王阳明说“夫学，莫先于立志”。两种说法各侧重什么？你更认同哪一种？为什么？</li>
-      </ol>
-      <p class="task-hint">建议课堂用时 20–30 分钟；可作为课前诵读、国学拓展或中英对照阅读材料。</p>
+      <div class="line-card">
+        <div class="line-no">曾</div>
+        <h3 class="view-title">曾子</h3>
+        <div class="line-body">
+          <p class="note"><b>《论语·学而》</b>吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？</p>
+          <p class="source">据中华书局《四书章句集注·论语集注》卷一。</p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <div class="line-no">思</div>
+        <h3 class="view-title">子思</h3>
+        <div class="line-body">
+          <p class="note"><b>《中庸》</b>博学之，审问之，慎思之，明辨之，笃行之。</p>
+          <p class="source">据中华书局《四书章句集注·中庸章句》。</p>
+        </div>
+      </div>
+
+      <div class="line-card">
+        <div class="line-no">孟</div>
+        <h3 class="view-title">孟子</h3>
+        <div class="line-body">
+          <p class="note"><b>《孟子·告子上》</b>学问之道无他，求其放心而已矣。</p>
+          <p class="source">据中华书局《四书章句集注·孟子集注》。</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ======================= 参考书目 ======================= -->
-  <section class="section alt" id="biblio">
+  <section class="section" id="biblio">
     <div class="wrap narrow">
       <h2 class="sec-title"><span class="en">Bibliography</span>参考书目（中华书局）</h2>
       <ul class="biblio">
-        <li><b>杨伯峻《论语译注》</b><span class="pub">中华书局</span><br>白话译文与章句解释的主要依据；本页译文据其释义改写，不逐字迻录。</li>
-        <li><b>朱熹《四书章句集注》</b><span class="pub">中华书局</span><br>字词训释与义理阐发的主要依据；《论语集注》引程子、尹氏等说，本页择要引用。</li>
-        <li><b>王阳明《传习录》</b><span class="pub">中华书局</span><br>“知行合一”“心即理”“事上磨”等心学观点的出处。</li>
+        <li><b>朱熹《四书章句集注》</b><span class="pub">中华书局</span><br>本页原文、朱熹集注及曾子、子思、孟子引文的主要依据。</li>
+        <li><b>王阳明《传习录》</b><span class="pub">中华书局</span><br>王阳明论“知行合一”“心即理”“事上磨”等语的出处。</li>
         <li><b>王阳明《示弟立志说》</b><span class="pub">《王阳明全集》本（中华书局）</span><br>“夫学，莫先于立志”的出处。</li>
       </ul>
-      <p class="source" style="margin-top:16px">说明：本页为测试版，引文与白话译文仅供学习与教学参考；版权文本请以中华书局正式出版物为准。后续将按同一体例扩展到《论语》其余篇章及《大学》《中庸》《孟子》。</p>
+      <p class="source" style="margin-top:16px">说明：本页为测试版，引文均标注出处；后续《大学》《中庸》《孟子》将沿用中华书局《四书章句集注》及相关中华书局版本，并按同一体例整理。</p>
       <div class="hero-actions center">
         <a class="btn btn-paper" href="../index.html">四书首页</a>
         <a class="btn btn-paper" href="../index.html#books">查看其它书目</a>
@@ -252,7 +188,7 @@
     <div class="wrap narrow">
       <p class="foot-brand">四书经典 · 论语 · 学而第一章</p>
       <p class="foot-meta">测试版 · 更新于 2026-10-20</p>
-      <p class="foot-note">原文以通行本为底本；白话译文与注释以中华书局权威注译本为主要依据，由编者改写、择要引用；英译采用 James Legge 公版译本，仅作对照参考。内容仅供学习与教学参考。</p>
+      <p class="foot-note">原文、朱熹集注与曾子、子思、孟子引文据中华书局《四书章句集注》；王阳明引文据中华书局《传习录》《王阳明全集》本。本页不设白话译文与练习题，仅供学习与教学参考。</p>
       <p class="foot-links"><a href="../index.html">四书首页</a><span>·</span><a href="https://1901151458-prog.github.io/english-materials/" rel="noopener">初中英语资料站</a></p>
     </div>
   </footer>
