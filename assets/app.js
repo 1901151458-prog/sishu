@@ -84,7 +84,58 @@
     }
   }
 
+
+  /* ---------- 注释开关 / 字号 / 全屏 / 竖排起点 ---------- */
+  var zhuBtn = document.getElementById("zhuBtn");
+  function setZhu(on) {
+    body.setAttribute("data-zhu", on ? "on" : "off");
+    if (zhuBtn) zhuBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    try { localStorage.setItem("daxue-zhu", on ? "on" : "off"); } catch (e) {}
+  }
+  if (zhuBtn) {
+    var zhuState = "on";
+    try { zhuState = localStorage.getItem("daxue-zhu") || "on"; } catch (e) {}
+    setZhu(zhuState !== "off");
+    zhuBtn.addEventListener("click", function () { setZhu(body.getAttribute("data-zhu") !== "on"); });
+  }
+  var scaleMain = 1, scaleZhu = 1;
+  function applyScales() {
+    document.documentElement.style.setProperty("--fs-main", scaleMain.toFixed(2));
+    document.documentElement.style.setProperty("--fs-zhu", scaleZhu.toFixed(2));
+  }
+  [["mainMinus","main",-1],["mainPlus","main",1],["zhuMinus","zhu",-1],["zhuPlus","zhu",1]].forEach(function (cfg) {
+    var el = document.getElementById(cfg[0]);
+    if (!el) return;
+    el.addEventListener("click", function () {
+      if (cfg[1] === "main") scaleMain = Math.min(1.6, Math.max(0.8, scaleMain + cfg[2]*0.08));
+      else scaleZhu = Math.min(1.6, Math.max(0.75, scaleZhu + cfg[2]*0.08));
+      applyScales();
+    });
+  });
+  var fsBtn = document.getElementById("fsBtn");
+  var fsBtn2 = document.getElementById("fsBtn2");
+  var vstage = document.getElementById("vstage");
+  function toggleFs() {
+    if (!vstage) return;
+    if (!document.fullscreenElement) {
+      if (vstage.requestFullscreen) vstage.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+  if (fsBtn) fsBtn.addEventListener("click", toggleFs);
+  if (fsBtn2) fsBtn2.addEventListener("click", function (ev) { ev.preventDefault(); toggleFs(); });
+  function positionVflow() {
+    if (!vstage || body.getAttribute("data-layout") !== "vertical") return;
+    requestAnimationFrame(function () {
+      try { vstage.scrollLeft = vstage.scrollWidth - vstage.clientWidth; } catch (e) {}
+    });
+  }
+  positionVflow();
+  window.addEventListener("resize", positionVflow);
+
   /* ---------- 字号 ---------- */
+
 
 
   var fs = 1;
