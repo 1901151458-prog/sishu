@@ -330,3 +330,15 @@ body[data-layout="horizontal"] .v-seg{display:none!important}
 .hb-en p{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:calc(13.5px * var(--fs-main, 1));line-height:1.8;color:#6b5740}
 .hb-en p:last-child{margin-bottom:0}
 .hb-en .en-note{color:#8a735a;font-style:italic}
+
+/* 孟子等整卷中英对照 */
+body[data-hmode="wide"][data-layout="horizontal"] .v-chapter{display:none!important}
+.h-bilingual-wide{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+@media(max-width:800px){.h-bilingual-wide{grid-template-columns:1fr}}
+.hb-wide-chapter{margin:0 0 22px}
+.hb-wide-chapter .v-no{display:block;margin-bottom:4px}
+.hb-wide-chapter p{margin:0 0 8px;font-size:calc(15px * var(--fs-main, 1));line-height:1.9;color:var(--ink)}
+.hb-wide-en p{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:calc(13px * var(--fs-main, 1));line-height:1.8;color:#6b5740}
+
+/* 中英对照区不参与滚动渐显，保证截图/打印/直接可见 */
+#english .reveal{opacity:1!important;transform:none!important}
