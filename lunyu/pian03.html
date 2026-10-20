@@ -3,345 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>论语 · 八佾 · 朱熹《四书章句集注》本 · 四书经典</title>
-<meta name="description" content="《论语·八佾》全篇：简体、繁體原文，朱熹《论语集注》，James Legge 英译。">
+<title>论语 · 八佾第三 · 四书经典</title>
+<meta name="description" content="《论语·八佾第三》竖排随文小注">
 <meta name="theme-color" content="#141210">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body data-script="simp">
-<a class="skip-link" href="#text">跳到原文</a>
-<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<body data-script="simp" data-layout="vertical" data-zhu="on">
+<a class="skip-link" href="#text">跳到正文</a>
 <header class="topbar">
   <div class="wrap topbar-inner">
     <a class="brand" href="../index.html" aria-label="四书经典 · 返回首页">
       <span class="brand-mark" aria-hidden="true">经</span>
-      <span class="brand-text"><b>四书经典</b><small>论语 · 朱熹《四书章句集注》本</small></span>
+      <span class="brand-text"><b>四书经典</b><small>论语 · 八佾第三</small></span>
     </a>
     <div class="topbar-actions">
-      <div class="script-switch" role="group" aria-label="字形显示">
+      <div class="script-switch" role="group" aria-label="字形">
         <button type="button" class="script-btn" data-script="simp" aria-pressed="true">简体</button>
         <button type="button" class="script-btn" data-script="trad" aria-pressed="false">繁體</button>
       </div>
-      <button type="button" class="icon-btn" id="fontMinus" aria-label="缩小字号">A−</button>
-      <button type="button" class="icon-btn" id="fontPlus" aria-label="放大字号">A+</button>
-      <button type="button" class="icon-btn" id="printBtn" aria-label="打印">打印</button>
-      <a class="top-link" href="index.html">论语目录</a>
+      <div class="layout-switch" role="group" aria-label="排版">
+        <button type="button" class="layout-btn" data-layout="vertical" aria-pressed="true">竖排</button>
+        <button type="button" class="layout-btn" data-layout="horizontal" aria-pressed="false">横排</button>
+      </div>
+      <button type="button" class="icon-btn" id="zhuBtn" aria-pressed="true">注释</button>
+      <span class="fs-group"><button type="button" class="icon-btn" id="mainMinus">正文A−</button><button type="button" class="icon-btn" id="mainPlus">正文A+</button></span>
+      <span class="fs-group"><button type="button" class="icon-btn" id="zhuMinus">注A−</button><button type="button" class="icon-btn" id="zhuPlus">注A+</button></span>
+      <button type="button" class="icon-btn" id="fsBtn">全屏</button>
+      <button type="button" class="icon-btn" id="printBtn">打印</button>
+      <a class="top-link" href="index.html">目录</a>
+      <a class="top-link" href="../index.html">四书首页</a>
     </div>
   </div>
 </header>
-<main>
-  <section class="hero hero-lite">
-    <div class="wrap hero-inner">
-      <p class="badge"><span class="dot"></span>论语 · 朱熹《四书章句集注》本</p>
-<h1 class="hero-title">八佾<small>第三篇</small></h1>
-<p class="hero-hint">全篇 26 章 · 简体 / 繁體 · 朱熹集注 · James Legge 英译</p>
-</div>
-  </section>
-<section class="section"><div class="wrap narrow">
-<h2 class="sec-title"><span class="en">Preface</span>篇首注</h2>
-<p class="preamble zh-simp">凡二十六章。通前篇末二章，皆论礼乐之事。</p>
-<p class="preamble zh-trad">凡二十六章。通前篇末二章，皆論禮樂之事。</p>
+<main><section class="hero-lite-v"><div class="wrap v-hero">
+  <div class="v-hero-title"><p class="badge">论语 · 朱熹《论语集注》· 八佾第三</p><h1>八佾<span>八佾第三</span></h1><p class="v-hero-hint">竖排随文小注 · 大字正文 / 小字集注 · 整页横向滚动</p></div>
+  <div class="v-hero-side"><p>竖排随文小注 · 大字正文 / 小字集注 · 整页横向滚动</p><div class="hero-actions"><a class="btn btn-solid" href="#text">开始阅读</a><a class="btn btn-line" id="fsBtn2" href="#text">全屏阅读</a></div></div>
+</div></section><section class="section alt" id="text"><div class="vstage" id="vstage">
+  <div class="vstage-head wrap">
+    <h2 class="sec-title"><span class="en">Text</span>原文与随文小注</h2>
+    <p class="v-tip">竖排：每句经文后紧跟该句朱熹小注，标点以半角空格替代；可关闭注释只看白文，整页左右拖动/滚轮横向阅读。横排：显示原文与英文对照（不显示小注）。</p>
+  </div>
+  <div class="vflow" id="vflow"><div class="v-chapter"><span class="v-no">第一章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">孔子谓季氏  八佾舞于庭 是可忍也 孰不可忍也  </span><span class="mtext zh-simp h-punct">孔子谓季氏：“八佾舞于庭，是可忍也，孰不可忍也？”</span><span class="mtext zh-trad v-nopunct">孔子謂季氏  八佾舞於庭 是可忍也 孰不可忍也  </span><span class="mtext zh-trad h-punct">孔子謂季氏：「八佾舞於庭，是可忍也，孰不可忍也？」</span><span class="mzhu zh-simp">佾 音逸  季氏 鲁大夫季孙氏也 佾 舞列也 天子八 诸侯六 大夫四 士二 每佾人数 如其佾数 或曰  每佾八人  未详孰是 季氏以大夫而僭用天子之乐 孔子言其此事尚忍为之 则何事不可忍为 或曰  忍 容忍也  盖深疾之之辞  范氏曰  乐舞之数 自上而下 降杀以两而已 故两之间 不可以毫发僭差也 孔子为政 先正礼乐 则季氏之罪不容诛矣  谢氏曰  君子于其所不当为不敢须臾处 不忍故也 而季氏忍此矣 则虽弑父与君 亦何所惮而不为乎  </span><span class="mzhu zh-trad">佾 音逸  季氏 魯大夫季孫氏也 佾 舞列也 天子八 諸侯六 大夫四 士二 每佾人數 如其佾數 或曰  每佾八人  未詳孰是 季氏以大夫而僭用天子之樂 孔子言其此事尚忍為之 則何事不可忍為 或曰  忍 容忍也  蓋深疾之之辭  范氏曰  樂舞之數 自上而下 降殺以兩而已 故兩之間 不可以毫髮僭差也 孔子為政 先正禮樂 則季氏之罪不容誅矣  謝氏曰  君子於其所不當為不敢須臾處 不忍故也 而季氏忍此矣 則雖弒父與君 亦何所憚而不為乎  </span></span><div class="h-text h-only"><p class="zh-simp">孔子谓季氏：“八佾舞于庭，是可忍也，孰不可忍也？”</p><p class="zh-trad">孔子謂季氏：「八佾舞於庭，是可忍也，孰不可忍也？」</p></div><div class="ch-en h-only"><p>Confucius said of the head of the Chi family, who had eight rows of pantomimes in his area, 'If he can bear to do this, what may he not bear to do?'</p></div></div><div class="v-chapter"><span class="v-no">第二章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">三家者以雍彻 子曰   相维辟公 天子穆穆  奚取于三家之堂  </span><span class="mtext zh-simp h-punct">三家者以雍彻。子曰：“‘相维辟公，天子穆穆’，奚取于三家之堂？”</span><span class="mtext zh-trad v-nopunct">三家者以雍徹 子曰   相維辟公 天子穆穆  奚取於三家之堂  </span><span class="mtext zh-trad h-punct">三家者以雍徹。子曰：「『相維辟公，天子穆穆』，奚取於三家之堂？」</span><span class="mzhu zh-simp">彻 直列反 相 去声  三家 鲁大夫孟孙 叔孙 季孙之家也 雍 周颂篇名 彻 祭毕而收其俎也 天子宗庙之祭 则歌雍以彻 是时三家僭而用之 相 助也 辟公 诸侯也 穆穆 深远之意 天子之容也 此雍诗之辞 孔子引之 言三家之堂非有此事 亦何取于此义而歌之乎 讥其无知妄作 以取僭窃之罪  程子曰  周公之功固大矣 皆臣子之分所当为 鲁安得独用天子礼乐哉 成王之赐 伯禽之受 皆非也 其因袭之弊 遂使季氏僭八佾 三家僭雍彻 故仲尼讥之  </span><span class="mzhu zh-trad">徹 直列反 相 去聲  三家 魯大夫孟孫 叔孫 季孫之家也 雍 周頌篇名 徹 祭畢而收其俎也 天子宗廟之祭 則歌雍以徹 是時三家僭而用之 相 助也 辟公 諸侯也 穆穆 深遠之意 天子之容也 此雍詩之辭 孔子引之 言三家之堂非有此事 亦何取於此義而歌之乎 譏其無知妄作 以取僭竊之罪  程子曰  周公之功固大矣 皆臣子之分所當為 魯安得獨用天子禮樂哉 成王之賜 伯禽之受 皆非也 其因襲之弊 遂使季氏僭八佾 三家僭雍徹 故仲尼譏之  </span></span><div class="h-text h-only"><p class="zh-simp">三家者以雍彻。子曰：“‘相维辟公，天子穆穆’，奚取于三家之堂？”</p><p class="zh-trad">三家者以雍徹。子曰：「『相維辟公，天子穆穆』，奚取於三家之堂？」</p></div><div class="ch-en h-only"><p>The three families used the YUNG ode, while the vessels were being removed, at the conclusion of the sacrifice. The Master said, '"Assisting are the princes;-- the son of heaven looks profound and grave:"-- what application can these words have in the hall of the three families?'</p></div></div><div class="v-chapter"><span class="v-no">第三章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  人而不仁 如礼何 人而不仁 如乐何  </span><span class="mtext zh-simp h-punct">子曰：“人而不仁，如礼何？人而不仁，如乐何？”</span><span class="mtext zh-trad v-nopunct">子曰  人而不仁 如禮何 人而不仁 如樂何  </span><span class="mtext zh-trad h-punct">子曰：「人而不仁，如禮何？人而不仁，如樂何？」</span><span class="mzhu zh-simp">游氏曰  人而不仁 则人心亡矣 其如礼乐何哉 言虽欲用之 而礼乐不为之用也  程子曰  仁者天下之正理 失正理 则无序而不和  李氏曰  礼乐待人而后行 苟非其人 则虽玉帛交错 钟鼓铿锵 亦将如之何哉  然记者序此于八佾雍彻之后 疑其为僭礼乐者发也 </span><span class="mzhu zh-trad">游氏曰  人而不仁 則人心亡矣 其如禮樂何哉 言雖欲用之 而禮樂不為之用也  程子曰  仁者天下之正理 失正理 則無序而不和  李氏曰  禮樂待人而後行 苟非其人 則雖玉帛交錯 鐘鼓鏗鏘 亦將如之何哉  然記者序此於八佾雍徹之後 疑其為僭禮樂者發也 </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“人而不仁，如礼何？人而不仁，如乐何？”</p><p class="zh-trad">子曰：「人而不仁，如禮何？人而不仁，如樂何？」</p></div><div class="ch-en h-only"><p>The Master said, 'If a man be without the virtues proper to humanity, what has he to do with the rites of propriety? If a man be without the virtues proper to humanity, what has he to do with music?'</p></div></div><div class="v-chapter"><span class="v-no">第四章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">林放问礼之本 </span><span class="mtext zh-simp h-punct">林放问礼之本。</span><span class="mtext zh-trad v-nopunct">林放問禮之本 </span><span class="mtext zh-trad h-punct">林放問禮之本。</span><span class="mzhu zh-simp">林放 鲁人 见世之为礼者 专事繁文 而疑其本之不在是也 故以为问 </span><span class="mzhu zh-trad">林放 魯人 見世之為禮者 專事繁文 而疑其本之不在是也 故以為問 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  大哉问 </span><span class="mtext zh-simp h-punct">子曰：“大哉问！</span><span class="mtext zh-trad v-nopunct">子曰  大哉問 </span><span class="mtext zh-trad h-punct">子曰：「大哉問！</span><span class="mzhu zh-simp">孔子以时方逐末 而放独有志于本 故大其问 盖得其本 则礼之全体无不在其中矣 </span><span class="mzhu zh-trad">孔子以時方逐末 而放獨有志於本 故大其問 蓋得其本 則禮之全體無不在其中矣 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">礼 与其奢也 宁俭 丧 与其易也 宁戚  </span><span class="mtext zh-simp h-punct">礼，与其奢也，宁俭；丧，与其易也，宁戚。”</span><span class="mtext zh-trad v-nopunct">禮 與其奢也 寧儉 喪 與其易也 寧戚  </span><span class="mtext zh-trad h-punct">禮，與其奢也，寧儉；喪，與其易也，寧戚。」</span><span class="mzhu zh-simp">易 去声  易 治也 孟子曰  易其田畴  在丧礼 则节文习熟 而无哀痛惨怛之实者也 戚则一于哀 而文不足耳 礼贵得中 奢易则过于文 俭戚则不及而质 二者皆未合礼 然凡物之理 必先有质而后有文 则质乃礼之本也  范氏曰  夫祭与其敬不足而礼有馀也 不若礼不足而敬有馀也 丧与其哀不足而礼有馀也 不若礼不足而哀有馀也 礼失之奢 丧失之易 皆不能反本 而随其末故也 礼奢而备 不若俭而不备之愈也 丧易而文 不若戚而不文之愈也 俭者物之质 戚者心之诚 故为礼之本  杨氏曰  礼始诸饮食 故污尊而抔饮 为之簠 簋 笾 豆 罍 爵之饰 所以文之也 则其本俭而已 丧不可以径情而直行 为之衰麻哭踊之数 所以节之也 则其本戚而已 周衰 世方以文灭质 而林放独能问礼之本 故夫子大之 而告之以此  </span><span class="mzhu zh-trad">易 去聲  易 治也 孟子曰  易其田疇  在喪禮 則節文習熟 而無哀痛慘怛之實者也 戚則一於哀 而文不足耳 禮貴得中 奢易則過於文 儉戚則不及而質 二者皆未合禮 然凡物之理 必先有質而後有文 則質乃禮之本也  范氏曰  夫祭與其敬不足而禮有餘也 不若禮不足而敬有餘也 喪與其哀不足而禮有餘也 不若禮不足而哀有餘也 禮失之奢 喪失之易 皆不能反本 而隨其末故也 禮奢而備 不若儉而不備之愈也 喪易而文 不若戚而不文之愈也 儉者物之質 戚者心之誠 故為禮之本  楊氏曰  禮始諸飲食 故污尊而抔飲 為之簠 簋 籩 豆 罍 爵之飾 所以文之也 則其本儉而已 喪不可以徑情而直行 為之衰麻哭踴之數 所以節之也 則其本戚而已 周衰 世方以文滅質 而林放獨能問禮之本 故夫子大之 而告之以此  </span></span><div class="h-text h-only"><p class="zh-simp">林放问礼之本。子曰：“大哉问！礼，与其奢也，宁俭；丧，与其易也，宁戚。”</p><p class="zh-trad">林放問禮之本。子曰：「大哉問！禮，與其奢也，寧儉；喪，與其易也，寧戚。」</p></div><div class="ch-en h-only"><p>1. Lin Fang asked what was the first thing to be attended to in ceremonies. 2. The Master said, 'A great question indeed! 3. 'In festive ceremonies, it is better to be sparing than extravagant. In the ceremonies of mourning, it is better that there be deep sorrow than a minute attention to observances.'</p></div></div><div class="v-chapter"><span class="v-no">第五章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  夷狄之有君 不如诸夏之亡也  </span><span class="mtext zh-simp h-punct">子曰：“夷狄之有君，不如诸夏之亡也。”</span><span class="mtext zh-trad v-nopunct">子曰  夷狄之有君 不如諸夏之亡也  </span><span class="mtext zh-trad h-punct">子曰：「夷狄之有君，不如諸夏之亡也。」</span><span class="mzhu zh-simp">吴氏曰  亡 古无字 通用  程子曰  夷狄且有君长 不如诸夏之僭乱 反无上下之分也  尹氏曰  孔子伤时之乱而叹之也 亡 非实亡也 虽有之 不能尽其道尔  </span><span class="mzhu zh-trad">吳氏曰  亡 古無字 通用  程子曰  夷狄且有君長 不如諸夏之僭亂 反無上下之分也  尹氏曰  孔子傷時之亂而歎之也 亡 非實亡也 雖有之 不能盡其道爾  </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“夷狄之有君，不如诸夏之亡也。”</p><p class="zh-trad">子曰：「夷狄之有君，不如諸夏之亡也。」</p></div><div class="ch-en h-only"><p>The Master said, 'The rude tribes of the east and north have their princes, and are not like the States of our great land which are without them.'</p></div></div><div class="v-chapter"><span class="v-no">第六章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">季氏旅于泰山 子谓冉有曰  女弗能救与  对曰  不能  子曰  呜呼 曾谓泰山 不如林放乎  </span><span class="mtext zh-simp h-punct">季氏旅于泰山。子谓冉有曰：“女弗能救与？”对曰：“不能。”子曰：“呜呼！曾谓泰山，不如林放乎？”</span><span class="mtext zh-trad v-nopunct">季氏旅於泰山 子謂冉有曰  女弗能救與  對曰  不能  子曰  嗚呼 曾謂泰山 不如林放乎  </span><span class="mtext zh-trad h-punct">季氏旅於泰山。子謂冉有曰：「女弗能救與？」對曰：「不能。」子曰：「嗚呼！曾謂泰山，不如林放乎？」</span><span class="mzhu zh-simp">女 音汝 与 平声  旅 祭名 泰山 山名 在鲁地 礼 诸侯祭封内山川 季氏祭之 僭也 冉有 孔子弟子 名求 时为季氏宰 救 谓救其陷于僭窃之罪 呜呼 叹辞 言神不享非礼 欲季氏知其无益而自止 又进林放以厉冉有也  范氏曰  冉有从季氏 夫子岂不知其不可告也 然而圣人不轻绝人 尽己之心 安知冉有之不能救 季氏之不可谏也 既不能正 则美林放以明泰山之不可诬 是亦教诲之道也  </span><span class="mzhu zh-trad">女 音汝 與 平聲  旅 祭名 泰山 山名 在魯地 禮 諸侯祭封內山川 季氏祭之 僭也 冉有 孔子弟子 名求 時為季氏宰 救 謂救其陷於僭竊之罪 嗚呼 歎辭 言神不享非禮 欲季氏知其無益而自止 又進林放以厲冉有也  范氏曰  冉有從季氏 夫子豈不知其不可告也 然而聖人不輕絕人 盡己之心 安知冉有之不能救 季氏之不可諫也 既不能正 則美林放以明泰山之不可誣 是亦教誨之道也  </span></span><div class="h-text h-only"><p class="zh-simp">季氏旅于泰山。子谓冉有曰：“女弗能救与？”对曰：“不能。”子曰：“呜呼！曾谓泰山，不如林放乎？”</p><p class="zh-trad">季氏旅於泰山。子謂冉有曰：「女弗能救與？」對曰：「不能。」子曰：「嗚呼！曾謂泰山，不如林放乎？」</p></div><div class="ch-en h-only"><p>The chief of the Chi family was about to sacrifice to the T'ai mountain. The Master said to Zan Yu, 'Can you not save him from this?' He answered, 'I cannot.' Confucius said, 'Alas! will you say that the T'ai mountain is not so discerning as Lin Fang?'</p></div></div><div class="v-chapter"><span class="v-no">第七章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  君子无所争 必也射乎 揖让而升 下而饮 其争也君子  </span><span class="mtext zh-simp h-punct">子曰：“君子无所争，必也射乎！揖让而升，下而饮，其争也君子。”</span><span class="mtext zh-trad v-nopunct">子曰  君子無所爭 必也射乎 揖讓而升 下而飲 其爭也君子  </span><span class="mtext zh-trad h-punct">子曰：「君子無所爭，必也射乎！揖讓而升，下而飲，其爭也君子。」</span><span class="mzhu zh-simp">饮 去声  揖让而升者 大射之礼 耦进三揖而后升堂也 下而饮 谓射毕揖降 以俟众耦皆降 胜者乃揖不胜者升 取觯立饮也 言君子恭逊不与人争 惟于射而后有争 然其争也 雍容揖逊乃如此 则其争也君子 而非若小人之争矣 </span><span class="mzhu zh-trad">飲 去聲  揖讓而升者 大射之禮 耦進三揖而後升堂也 下而飲 謂射畢揖降 以俟眾耦皆降 勝者乃揖不勝者升 取觶立飲也 言君子恭遜不與人爭 惟於射而後有爭 然其爭也 雍容揖遜乃如此 則其爭也君子 而非若小人之爭矣 </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“君子无所争，必也射乎！揖让而升，下而饮，其争也君子。”</p><p class="zh-trad">子曰：「君子無所爭，必也射乎！揖讓而升，下而飲，其爭也君子。」</p></div><div class="ch-en h-only"><p>The Master said, 'The student of virtue has no contentions. If it be said he cannot avoid them, shall this be in archery? But he bows complaisantly to his competitors; thus he ascends the hall, descends, and exacts the forfeit of drinking. In his contention, he is still the Chun-tsze.'</p></div></div><div class="v-chapter"><span class="v-no">第八章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子夏问曰   巧笑倩兮 美目盼兮 素以为绚兮  何谓也  </span><span class="mtext zh-simp h-punct">子夏问曰：“‘巧笑倩兮，美目盼兮，素以为绚兮。’何谓也？”</span><span class="mtext zh-trad v-nopunct">子夏問曰   巧笑倩兮 美目盼兮 素以為絢兮  何謂也  </span><span class="mtext zh-trad h-punct">子夏問曰：「『巧笑倩兮，美目盼兮，素以為絢兮。』何謂也？」</span><span class="mzhu zh-simp">倩 七练反 盼 普苋反 绚 呼县反  此逸诗也 倩 好口辅也 盼 目黑白分也 素 粉地 画之质也 绚 采色 画之饰也 言人有此倩盼之美质 而又加以华采之饰 如有素地而加采色也 子夏疑其反谓以素为饰 故问之 </span><span class="mzhu zh-trad">倩 七練反 盼 普莧反 絢 呼縣反  此逸詩也 倩 好口輔也 盼 目黑白分也 素 粉地 畫之質也 絢 採色 畫之飾也 言人有此倩盼之美質 而又加以華采之飾 如有素地而加采色也 子夏疑其反謂以素為飾 故問之 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  绘事后素  </span><span class="mtext zh-simp h-punct">子曰：“绘事后素。”</span><span class="mtext zh-trad v-nopunct">子曰  繪事後素  </span><span class="mtext zh-trad h-punct">子曰：「繪事後素。」</span><span class="mzhu zh-simp">绘 胡对反  绘事 绘画之事也 后素 后于素也  考工记 曰  绘画之事后素功  谓先以粉地为质 而后施五采 犹人有美质 然后可加文饰 </span><span class="mzhu zh-trad">繪 胡對反  繪事 繪畫之事也 後素 後於素也  考工記 曰  繪畫之事後素功  謂先以粉地為質 而後施五采 猶人有美質 然後可加文飾 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">曰  礼后乎  子曰  起予者商也 始可与言诗已矣  </span><span class="mtext zh-simp h-punct">曰：“礼后乎？”子曰：“起予者商也！始可与言诗已矣。”</span><span class="mtext zh-trad v-nopunct">曰  禮後乎  子曰  起予者商也 始可與言詩已矣  </span><span class="mtext zh-trad h-punct">曰：「禮後乎？」子曰：「起予者商也！始可與言詩已矣。」</span><span class="mzhu zh-simp">礼必以忠信为质 犹绘事必以粉素为先 起 犹发也 起予 言能起发我之志意  谢氏曰  子贡因论学而知诗 子夏因论诗而知学 故皆可与言诗  杨氏曰   甘受和 白受采 忠信之人 可以学礼 苟无其质 礼不虚行  此 绘事后素 之说也 孔子曰 绘事后素  而子夏曰 礼后乎  可谓能继其志矣 非得之言意之表者能之乎 商赐可与言诗者以此 若夫玩心于章句之末 则其为诗也固而已矣 所谓 起予  则亦相长之义也  </span><span class="mzhu zh-trad">禮必以忠信為質 猶繪事必以粉素為先 起 猶發也 起予 言能起發我之志意  謝氏曰  子貢因論學而知詩 子夏因論詩而知學 故皆可與言詩  楊氏曰   甘受和 白受采 忠信之人 可以學禮 苟無其質 禮不虛行  此 繪事後素 之說也 孔子曰 繪事後素  而子夏曰 禮後乎  可謂能繼其志矣 非得之言意之表者能之乎 商賜可與言詩者以此 若夫玩心於章句之末 則其為詩也固而已矣 所謂 起予  則亦相長之義也  </span></span><div class="h-text h-only"><p class="zh-simp">子夏问曰：“‘巧笑倩兮，美目盼兮，素以为绚兮。’何谓也？”子曰：“绘事后素。”曰：“礼后乎？”子曰：“起予者商也！始可与言诗已矣。”</p><p class="zh-trad">子夏問曰：「『巧笑倩兮，美目盼兮，素以為絢兮。』何謂也？」子曰：「繪事後素。」曰：「禮後乎？」子曰：「起予者商也！始可與言詩已矣。」</p></div><div class="ch-en h-only"><p>1. Tsze-hsia asked, saying, 'What is the meaning of the passage-- "The pretty dimples of her artful smile! The well- defined black and white of her eye! The plain ground for the colours?"' 2. The Master said, 'The business of laying on the colours follows (the preparation of) the plain ground.' 3. 'Ceremonies then are a subsequent thing?' The Master said, 'It is Shang who can bring out my meaning. Now I can begin to talk about the odes with him.'</p></div></div><div class="v-chapter"><span class="v-no">第九章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  夏礼吾能言之 杞不足征也 殷礼吾能言之 宋不足征也 文献不足故也 足则吾能征之矣  </span><span class="mtext zh-simp h-punct">子曰：“夏礼吾能言之，杞不足征也；殷礼吾能言之，宋不足征也。文献不足故也，足则吾能征之矣。”</span><span class="mtext zh-trad v-nopunct">子曰  夏禮吾能言之 杞不足徵也 殷禮吾能言之 宋不足徵也 文獻不足故也 足則吾能徵之矣  </span><span class="mtext zh-trad h-punct">子曰：「夏禮吾能言之，杞不足徵也；殷禮吾能言之，宋不足徵也。文獻不足故也，足則吾能徵之矣。」</span><span class="mzhu zh-simp">杞 夏之后 宋 殷之后 征 证也 文 典籍也 献 贤也 言二代之礼 我能言之 而二国不足取以为证 以其文献不足故也 文献若足 则我能取之 以证君言矣 </span><span class="mzhu zh-trad">杞 夏之後 宋 殷之後 徵 證也 文 典籍也 獻 賢也 言二代之禮 我能言之 而二國不足取以為證 以其文獻不足故也 文獻若足 則我能取之 以證君言矣 </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“夏礼吾能言之，杞不足征也；殷礼吾能言之，宋不足征也。文献不足故也，足则吾能征之矣。”</p><p class="zh-trad">子曰：「夏禮吾能言之，杞不足徵也；殷禮吾能言之，宋不足徵也。文獻不足故也，足則吾能徵之矣。」</p></div><div class="ch-en h-only"><p>The Master said, 'I could describe the ceremonies of the Hsia dynasty, but Chi cannot sufficiently attest my words. I could describe the ceremonies of the Yin dynasty, but Sung cannot sufficiently attest my words. (They cannot do so) because of the insufficiency of their records and wise men. If those were sufficient, I could adduce them in support of my words.'</p></div></div><div class="v-chapter"><span class="v-no">第十章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  禘自既灌而往者 吾不欲观之矣  </span><span class="mtext zh-simp h-punct">子曰：“禘自既灌而往者，吾不欲观之矣。”</span><span class="mtext zh-trad v-nopunct">子曰  禘自既灌而往者 吾不欲觀之矣  </span><span class="mtext zh-trad h-punct">子曰：「禘自既灌而往者，吾不欲觀之矣。」</span><span class="mzhu zh-simp">禘 大计反  赵伯循曰  禘 王者之大祭也 王者既立始祖之庙 又推始祖所自出之帝 祀之于始祖之庙 而以始祖配之也 成王以周公有大勋劳 赐鲁重祭 故得禘于周公之庙 以文王为所出之帝 而周公配之 然非礼矣  灌者 方祭之始 用郁鬯之酒灌地 以降神也 鲁之君臣 当此之时 诚意未散 犹有可观 自此以后 则浸以懈怠而无足观矣 盖鲁祭非礼 孔子本不欲观 至此而失礼之中又失礼焉 故发此叹也  谢氏曰  夫子尝曰  我欲观夏道 是故之杞 而不足征也 我欲观殷道 是故之宋 而不足征也  又曰  我观周道 幽厉伤之 吾舍鲁何适矣 鲁之郊禘非礼也 周公其衰矣  考之杞宋已如彼 考之当今又如此 孔子所以深叹也  </span><span class="mzhu zh-trad">禘 大計反  趙伯循曰  禘 王者之大祭也 王者既立始祖之廟 又推始祖所自出之帝 祀之於始祖之廟 而以始祖配之也 成王以周公有大勳勞 賜魯重祭 故得禘於周公之廟 以文王為所出之帝 而周公配之 然非禮矣  灌者 方祭之始 用郁鬯之酒灌地 以降神也 魯之君臣 當此之時 誠意未散 猶有可觀 自此以後 則浸以懈怠而無足觀矣 蓋魯祭非禮 孔子本不欲觀 至此而失禮之中又失禮焉 故發此歎也  謝氏曰  夫子嘗曰  我欲觀夏道 是故之杞 而不足征也 我欲觀殷道 是故之宋 而不足征也  又曰  我觀周道 幽厲傷之 吾捨魯何適矣 魯之郊禘非禮也 周公其衰矣  考之杞宋已如彼 考之當今又如此 孔子所以深歎也  </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“禘自既灌而往者，吾不欲观之矣。”</p><p class="zh-trad">子曰：「禘自既灌而往者，吾不欲觀之矣。」</p></div><div class="ch-en h-only"><p>The Master said, 'At the great sacrifice, after the pouring out of the libation, I have no wish to look on.'</p></div></div><div class="v-chapter"><span class="v-no">第十一章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">或问禘之说 子曰  不知也 知其说者之于天下也 其如示诸斯乎  指其掌 </span><span class="mtext zh-simp h-punct">或问禘之说。子曰：“不知也。知其说者之于天下也，其如示诸斯乎！”指其掌。</span><span class="mtext zh-trad v-nopunct">或問禘之說 子曰  不知也 知其說者之於天下也 其如示諸斯乎  指其掌 </span><span class="mtext zh-trad h-punct">或問禘之說。子曰：「不知也。知其說者之於天下也，其如示諸斯乎！」指其掌。</span><span class="mzhu zh-simp">先王报本追远之意 莫深于禘 非仁孝诚敬之至 不足以与此 非或人之所及也 而不王不禘之法 又鲁之所当讳者 故以不知答之 示 与视同 指其掌 弟子记夫子言此而自指其掌 言其明且易也 盖知禘之说 则理无不明 诚无不格 而治天下不难矣 圣人于此 岂真有所不知也哉 </span><span class="mzhu zh-trad">先王報本追遠之意 莫深於禘 非仁孝誠敬之至 不足以與此 非或人之所及也 而不王不禘之法 又魯之所當諱者 故以不知答之 示 與視同 指其掌 弟子記夫子言此而自指其掌 言其明且易也 蓋知禘之說 則理無不明 誠無不格 而治天下不難矣 聖人於此 豈真有所不知也哉 </span></span><div class="h-text h-only"><p class="zh-simp">或问禘之说。子曰：“不知也。知其说者之于天下也，其如示诸斯乎！”指其掌。</p><p class="zh-trad">或問禘之說。子曰：「不知也。知其說者之於天下也，其如示諸斯乎！」指其掌。</p></div><div class="ch-en h-only"><p>Some one asked the meaning of the great sacrifice. The Master said, 'I do not know. He who knew its meaning would find it as easy to govern the kingdom as to look on this;-- pointing to his palm.</p></div></div><div class="v-chapter"><span class="v-no">第十二章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">祭如在 祭神如神在 </span><span class="mtext zh-simp h-punct">祭如在，祭神如神在。</span><span class="mtext zh-trad v-nopunct">祭如在 祭神如神在 </span><span class="mtext zh-trad h-punct">祭如在，祭神如神在。</span><span class="mzhu zh-simp">程子曰  祭 祭先祖也 祭神 祭外神也 祭先主于孝 祭神主于敬  愚谓此门人记孔子祭祀之诚意 </span><span class="mzhu zh-trad">程子曰  祭 祭先祖也 祭神 祭外神也 祭先主於孝 祭神主於敬  愚謂此門人記孔子祭祀之誠意 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  吾不与祭 如不祭  </span><span class="mtext zh-simp h-punct">子曰：“吾不与祭，如不祭。”</span><span class="mtext zh-trad v-nopunct">子曰  吾不與祭 如不祭  </span><span class="mtext zh-trad h-punct">子曰：「吾不與祭，如不祭。」</span><span class="mzhu zh-simp">与 去声  又记孔子之言以明之 言己当祭之时 或有故不得与 而使他人摄之 则不得致其如在之诚 故虽已祭 而此心缺然 如未尝祭也  范氏曰  君子之祭 七日戒 三日齐 必见所祭者 诚之至也 是故郊则天神格 庙则人鬼享 皆由己以致之也 有其诚则有其神 无其诚则无其神 可不谨乎 吾不与祭如不祭 诚为实 礼为虚也  </span><span class="mzhu zh-trad">與 去聲  又記孔子之言以明之 言己當祭之時 或有故不得與 而使他人攝之 則不得致其如在之誠 故雖已祭 而此心缺然 如未嘗祭也  范氏曰  君子之祭 七日戒 三日齊 必見所祭者 誠之至也 是故郊則天神格 廟則人鬼享 皆由己以致之也 有其誠則有其神 無其誠則無其神 可不謹乎 吾不與祭如不祭 誠為實 禮為虛也  </span></span><div class="h-text h-only"><p class="zh-simp">祭如在，祭神如神在。子曰：“吾不与祭，如不祭。”</p><p class="zh-trad">祭如在，祭神如神在。子曰：「吾不與祭，如不祭。」</p></div><div class="ch-en h-only"><p>1. He sacrificed to the dead, as if they were present. He sacrificed to the spirits, as if the spirits were present. 2. The Master said, 'I consider my not being present at the sacrifice, as if I did not sacrifice.'</p></div></div><div class="v-chapter"><span class="v-no">第十三章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">王孙贾问曰  与其媚于奥 宁媚于灶 何谓也  </span><span class="mtext zh-simp h-punct">王孙贾问曰：“与其媚于奥，宁媚于灶，何谓也？”</span><span class="mtext zh-trad v-nopunct">王孫賈問曰  與其媚於奧 寧媚於竈 何謂也  </span><span class="mtext zh-trad h-punct">王孫賈問曰：「與其媚於奧，寧媚於竈，何謂也？」</span><span class="mzhu zh-simp">王孙贾 卫大夫 媚 亲顺也 室西南隅为奥 灶者 五祀之一 夏所祭也 凡祭五祀 皆先设主而祭于其所 然后迎尸而祭于奥 略如祭宗庙之仪 如祀灶 则设主于灶陉 祭毕 而更设馔于奥以迎尸也 故时俗之语 因以奥有常尊 而非祭之主 灶虽卑贱 而当时用事 喻自结于君 不如阿附权臣也 贾 卫之权臣 故以此讽孔子 </span><span class="mzhu zh-trad">王孫賈 衛大夫 媚 親順也 室西南隅為奧 竈者 五祀之一 夏所祭也 凡祭五祀 皆先設主而祭於其所 然後迎尸而祭於奧 略如祭宗廟之儀 如祀竈 則設主於竈陘 祭畢 而更設饌於奧以迎尸也 故時俗之語 因以奧有常尊 而非祭之主 竈雖卑賤 而當時用事 喻自結於君 不如阿附權臣也 賈 衛之權臣 故以此諷孔子 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  不然 获罪于天 无所祷也  </span><span class="mtext zh-simp h-punct">子曰：“不然，获罪于天，无所祷也。”</span><span class="mtext zh-trad v-nopunct">子曰  不然 獲罪於天 無所禱也  </span><span class="mtext zh-trad h-punct">子曰：「不然，獲罪於天，無所禱也。」</span><span class="mzhu zh-simp">天 即理也 其尊无对 非奥灶之可比也 逆理 则获罪于天矣 岂媚于奥灶所能祷而免乎 言但当顺理 非特不当媚灶 亦不可媚于奥也  谢氏曰  圣人之言 逊而不迫 使王孙贾而知此意 不为无益 使其不知 亦非所以取祸  </span><span class="mzhu zh-trad">天 即理也 其尊無對 非奧竈之可比也 逆理 則獲罪於天矣 豈媚於奧竈所能禱而免乎 言但當順理 非特不當媚竈 亦不可媚於奧也  謝氏曰  聖人之言 遜而不迫 使王孫賈而知此意 不為無益 使其不知 亦非所以取禍  </span></span><div class="h-text h-only"><p class="zh-simp">王孙贾问曰：“与其媚于奥，宁媚于灶，何谓也？”子曰：“不然，获罪于天，无所祷也。”</p><p class="zh-trad">王孫賈問曰：「與其媚於奧，寧媚於竈，何謂也？」子曰：「不然，獲罪於天，無所禱也。」</p></div><div class="ch-en h-only"><p>1. Wang-sun Chia asked, saying, 'What is the meaning of the saying, "It is better to pay court to the furnace than to the south-west corner?"' 2. The Master said, 'Not so. He who offends against Heaven has none to whom he can pray.'</p></div></div><div class="v-chapter"><span class="v-no">第十四章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  周监于二代 郁郁乎文哉 吾从周  </span><span class="mtext zh-simp h-punct">子曰：“周监于二代，郁郁乎文哉！吾从周。”</span><span class="mtext zh-trad v-nopunct">子曰  周監於二代 郁郁乎文哉 吾從周  </span><span class="mtext zh-trad h-punct">子曰：「周監於二代，郁郁乎文哉！吾從周。」</span><span class="mzhu zh-simp">郁 于六反  监 视也 二代 夏商也 言其视二代之礼而损益之 郁郁 文盛貌  尹氏曰  三代之礼至周大备 夫子美其文而从之  </span><span class="mzhu zh-trad">郁 於六反  監 視也 二代 夏商也 言其視二代之禮而損益之 郁郁 文盛貌  尹氏曰  三代之禮至周大備 夫子美其文而從之  </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“周监于二代，郁郁乎文哉！吾从周。”</p><p class="zh-trad">子曰：「周監於二代，郁郁乎文哉！吾從周。」</p></div><div class="ch-en h-only"><p>The Master said, 'Chau had the advantage of viewing the two past dynasties. How complete and elegant are its regulations! I follow Chau.'</p></div></div><div class="v-chapter"><span class="v-no">第十五章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子入大庙 每事问 或曰  孰谓鄹人之子知礼乎 入大庙 每事问  子闻之曰  是礼也  </span><span class="mtext zh-simp h-punct">子入大庙，每事问。或曰：“孰谓鄹人之子知礼乎？入大庙，每事问。”子闻之曰：“是礼也。”</span><span class="mtext zh-trad v-nopunct">子入大廟 每事問 或曰  孰謂鄹人之子知禮乎 入大廟 每事問  子聞之曰  是禮也  </span><span class="mtext zh-trad h-punct">子入大廟，每事問。或曰：「孰謂鄹人之子知禮乎？入大廟，每事問。」子聞之曰：「是禮也。」</span><span class="mzhu zh-simp">大 音泰 鄹 侧留反  大庙 鲁周公庙 此盖孔子始仕之时 入而助祭也 鄹 鲁邑名 孔子父叔梁纥 尝为其邑大夫 孔子自少以知礼闻 故或人因此而讥之 孔子言 是礼 者 敬谨之至 乃所以为礼也  尹氏曰  礼者 敬而已矣 虽知亦问 谨之至也 其为敬莫大于此 谓之不知礼者 岂足以知孔子哉  </span><span class="mzhu zh-trad">大 音泰 鄹 側留反  大廟 魯周公廟 此蓋孔子始仕之時 入而助祭也 鄹 魯邑名 孔子父叔梁紇 嘗為其邑大夫 孔子自少以知禮聞 故或人因此而譏之 孔子言 是禮 者 敬謹之至 乃所以為禮也  尹氏曰  禮者 敬而已矣 雖知亦問 謹之至也 其為敬莫大於此 謂之不知禮者 豈足以知孔子哉  </span></span><div class="h-text h-only"><p class="zh-simp">子入大庙，每事问。或曰：“孰谓鄹人之子知礼乎？入大庙，每事问。”子闻之曰：“是礼也。”</p><p class="zh-trad">子入大廟，每事問。或曰：「孰謂鄹人之子知禮乎？入大廟，每事問。」子聞之曰：「是禮也。」</p></div><div class="ch-en h-only"><p>The Master, when he entered the grand temple, asked about everything. Some one said, 'Who will say that the son of the man of Tsau knows the rules of propriety! He has entered the grand temple and asks about everything.' The Master heard the remark, and said, 'This is a rule of propriety.'</p></div></div><div class="v-chapter"><span class="v-no">第十六章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  射不主皮 为力不同科 古之道也  </span><span class="mtext zh-simp h-punct">子曰：“射不主皮，为力不同科，古之道也。”</span><span class="mtext zh-trad v-nopunct">子曰  射不主皮 為力不同科 古之道也  </span><span class="mtext zh-trad h-punct">子曰：「射不主皮，為力不同科，古之道也。」</span><span class="mzhu zh-simp">为 去声  射不主皮 乡射礼文 为力不同科 孔子解礼之意如此也 皮 革也 布侯而栖革于其中以为的 所谓鹄也 科 等也 古者射以观德 但主于中 而不主于贯革 盖以人之力有强弱 不同等也 记曰  武王克商 散军郊射 而贯革之射息  正谓此也 周衰 礼废 列国兵争 复尚贯革 故孔子叹之  杨氏曰  中可以学而能 力不可以强而至 圣人言古之道 所以正今之失  </span><span class="mzhu zh-trad">為 去聲  射不主皮 鄉射禮文 為力不同科 孔子解禮之意如此也 皮 革也 布侯而棲革於其中以為的 所謂鵠也 科 等也 古者射以觀德 但主於中 而不主於貫革 蓋以人之力有強弱 不同等也 記曰  武王克商 散軍郊射 而貫革之射息  正謂此也 周衰 禮廢 列國兵爭 復尚貫革 故孔子歎之  楊氏曰  中可以學而能 力不可以強而至 聖人言古之道 所以正今之失  </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“射不主皮，为力不同科，古之道也。”</p><p class="zh-trad">子曰：「射不主皮，為力不同科，古之道也。」</p></div><div class="ch-en h-only"><p>The Master said, 'In archery it is not going through the leather which is the principal thing;-- because people's strength is not equal. This was the old way.'</p></div></div><div class="v-chapter"><span class="v-no">第十七章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子贡欲去告朔之饩羊 </span><span class="mtext zh-simp h-punct">子贡欲去告朔之饩羊。</span><span class="mtext zh-trad v-nopunct">子貢欲去告朔之餼羊 </span><span class="mtext zh-trad h-punct">子貢欲去告朔之餼羊。</span><span class="mzhu zh-simp">去 起吕反 告 古笃反 饩 许气反  告朔之礼 古者天子常以季冬 颁来岁十二月之朔于诸侯 诸侯受而藏之祖庙 月朔 则以特羊告庙 请而行之 饩 生牲也 鲁自文公始不视朔 而有司犹供此羊 故子贡欲去之 </span><span class="mzhu zh-trad">去 起呂反 告 古篤反 餼 許氣反  告朔之禮 古者天子常以季冬 頒來歲十二月之朔於諸侯 諸侯受而藏之祖廟 月朔 則以特羊告廟 請而行之 餼 生牲也 魯自文公始不視朔 而有司猶供此羊 故子貢欲去之 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  赐也 尔爱其羊 我爱其礼  </span><span class="mtext zh-simp h-punct">子曰：“赐也，尔爱其羊，我爱其礼。”</span><span class="mtext zh-trad v-nopunct">子曰  賜也 爾愛其羊 我愛其禮  </span><span class="mtext zh-trad h-punct">子曰：「賜也，爾愛其羊，我愛其禮。」</span><span class="mzhu zh-simp">爱 犹惜也 子贡盖惜其无实而妄费 然礼虽废 羊存 犹得以识之而可复焉 若并去其羊 则此礼遂亡矣 孔子所以惜之  杨氏曰  告朔 诸侯所以 命于君亲 礼之大者 鲁不视朔矣 然羊存则告朔之名未泯 而其实因可举 此夫子所以惜之也  </span><span class="mzhu zh-trad">愛 猶惜也 子貢蓋惜其無實而妄費 然禮雖廢 羊存 猶得以識之而可復焉 若並去其羊 則此禮遂亡矣 孔子所以惜之  楊氏曰  告朔 諸侯所以 命於君親 禮之大者 魯不視朔矣 然羊存則告朔之名未泯 而其實因可舉 此夫子所以惜之也  </span></span><div class="h-text h-only"><p class="zh-simp">子贡欲去告朔之饩羊。子曰：“赐也，尔爱其羊，我爱其礼。”</p><p class="zh-trad">子貢欲去告朔之餼羊。子曰：「賜也，爾愛其羊，我愛其禮。」</p></div><div class="ch-en h-only"><p>1. Tsze-kung wished to do away with the offering of a sheep connected with the inauguration of the first day of each month. 2. The Master said, 'Ts'ze, you love the sheep; I love the ceremony.'</p></div></div><div class="v-chapter"><span class="v-no">第十八章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  事君尽礼 人以为谄也  </span><span class="mtext zh-simp h-punct">子曰：“事君尽礼，人以为谄也。”</span><span class="mtext zh-trad v-nopunct">子曰  事君盡禮 人以為諂也  </span><span class="mtext zh-trad h-punct">子曰：「事君盡禮，人以為諂也。」</span><span class="mzhu zh-simp">黄氏曰  孔子于事君之礼 非有所加也 如是而后尽尔 时人不能 反以为谄 故孔子言之 以明礼之当然也  程子曰  圣人事君尽礼 当时以为谄 若他人言之 必曰 我事君尽礼 小人以为谄  而孔子之言止于如此 圣人道大德宏 此亦可见  </span><span class="mzhu zh-trad">黃氏曰  孔子於事君之禮 非有所加也 如是而後盡爾 時人不能 反以為諂 故孔子言之 以明禮之當然也  程子曰  聖人事君盡禮 當時以為諂 若他人言之 必曰 我事君盡禮 小人以為諂  而孔子之言止於如此 聖人道大德宏 此亦可見  </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“事君尽礼，人以为谄也。”</p><p class="zh-trad">子曰：「事君盡禮，人以為諂也。」</p></div><div class="ch-en h-only"><p>The Master said, 'The full observance of the rules of propriety in serving one's prince is accounted by people to be flattery.'</p></div></div><div class="v-chapter"><span class="v-no">第十九章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">定公问  君使臣 臣事君 如之何  孔子对曰  君使臣以礼 臣事君以忠  </span><span class="mtext zh-simp h-punct">定公问：“君使臣，臣事君，如之何？”孔子对曰：“君使臣以礼，臣事君以忠。”</span><span class="mtext zh-trad v-nopunct">定公問  君使臣 臣事君 如之何  孔子對曰  君使臣以禮 臣事君以忠  </span><span class="mtext zh-trad h-punct">定公問：「君使臣，臣事君，如之何？」孔子對曰：「君使臣以禮，臣事君以忠。」</span><span class="mzhu zh-simp">定公 鲁君 名宋 二者皆理之当然 各欲自尽而已  吕氏曰  使臣不患其不忠 患礼之不至 事君不患其无礼 患忠之不足  尹氏曰  君臣以义合者也 故君使臣以礼 则臣事君以忠  </span><span class="mzhu zh-trad">定公 魯君 名宋 二者皆理之當然 各欲自盡而已  呂氏曰  使臣不患其不忠 患禮之不至 事君不患其無禮 患忠之不足  尹氏曰  君臣以義合者也 故君使臣以禮 則臣事君以忠  </span></span><div class="h-text h-only"><p class="zh-simp">定公问：“君使臣，臣事君，如之何？”孔子对曰：“君使臣以礼，臣事君以忠。”</p><p class="zh-trad">定公問：「君使臣，臣事君，如之何？」孔子對曰：「君使臣以禮，臣事君以忠。」</p></div><div class="ch-en h-only"><p>The Duke Ting asked how a prince should employ his ministers, and how ministers should serve their prince. Confucius replied, 'A prince should employ his minister according to according to the rules of propriety; ministers should serve their prince with faithfulness.'</p></div></div><div class="v-chapter"><span class="v-no">第二十章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰   关雎  乐而不淫 哀而不伤  </span><span class="mtext zh-simp h-punct">子曰：“《关雎》，乐而不淫，哀而不伤。”</span><span class="mtext zh-trad v-nopunct">子曰   關雎  樂而不淫 哀而不傷  </span><span class="mtext zh-trad h-punct">子曰：「《關雎》，樂而不淫，哀而不傷。」</span><span class="mzhu zh-simp">乐 音洛   关雎   周南  国风  诗 之首篇也 淫者 乐之过而失其正者也 伤者 哀之过而害于和者也  关雎 之诗 言后妃之德 宜配君子 求之未得 则不能无寤寐反侧之忧 求而得之 则宜其有琴瑟钟鼓之乐 盖其忧虽深而不害于和 其乐虽盛而不失其正 故夫子称之如此 欲学者玩其辞 审其音 而有以识其性情之正也 </span><span class="mzhu zh-trad">樂 音洛   關雎   周南  國風  詩 之首篇也 淫者 樂之過而失其正者也 傷者 哀之過而害於和者也  關雎 之詩 言后妃之德 宜配君子 求之未得 則不能無寤寐反側之憂 求而得之 則宜其有琴瑟鐘鼓之樂 蓋其憂雖深而不害於和 其樂雖盛而不失其正 故夫子稱之如此 欲學者玩其辭 審其音 而有以識其性情之正也 </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“《关雎》，乐而不淫，哀而不伤。”</p><p class="zh-trad">子曰：「《關雎》，樂而不淫，哀而不傷。」</p></div><div class="ch-en h-only"><p>The Master said, 'The Kwan Tsu is expressive of enjoyment without being licentious, and of grief without being hurtfully excessive.'</p></div></div><div class="v-chapter"><span class="v-no">第二十一章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">哀公问社于宰我 宰我对曰  夏后氏以松 殷人以柏 周人以栗 曰使民战栗  </span><span class="mtext zh-simp h-punct">哀公问社于宰我。宰我对曰：“夏后氏以松，殷人以柏，周人以栗，曰使民战栗。”</span><span class="mtext zh-trad v-nopunct">哀公問社於宰我 宰我對曰  夏後氏以松 殷人以柏 周人以栗 曰使民戰慄  </span><span class="mtext zh-trad h-punct">哀公問社於宰我。宰我對曰：「夏後氏以松，殷人以柏，周人以栗，曰使民戰慄。」</span><span class="mzhu zh-simp">宰我 孔子弟子 名予 三代之社不同者 古者立社 各树其土之所宜木以为主也 战栗 恐惧貌 宰我又言周所以用栗之意如此 岂以古者戮人于社 故附会其说与 </span><span class="mzhu zh-trad">宰我 孔子弟子 名予 三代之社不同者 古者立社 各樹其土之所宜木以為主也 戰慄 恐懼貌 宰我又言周所以用栗之意如此 豈以古者戮人於社 故附會其說與 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子闻之曰  成事不说 遂事不谏 既往不咎  </span><span class="mtext zh-simp h-punct">子闻之曰：“成事不说，遂事不谏，既往不咎。”</span><span class="mtext zh-trad v-nopunct">子聞之曰  成事不說 遂事不諫 既往不咎  </span><span class="mtext zh-trad h-punct">子聞之曰：「成事不說，遂事不諫，既往不咎。」</span><span class="mzhu zh-simp">遂事 谓事虽未成 而势不能已者 孔子以宰我所对 非立社之本意 又启时君杀伐之心 而其言已出 不可复救 故历言此以深责之 欲使谨其后也  尹氏曰  古者各以所宜木名其社 非取义于木也 宰我不知而妄对 故夫子责之  </span><span class="mzhu zh-trad">遂事 謂事雖未成 而勢不能已者 孔子以宰我所對 非立社之本意 又啟時君殺伐之心 而其言已出 不可復救 故歷言此以深責之 欲使謹其後也  尹氏曰  古者各以所宜木名其社 非取義於木也 宰我不知而妄對 故夫子責之  </span></span><div class="h-text h-only"><p class="zh-simp">哀公问社于宰我。宰我对曰：“夏后氏以松，殷人以柏，周人以栗，曰使民战栗。”子闻之曰：“成事不说，遂事不谏，既往不咎。”</p><p class="zh-trad">哀公問社於宰我。宰我對曰：「夏後氏以松，殷人以柏，周人以栗，曰使民戰慄。」子聞之曰：「成事不說，遂事不諫，既往不咎。」</p></div><div class="ch-en h-only"><p>1. The Duke Ai asked Tsai Wo about the altars of the spirits of the land. Tsai Wo replied, 'The Hsia sovereign planted the pine tree about them; the men of the Yin planted the cypress; and the men of the Chau planted the chestnut tree, meaning thereby to cause the people to be in awe.' 2. When the Master heard it, he said, 'Things that are done, it is needless to speak about; things that have had their course, it is needless to remonstrate about; things that are past, it is needless to blame.'</p></div></div><div class="v-chapter"><span class="v-no">第二十二章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  管仲之器小哉  </span><span class="mtext zh-simp h-punct">子曰：“管仲之器小哉！”</span><span class="mtext zh-trad v-nopunct">子曰  管仲之器小哉  </span><span class="mtext zh-trad h-punct">子曰：「管仲之器小哉！」</span><span class="mzhu zh-simp">管仲 齐大夫 名夷吾 相桓公霸诸侯 器小 言其不知圣贤大学之道 故局量褊浅 规模卑狭 不能正身修德以致主于王道 </span><span class="mzhu zh-trad">管仲 齊大夫 名夷吾 相桓公霸諸侯 器小 言其不知聖賢大學之道 故局量褊淺 規模卑狹 不能正身修德以致主於王道 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct">或曰  管仲俭乎  曰  管氏有三归 官事不摄 焉得俭  </span><span class="mtext zh-simp h-punct">或曰：“管仲俭乎？”曰：“管氏有三归，官事不摄，焉得俭？”</span><span class="mtext zh-trad v-nopunct">或曰  管仲儉乎  曰  管氏有三歸 官事不攝 焉得儉  </span><span class="mtext zh-trad h-punct">或曰：「管仲儉乎？」曰：「管氏有三歸，官事不攝，焉得儉？」</span><span class="mzhu zh-simp">焉 于虔反  或人盖疑器小之为俭 三归 台名 事见 说苑  摄 兼也 家臣不能具官 一人常兼数事 管仲不然 皆言其侈 </span><span class="mzhu zh-trad">焉 於虔反  或人蓋疑器小之為儉 三歸 台名 事見 說苑  攝 兼也 家臣不能具官 一人常兼數事 管仲不然 皆言其侈 </span></span><span class="v-seg"><span class="mtext zh-simp v-nopunct"> 然则管仲知礼乎  曰  邦君树塞门 管氏亦树塞门 邦君为两君之好 有反坫 管氏亦有反坫 管氏而知礼 孰不知礼  </span><span class="mtext zh-simp h-punct">“然则管仲知礼乎？”曰：“邦君树塞门，管氏亦树塞门；邦君为两君之好，有反坫，管氏亦有反坫。管氏而知礼，孰不知礼？”</span><span class="mtext zh-trad v-nopunct"> 然則管仲知禮乎  曰  邦君樹塞門 管氏亦樹塞門 邦君為兩君之好 有反坫 管氏亦有反坫 管氏而知禮 孰不知禮  </span><span class="mtext zh-trad h-punct">「然則管仲知禮乎？」曰：「邦君樹塞門，管氏亦樹塞門；邦君為兩君之好，有反坫，管氏亦有反坫。管氏而知禮，孰不知禮？」</span><span class="mzhu zh-simp">好 去声 坫 丁念反  或人又疑不俭为知礼 屏谓之树 塞 犹蔽也 设屏于门 以蔽内外也 好 谓好会 坫 在两楹之间 献酬饮毕 则反爵于其上 此皆诸侯之礼 而管仲僭之 不知礼也 愚谓孔子讥管仲之器小 其旨深矣 或人不知而疑其俭 故斥其奢以明其非俭 或又疑其知礼 故又斥其僭 以明其不知礼 盖虽不复明言小器之所以然 而其所以小者 于此亦可见矣 故程子曰  奢而犯礼 其器之小可知 盖器大 则自知礼而无此失矣  此言当深味也  苏氏曰  自修身正家以及于国 则其本深 其及者远 是谓大器 扬雄所谓 大器犹规矩准绳  先自治而后治人者是也 管仲三归反坫 桓公内嬖六人 而霸天下 其本固已浅矣 管仲死 桓公薨 天下不复宗齐  杨氏曰  夫子大管仲之功而小其器 盖非王佐之才 虽能合诸侯 正天下 其器不足称也 道学不明 而王霸之略混为一途 故闻管仲之器小 则疑其为俭 以不俭告之 则又疑其知礼 盖世方以诡遇为功 而不知为之范 则不悟其小宜矣  </span><span class="mzhu zh-trad">好 去聲 坫 丁念反  或人又疑不儉為知禮 屏謂之樹 塞 猶蔽也 設屏於門 以蔽內外也 好 謂好會 坫 在兩楹之間 獻酬飲畢 則反爵於其上 此皆諸侯之禮 而管仲僭之 不知禮也 愚謂孔子譏管仲之器小 其旨深矣 或人不知而疑其儉 故斥其奢以明其非儉 或又疑其知禮 故又斥其僭 以明其不知禮 蓋雖不復明言小器之所以然 而其所以小者 於此亦可見矣 故程子曰  奢而犯禮 其器之小可知 蓋器大 則自知禮而無此失矣  此言當深味也  蘇氏曰  自修身正家以及於國 則其本深 其及者遠 是謂大器 揚雄所謂 大器猶規矩準繩  先自治而後治人者是也 管仲三歸反坫 桓公內嬖六人 而霸天下 其本固已淺矣 管仲死 桓公薨 天下不復宗齊  楊氏曰  夫子大管仲之功而小其器 蓋非王佐之才 雖能合諸侯 正天下 其器不足稱也 道學不明 而王霸之略混為一途 故聞管仲之器小 則疑其為儉 以不儉告之 則又疑其知禮 蓋世方以詭遇為功 而不知為之范 則不悟其小宜矣  </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“管仲之器小哉！”或曰：“管仲俭乎？”曰：“管氏有三归，官事不摄，焉得俭？”“然则管仲知礼乎？”曰：“邦君树塞门，管氏亦树塞门；邦君为两君之好，有反坫，管氏亦有反坫。管氏而知礼，孰不知礼？”</p><p class="zh-trad">子曰：「管仲之器小哉！」或曰：「管仲儉乎？」曰：「管氏有三歸，官事不攝，焉得儉？」「然則管仲知禮乎？」曰：「邦君樹塞門，管氏亦樹塞門；邦君為兩君之好，有反坫，管氏亦有反坫。管氏而知禮，孰不知禮？」</p></div><div class="ch-en h-only"><p>1. The Master said, 'Small indeed was the capacity of Kwan Chung!' 2. Some one said, 'Was Kwan Chung parsimonious?' 'Kwan,' was the reply, 'had the San Kwei, and his officers performed no double duties; how can he be considered parsimonious?' 3. 'Then, did Kwan Chung know the rules of propriety?' The Master said, 'The princes of States have a screen intercepting the view at their gates. Kwan had likewise a screen at his gate. The princes of States on any friendly meeting between two of them, had a stand on which to place their inverted cups. Kwan had also such a stand. If Kwan knew the rules of propriety, who does not know them?'</p></div></div><div class="v-chapter"><span class="v-no">第二十三章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子语鲁大师乐 曰  乐其可知也 始作 翕如也 从之 纯如也 皦如也 绎如也 以成  </span><span class="mtext zh-simp h-punct">子语鲁大师乐。曰：“乐其可知也：始作，翕如也；从之，纯如也，皦如也，绎如也，以成。”</span><span class="mtext zh-trad v-nopunct">子語魯大師樂 曰  樂其可知也 始作 翕如也 從之 純如也 皦如也 繹如也 以成  </span><span class="mtext zh-trad h-punct">子語魯大師樂。曰：「樂其可知也：始作，翕如也；從之，純如也，皦如也，繹如也，以成。」</span><span class="mzhu zh-simp">语 去声 大 音泰 从 音纵  语 告也 大师 乐官名 时音乐废缺 故孔子教之 翕 合也 从 放也 纯 和也 皦 明也 绎 相续不绝也 成 乐之一终也  谢氏曰  五音六律不具 不足以为乐 翕如 言其合也 五音合矣 清浊高下 如五味之相济而后和 故曰 纯如  合而和矣 欲其无相夺伦 故曰 皦如  然岂宫自宫而商自商乎 不相反而相连 如贯珠可也 故曰 绎如 也 以成  </span><span class="mzhu zh-trad">語 去聲 大 音泰 從 音縱  語 告也 大師 樂官名 時音樂廢缺 故孔子教之 翕 合也 從 放也 純 和也 皦 明也 繹 相續不絕也 成 樂之一終也  謝氏曰  五音六律不具 不足以為樂 翕如 言其合也 五音合矣 清濁高下 如五味之相濟而後和 故曰 純如  合而和矣 欲其無相奪倫 故曰 皦如  然豈宮自宮而商自商乎 不相反而相連 如貫珠可也 故曰 繹如 也 以成  </span></span><div class="h-text h-only"><p class="zh-simp">子语鲁大师乐。曰：“乐其可知也：始作，翕如也；从之，纯如也，皦如也，绎如也，以成。”</p><p class="zh-trad">子語魯大師樂。曰：「樂其可知也：始作，翕如也；從之，純如也，皦如也，繹如也，以成。」</p></div><div class="ch-en h-only"><p>The Master instructing the grand music-master of Lu said, 'How to play music may be known. At the commencement of the piece, all the parts should sound together. As it proceeds, they should be in harmony while severally distinct and flowing without break, and thus on to the conclusion.'</p></div></div><div class="v-chapter"><span class="v-no">第二十四章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">仪封人请见 曰  君子之至于斯也 吾未尝不得见也  从者见之 出曰  二三子 何患于丧乎 天下之无道也久矣 天将以夫子为木铎  </span><span class="mtext zh-simp h-punct">仪封人请见。曰：“君子之至于斯也，吾未尝不得见也。”从者见之。出曰：“二三子，何患于丧乎？天下之无道也久矣，天将以夫子为木铎。”</span><span class="mtext zh-trad v-nopunct">儀封人請見 曰  君子之至於斯也 吾未嘗不得見也  從者見之 出曰  二三子 何患於喪乎 天下之無道也久矣 天將以夫子為木鐸  </span><span class="mtext zh-trad h-punct">儀封人請見。曰：「君子之至於斯也，吾未嘗不得見也。」從者見之。出曰：「二三子，何患於喪乎？天下之無道也久矣，天將以夫子為木鐸。」</span><span class="mzhu zh-simp">请见 见之之见 贤遍反 从 丧 皆去声  仪 卫邑 封人 掌封疆之官 盖贤而隐于下位者也 君子 谓当时贤者 至此皆得见之 自言其平日不见绝于贤者 而求以自通也 见之 谓通使得见 丧 谓失位去国  礼 曰 丧欲速贫 是也 木铎 金口木舌 施政教时所振 以警众者也 言乱极当治 天必将使夫子得位设教 不久失位也 封人一见夫子而遽以是称之 其所得于观感之间者深矣 或曰  木铎所以 于道路 言天使夫子失位 周流四方以行其教 如木铎之 于道路也  </span><span class="mzhu zh-trad">請見 見之之見 賢遍反 從 喪 皆去聲  儀 衛邑 封人 掌封疆之官 蓋賢而隱於下位者也 君子 謂當時賢者 至此皆得見之 自言其平日不見絕於賢者 而求以自通也 見之 謂通使得見 喪 謂失位去國  禮 曰 喪欲速貧 是也 木鐸 金口木舌 施政教時所振 以警眾者也 言亂極當治 天必將使夫子得位設教 不久失位也 封人一見夫子而遽以是稱之 其所得於觀感之間者深矣 或曰  木鐸所以 於道路 言天使夫子失位 周流四方以行其教 如木鐸之 於道路也  </span></span><div class="h-text h-only"><p class="zh-simp">仪封人请见。曰：“君子之至于斯也，吾未尝不得见也。”从者见之。出曰：“二三子，何患于丧乎？天下之无道也久矣，天将以夫子为木铎。”</p><p class="zh-trad">儀封人請見。曰：「君子之至於斯也，吾未嘗不得見也。」從者見之。出曰：「二三子，何患於喪乎？天下之無道也久矣，天將以夫子為木鐸。」</p></div><div class="ch-en h-only"><p>The border warden at Yi requested to be introduced to the Master, saying, 'When men of superior virtue have come to this, I have never been denied the privilege of seeing them.' The followers of the sage introduced him, and when he came out from the interview, he said, 'My friends, why are you distressed by your master's loss of office? The kingdom has long been without the principles of truth and right; Heaven is going to use your master as a bell with its wooden tongue.'</p></div></div><div class="v-chapter"><span class="v-no">第二十五章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子谓韶  尽美矣 又尽善也  谓武  尽美矣 未尽善也  </span><span class="mtext zh-simp h-punct">子谓韶，“尽美矣，又尽善也。”谓武，“尽美矣，未尽善也”。</span><span class="mtext zh-trad v-nopunct">子謂韶  盡美矣 又盡善也  謂武  盡美矣 未盡善也  </span><span class="mtext zh-trad h-punct">子謂韶，「盡美矣，又盡善也。」謂武，「盡美矣，未盡善也」。</span><span class="mzhu zh-simp">韶 舜乐 武 武王乐 美者 声容之盛 善者 美之实也 舜绍尧致治 武王伐纣救民 其功一也 故其乐皆尽美 然舜之德 性之也 又以揖逊而有天下 武王之德 反之也 又以征诛而得天下 故其实有不同者  程子曰  成汤放桀 惟有惭德 武王亦然 故未尽善 尧 舜 汤 武 其揆一也 征伐非其所欲 所遇之时然尔  </span><span class="mzhu zh-trad">韶 舜樂 武 武王樂 美者 聲容之盛 善者 美之實也 舜紹堯致治 武王伐紂救民 其功一也 故其樂皆盡美 然舜之德 性之也 又以揖遜而有天下 武王之德 反之也 又以征誅而得天下 故其實有不同者  程子曰  成湯放桀 惟有慚德 武王亦然 故未盡善 堯 舜 湯 武 其揆一也 征伐非其所欲 所遇之時然爾  </span></span><div class="h-text h-only"><p class="zh-simp">子谓韶，“尽美矣，又尽善也。”谓武，“尽美矣，未尽善也”。</p><p class="zh-trad">子謂韶，「盡美矣，又盡善也。」謂武，「盡美矣，未盡善也」。</p></div><div class="ch-en h-only"><p>The Master said of the Shao that it was perfectly beautiful and also perfectly good. He said of the Wu that it was perfectly beautiful but not perfectly good.</p></div></div><div class="v-chapter"><span class="v-no">第二十六章</span><span class="v-seg"><span class="mtext zh-simp v-nopunct">子曰  居上不宽 为礼不敬 临丧不哀 吾何以观之哉  </span><span class="mtext zh-simp h-punct">子曰：“居上不宽，为礼不敬，临丧不哀，吾何以观之哉？”</span><span class="mtext zh-trad v-nopunct">子曰  居上不寬 為禮不敬 臨喪不哀 吾何以觀之哉  </span><span class="mtext zh-trad h-punct">子曰：「居上不寬，為禮不敬，臨喪不哀，吾何以觀之哉？」</span><span class="mzhu zh-simp">居上主于爱人 故以宽为本 为礼以敬为本 临丧以哀为本 既无其本 则以何者而观其所行之得失哉 </span><span class="mzhu zh-trad">居上主於愛人 故以寬為本 為禮以敬為本 臨喪以哀為本 既無其本 則以何者而觀其所行之得失哉 </span></span><div class="h-text h-only"><p class="zh-simp">子曰：“居上不宽，为礼不敬，临丧不哀，吾何以观之哉？”</p><p class="zh-trad">子曰：「居上不寬，為禮不敬，臨喪不哀，吾何以觀之哉？」</p></div><div class="ch-en h-only"><p>The Master said, 'High station filled without indulgent generosity; ceremonies performed without reverence; mourning conducted without sorrow;-- wherewith should I contemplate such ways?'</p></div></div></div>
+  <p class="v-hint">← 左右拖动或滚轮横向阅读（从右向左）</p>
 </div></section>
-<section class="section alt" id="text"><div class="wrap narrow">
-<h2 class="sec-title"><span class="en">Text & Commentary</span>原文与朱熹集注</h2>
-<article class="chapter" id="c1">
-<h3><span class="ch-no">第一章</span></h3>
-<p class="ch-text zh-simp">孔子谓季氏：“八佾舞于庭，是可忍也，孰不可忍也？”</p>
-<p class="ch-text zh-trad">孔子謂季氏：「八佾舞於庭，是可忍也，孰不可忍也？」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">佾，音逸。　季氏，鲁大夫季孙氏也。佾，舞列也，天子八、诸侯六、大夫四、士二。每佾人数，如其佾数。或曰：“每佾八人。”未详孰是。季氏以大夫而僭用天子之乐，孔子言其此事尚忍为之，则何事不可忍为。或曰：“忍，容忍也。”盖深疾之之辞。　范氏曰：“乐舞之数，自上而下，降杀以两而已，故两之间，不可以毫发僭差也。孔子为政，先正礼乐，则季氏之罪不容诛矣。”谢氏曰：“君子于其所不当为不敢须臾处，不忍故也。而季氏忍此矣，则虽弑父与君，亦何所惮而不为乎？”</p>
-<p class="zhu-text zh-trad">佾，音逸。　季氏，魯大夫季孫氏也。佾，舞列也，天子八、諸侯六、大夫四、士二。每佾人數，如其佾數。或曰：「每佾八人。」未詳孰是。季氏以大夫而僭用天子之樂，孔子言其此事尚忍為之，則何事不可忍為。或曰：「忍，容忍也。」蓋深疾之之辭。　范氏曰：「樂舞之數，自上而下，降殺以兩而已，故兩之間，不可以毫髮僭差也。孔子為政，先正禮樂，則季氏之罪不容誅矣。」謝氏曰：「君子於其所不當為不敢須臾處，不忍故也。而季氏忍此矣，則雖弒父與君，亦何所憚而不為乎？」</p>
-</div>
-<p class="ch-en">Confucius said of the head of the Chi family, who had eight rows of pantomimes in his area, 'If he can bear to do this, what may he not bear to do?'</p>
-</article>
-<article class="chapter" id="c2">
-<h3><span class="ch-no">第二章</span></h3>
-<p class="ch-text zh-simp">三家者以雍彻。子曰：“‘相维辟公，天子穆穆’，奚取于三家之堂？”</p>
-<p class="ch-text zh-trad">三家者以雍徹。子曰：「『相維辟公，天子穆穆』，奚取於三家之堂？」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">彻，直列反。相，去声。　三家，鲁大夫孟孙、叔孙、季孙之家也。雍，周颂篇名。彻，祭毕而收其俎也。天子宗庙之祭，则歌雍以彻，是时三家僭而用之。相，助也。辟公，诸侯也。穆穆，深远之意，天子之容也。此雍诗之辞，孔子引之，言三家之堂非有此事，亦何取于此义而歌之乎？讥其无知妄作，以取僭窃之罪。　程子曰：“周公之功固大矣，皆臣子之分所当为，鲁安得独用天子礼乐哉？成王之赐，伯禽之受，皆非也。其因袭之弊，遂使季氏僭八佾，三家僭雍彻，故仲尼讥之。”</p>
-<p class="zhu-text zh-trad">徹，直列反。相，去聲。　三家，魯大夫孟孫、叔孫、季孫之家也。雍，周頌篇名。徹，祭畢而收其俎也。天子宗廟之祭，則歌雍以徹，是時三家僭而用之。相，助也。辟公，諸侯也。穆穆，深遠之意，天子之容也。此雍詩之辭，孔子引之，言三家之堂非有此事，亦何取於此義而歌之乎？譏其無知妄作，以取僭竊之罪。　程子曰：「周公之功固大矣，皆臣子之分所當為，魯安得獨用天子禮樂哉？成王之賜，伯禽之受，皆非也。其因襲之弊，遂使季氏僭八佾，三家僭雍徹，故仲尼譏之。」</p>
-</div>
-<p class="ch-en">The three families used the YUNG ode, while the vessels were being removed, at the conclusion of the sacrifice. The Master said, '"Assisting are the princes;-- the son of heaven looks profound and grave:"-- what application can these words have in the hall of the three families?'</p>
-</article>
-<article class="chapter" id="c3">
-<h3><span class="ch-no">第三章</span></h3>
-<p class="ch-text zh-simp">子曰：“人而不仁，如礼何？人而不仁，如乐何？”</p>
-<p class="ch-text zh-trad">子曰：「人而不仁，如禮何？人而不仁，如樂何？」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">游氏曰：“人而不仁，则人心亡矣，其如礼乐何哉？言虽欲用之，而礼乐不为之用也。”程子曰：“仁者天下之正理。失正理，则无序而不和。”李氏曰：“礼乐待人而后行，苟非其人，则虽玉帛交错，钟鼓铿锵，亦将如之何哉？”然记者序此于八佾雍彻之后，疑其为僭礼乐者发也。</p>
-<p class="zhu-text zh-trad">游氏曰：「人而不仁，則人心亡矣，其如禮樂何哉？言雖欲用之，而禮樂不為之用也。」程子曰：「仁者天下之正理。失正理，則無序而不和。」李氏曰：「禮樂待人而後行，苟非其人，則雖玉帛交錯，鐘鼓鏗鏘，亦將如之何哉？」然記者序此於八佾雍徹之後，疑其為僭禮樂者發也。</p>
-</div>
-<p class="ch-en">The Master said, 'If a man be without the virtues proper to humanity, what has he to do with the rites of propriety? If a man be without the virtues proper to humanity, what has he to do with music?'</p>
-</article>
-<article class="chapter" id="c4">
-<h3><span class="ch-no">第四章</span></h3>
-<p class="ch-text zh-simp">林放问礼之本。子曰：“大哉问！礼，与其奢也，宁俭；丧，与其易也，宁戚。”</p>
-<p class="ch-text zh-trad">林放問禮之本。子曰：「大哉問！禮，與其奢也，寧儉；喪，與其易也，寧戚。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">林放，鲁人。见世之为礼者，专事繁文，而疑其本之不在是也，故以为问。孔子以时方逐末，而放独有志于本，故大其问。盖得其本，则礼之全体无不在其中矣。易，去声。　易，治也。孟子曰：“易其田畴。”在丧礼，则节文习熟，而无哀痛惨怛之实者也。戚则一于哀，而文不足耳。礼贵得中，奢易则过于文，俭戚则不及而质，二者皆未合礼。然凡物之理，必先有质而后有文，则质乃礼之本也。　范氏曰：“夫祭与其敬不足而礼有馀也，不若礼不足而敬有馀也，丧与其哀不足而礼有馀也，不若礼不足而哀有馀也。礼失之奢，丧失之易，皆不能反本，而随其末故也。礼奢而备，不若俭而不备之愈也；丧易而文，不若戚而不文之愈也。俭者物之质，戚者心之诚，故为礼之本。”杨氏曰：“礼始诸饮食，故污尊而抔饮，为之簠、簋、笾、豆、罍、爵之饰，所以文之也，则其本俭而已。丧不可以径情而直行，为之衰麻哭踊之数，所以节之也，则其本戚而已。周衰，世方以文灭质，而林放独能问礼之本，故夫子大之，而告之以此。”</p>
-<p class="zhu-text zh-trad">林放，魯人。見世之為禮者，專事繁文，而疑其本之不在是也，故以為問。孔子以時方逐末，而放獨有志於本，故大其問。蓋得其本，則禮之全體無不在其中矣。易，去聲。　易，治也。孟子曰：「易其田疇。」在喪禮，則節文習熟，而無哀痛慘怛之實者也。戚則一於哀，而文不足耳。禮貴得中，奢易則過於文，儉戚則不及而質，二者皆未合禮。然凡物之理，必先有質而後有文，則質乃禮之本也。　范氏曰：「夫祭與其敬不足而禮有餘也，不若禮不足而敬有餘也，喪與其哀不足而禮有餘也，不若禮不足而哀有餘也。禮失之奢，喪失之易，皆不能反本，而隨其末故也。禮奢而備，不若儉而不備之愈也；喪易而文，不若戚而不文之愈也。儉者物之質，戚者心之誠，故為禮之本。」楊氏曰：「禮始諸飲食，故污尊而抔飲，為之簠、簋、籩、豆、罍、爵之飾，所以文之也，則其本儉而已。喪不可以徑情而直行，為之衰麻哭踴之數，所以節之也，則其本戚而已。周衰，世方以文滅質，而林放獨能問禮之本，故夫子大之，而告之以此。」</p>
-</div>
-<p class="ch-en">1. Lin Fang asked what was the first thing to be attended to in ceremonies. 2. The Master said, 'A great question indeed! 3. 'In festive ceremonies, it is better to be sparing than extravagant. In the ceremonies of mourning, it is better that there be deep sorrow than a minute attention to observances.'</p>
-</article>
-<article class="chapter" id="c5">
-<h3><span class="ch-no">第五章</span></h3>
-<p class="ch-text zh-simp">子曰：“夷狄之有君，不如诸夏之亡也。”</p>
-<p class="ch-text zh-trad">子曰：「夷狄之有君，不如諸夏之亡也。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">吴氏曰：“亡，古无字，通用。”程子曰：“夷狄且有君长，不如诸夏之僭乱，反无上下之分也。”尹氏曰：“孔子伤时之乱而叹之也。亡，非实亡也，虽有之，不能尽其道尔。”</p>
-<p class="zhu-text zh-trad">吳氏曰：「亡，古無字，通用。」程子曰：「夷狄且有君長，不如諸夏之僭亂，反無上下之分也。」尹氏曰：「孔子傷時之亂而歎之也。亡，非實亡也，雖有之，不能盡其道爾。」</p>
-</div>
-<p class="ch-en">The Master said, 'The rude tribes of the east and north have their princes, and are not like the States of our great land which are without them.'</p>
-</article>
-<article class="chapter" id="c6">
-<h3><span class="ch-no">第六章</span></h3>
-<p class="ch-text zh-simp">季氏旅于泰山。子谓冉有曰：“女弗能救与？”对曰：“不能。”子曰：“呜呼！曾谓泰山，不如林放乎？”</p>
-<p class="ch-text zh-trad">季氏旅於泰山。子謂冉有曰：「女弗能救與？」對曰：「不能。」子曰：「嗚呼！曾謂泰山，不如林放乎？」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">女，音汝。与，平声。　旅，祭名。泰山，山名，在鲁地。礼，诸侯祭封内山川，季氏祭之，僭也。冉有，孔子弟子，名求，时为季氏宰。救，谓救其陷于僭窃之罪。呜呼，叹辞。言神不享非礼，欲季氏知其无益而自止，又进林放以厉冉有也。　范氏曰：“冉有从季氏，夫子岂不知其不可告也，然而圣人不轻绝人。尽己之心，安知冉有之不能救、季氏之不可谏也。既不能正，则美林放以明泰山之不可诬，是亦教诲之道也。”</p>
-<p class="zhu-text zh-trad">女，音汝。與，平聲。　旅，祭名。泰山，山名，在魯地。禮，諸侯祭封內山川，季氏祭之，僭也。冉有，孔子弟子，名求，時為季氏宰。救，謂救其陷於僭竊之罪。嗚呼，歎辭。言神不享非禮，欲季氏知其無益而自止，又進林放以厲冉有也。　范氏曰：「冉有從季氏，夫子豈不知其不可告也，然而聖人不輕絕人。盡己之心，安知冉有之不能救、季氏之不可諫也。既不能正，則美林放以明泰山之不可誣，是亦教誨之道也。」</p>
-</div>
-<p class="ch-en">The chief of the Chi family was about to sacrifice to the T'ai mountain. The Master said to Zan Yu, 'Can you not save him from this?' He answered, 'I cannot.' Confucius said, 'Alas! will you say that the T'ai mountain is not so discerning as Lin Fang?'</p>
-</article>
-<article class="chapter" id="c7">
-<h3><span class="ch-no">第七章</span></h3>
-<p class="ch-text zh-simp">子曰：“君子无所争，必也射乎！揖让而升，下而饮，其争也君子。”</p>
-<p class="ch-text zh-trad">子曰：「君子無所爭，必也射乎！揖讓而升，下而飲，其爭也君子。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">饮，去声。　揖让而升者，大射之礼，耦进三揖而后升堂也。下而饮，谓射毕揖降，以俟众耦皆降，胜者乃揖不胜者升，取觯立饮也。言君子恭逊不与人争，惟于射而后有争。然其争也，雍容揖逊乃如此，则其争也君子，而非若小人之争矣。</p>
-<p class="zhu-text zh-trad">飲，去聲。　揖讓而升者，大射之禮，耦進三揖而後升堂也。下而飲，謂射畢揖降，以俟眾耦皆降，勝者乃揖不勝者升，取觶立飲也。言君子恭遜不與人爭，惟於射而後有爭。然其爭也，雍容揖遜乃如此，則其爭也君子，而非若小人之爭矣。</p>
-</div>
-<p class="ch-en">The Master said, 'The student of virtue has no contentions. If it be said he cannot avoid them, shall this be in archery? But he bows complaisantly to his competitors; thus he ascends the hall, descends, and exacts the forfeit of drinking. In his contention, he is still the Chun-tsze.'</p>
-</article>
-<article class="chapter" id="c8">
-<h3><span class="ch-no">第八章</span></h3>
-<p class="ch-text zh-simp">子夏问曰：“‘巧笑倩兮，美目盼兮，素以为绚兮。’何谓也？”子曰：“绘事后素。”曰：“礼后乎？”子曰：“起予者商也！始可与言诗已矣。”</p>
-<p class="ch-text zh-trad">子夏問曰：「『巧笑倩兮，美目盼兮，素以為絢兮。』何謂也？」子曰：「繪事後素。」曰：「禮後乎？」子曰：「起予者商也！始可與言詩已矣。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">倩，七练反。盼，普苋反。绚，呼县反。　此逸诗也。倩，好口辅也。盼，目黑白分也。素，粉地，画之质也。绚，采色，画之饰也。言人有此倩盼之美质，而又加以华采之饰，如有素地而加采色也。子夏疑其反谓以素为饰，故问之。绘，胡对反。　绘事，绘画之事也。后素，后于素也。《考工记》曰：“绘画之事后素功。”谓先以粉地为质，而后施五采，犹人有美质，然后可加文饰。礼必以忠信为质，犹绘事必以粉素为先。起，犹发也。起予，言能起发我之志意。　谢氏曰：“子贡因论学而知诗，子夏因论诗而知学，故皆可与言诗。”杨氏曰：“‘甘受和，白受采，忠信之人，可以学礼。苟无其质，礼不虚行’。此‘绘事后素’之说也。孔子曰‘绘事后素’，而子夏曰‘礼后乎’，可谓能继其志矣。非得之言意之表者能之乎？商赐可与言诗者以此。若夫玩心于章句之末，则其为诗也固而已矣。所谓‘起予’，则亦相长之义也。”</p>
-<p class="zhu-text zh-trad">倩，七練反。盼，普莧反。絢，呼縣反。　此逸詩也。倩，好口輔也。盼，目黑白分也。素，粉地，畫之質也。絢，採色，畫之飾也。言人有此倩盼之美質，而又加以華采之飾，如有素地而加采色也。子夏疑其反謂以素為飾，故問之。繪，胡對反。　繪事，繪畫之事也。後素，後於素也。《考工記》曰：「繪畫之事後素功。」謂先以粉地為質，而後施五采，猶人有美質，然後可加文飾。禮必以忠信為質，猶繪事必以粉素為先。起，猶發也。起予，言能起發我之志意。　謝氏曰：「子貢因論學而知詩，子夏因論詩而知學，故皆可與言詩。」楊氏曰：「『甘受和，白受采，忠信之人，可以學禮。苟無其質，禮不虛行』。此『繪事後素』之說也。孔子曰『繪事後素』，而子夏曰『禮後乎』，可謂能繼其志矣。非得之言意之表者能之乎？商賜可與言詩者以此。若夫玩心於章句之末，則其為詩也固而已矣。所謂『起予』，則亦相長之義也。」</p>
-</div>
-<p class="ch-en">1. Tsze-hsia asked, saying, 'What is the meaning of the passage-- "The pretty dimples of her artful smile! The well- defined black and white of her eye! The plain ground for the colours?"' 2. The Master said, 'The business of laying on the colours follows (the preparation of) the plain ground.' 3. 'Ceremonies then are a subsequent thing?' The Master said, 'It is Shang who can bring out my meaning. Now I can begin to talk about the odes with him.'</p>
-</article>
-<article class="chapter" id="c9">
-<h3><span class="ch-no">第九章</span></h3>
-<p class="ch-text zh-simp">子曰：“夏礼吾能言之，杞不足征也；殷礼吾能言之，宋不足征也。文献不足故也，足则吾能征之矣。”</p>
-<p class="ch-text zh-trad">子曰：「夏禮吾能言之，杞不足徵也；殷禮吾能言之，宋不足徵也。文獻不足故也，足則吾能徵之矣。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">杞，夏之后。宋，殷之后。征，证也。文，典籍也。献，贤也。言二代之礼，我能言之，而二国不足取以为证，以其文献不足故也。文献若足，则我能取之，以证君言矣。</p>
-<p class="zhu-text zh-trad">杞，夏之後。宋，殷之後。徵，證也。文，典籍也。獻，賢也。言二代之禮，我能言之，而二國不足取以為證，以其文獻不足故也。文獻若足，則我能取之，以證君言矣。</p>
-</div>
-<p class="ch-en">The Master said, 'I could describe the ceremonies of the Hsia dynasty, but Chi cannot sufficiently attest my words. I could describe the ceremonies of the Yin dynasty, but Sung cannot sufficiently attest my words. (They cannot do so) because of the insufficiency of their records and wise men. If those were sufficient, I could adduce them in support of my words.'</p>
-</article>
-<article class="chapter" id="c10">
-<h3><span class="ch-no">第十章</span></h3>
-<p class="ch-text zh-simp">子曰：“禘自既灌而往者，吾不欲观之矣。”</p>
-<p class="ch-text zh-trad">子曰：「禘自既灌而往者，吾不欲觀之矣。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">禘，大计反。　赵伯循曰：“禘，王者之大祭也。王者既立始祖之庙，又推始祖所自出之帝，祀之于始祖之庙，而以始祖配之也。成王以周公有大勋劳，赐鲁重祭。故得禘于周公之庙，以文王为所出之帝，而周公配之，然非礼矣。”灌者，方祭之始，用郁鬯之酒灌地，以降神也。鲁之君臣，当此之时，诚意未散，犹有可观，自此以后，则浸以懈怠而无足观矣。盖鲁祭非礼，孔子本不欲观，至此而失礼之中又失礼焉，故发此叹也。　谢氏曰：“夫子尝曰：‘我欲观夏道，是故之杞，而不足征也；我欲观殷道，是故之宋，而不足征也。’又曰：‘我观周道，幽厉伤之，吾舍鲁何适矣。鲁之郊禘非礼也，周公其衰矣！’考之杞宋已如彼，考之当今又如此，孔子所以深叹也。”</p>
-<p class="zhu-text zh-trad">禘，大計反。　趙伯循曰：「禘，王者之大祭也。王者既立始祖之廟，又推始祖所自出之帝，祀之於始祖之廟，而以始祖配之也。成王以周公有大勳勞，賜魯重祭。故得禘於周公之廟，以文王為所出之帝，而周公配之，然非禮矣。」灌者，方祭之始，用郁鬯之酒灌地，以降神也。魯之君臣，當此之時，誠意未散，猶有可觀，自此以後，則浸以懈怠而無足觀矣。蓋魯祭非禮，孔子本不欲觀，至此而失禮之中又失禮焉，故發此歎也。　謝氏曰：「夫子嘗曰：『我欲觀夏道，是故之杞，而不足征也；我欲觀殷道，是故之宋，而不足征也。』又曰：『我觀周道，幽厲傷之，吾捨魯何適矣。魯之郊禘非禮也，周公其衰矣！』考之杞宋已如彼，考之當今又如此，孔子所以深歎也。」</p>
-</div>
-<p class="ch-en">The Master said, 'At the great sacrifice, after the pouring out of the libation, I have no wish to look on.'</p>
-</article>
-<article class="chapter" id="c11">
-<h3><span class="ch-no">第十一章</span></h3>
-<p class="ch-text zh-simp">或问禘之说。子曰：“不知也。知其说者之于天下也，其如示诸斯乎！”指其掌。</p>
-<p class="ch-text zh-trad">或問禘之說。子曰：「不知也。知其說者之於天下也，其如示諸斯乎！」指其掌。</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">先王报本追远之意，莫深于禘。非仁孝诚敬之至，不足以与此，非或人之所及也。而不王不禘之法，又鲁之所当讳者，故以不知答之。示，与视同。指其掌，弟子记夫子言此而自指其掌，言其明且易也。盖知禘之说，则理无不明，诚无不格，而治天下不难矣。圣人于此，岂真有所不知也哉？</p>
-<p class="zhu-text zh-trad">先王報本追遠之意，莫深於禘。非仁孝誠敬之至，不足以與此，非或人之所及也。而不王不禘之法，又魯之所當諱者，故以不知答之。示，與視同。指其掌，弟子記夫子言此而自指其掌，言其明且易也。蓋知禘之說，則理無不明，誠無不格，而治天下不難矣。聖人於此，豈真有所不知也哉？</p>
-</div>
-<p class="ch-en">Some one asked the meaning of the great sacrifice. The Master said, 'I do not know. He who knew its meaning would find it as easy to govern the kingdom as to look on this;-- pointing to his palm.</p>
-</article>
-<article class="chapter" id="c12">
-<h3><span class="ch-no">第十二章</span></h3>
-<p class="ch-text zh-simp">祭如在，祭神如神在。子曰：“吾不与祭，如不祭。”</p>
-<p class="ch-text zh-trad">祭如在，祭神如神在。子曰：「吾不與祭，如不祭。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">程子曰：“祭，祭先祖也。祭神，祭外神也。祭先主于孝，祭神主于敬。”愚谓此门人记孔子祭祀之诚意。与，去声。　又记孔子之言以明之。言己当祭之时，或有故不得与，而使他人摄之，则不得致其如在之诚。故虽已祭，而此心缺然，如未尝祭也。　范氏曰：“君子之祭，七日戒，三日齐，必见所祭者，诚之至也。是故郊则天神格，庙则人鬼享，皆由己以致之也。有其诚则有其神，无其诚则无其神，可不谨乎？吾不与祭如不祭，诚为实，礼为虚也。”</p>
-<p class="zhu-text zh-trad">程子曰：「祭，祭先祖也。祭神，祭外神也。祭先主於孝，祭神主於敬。」愚謂此門人記孔子祭祀之誠意。與，去聲。　又記孔子之言以明之。言己當祭之時，或有故不得與，而使他人攝之，則不得致其如在之誠。故雖已祭，而此心缺然，如未嘗祭也。　范氏曰：「君子之祭，七日戒，三日齊，必見所祭者，誠之至也。是故郊則天神格，廟則人鬼享，皆由己以致之也。有其誠則有其神，無其誠則無其神，可不謹乎？吾不與祭如不祭，誠為實，禮為虛也。」</p>
-</div>
-<p class="ch-en">1. He sacrificed to the dead, as if they were present. He sacrificed to the spirits, as if the spirits were present. 2. The Master said, 'I consider my not being present at the sacrifice, as if I did not sacrifice.'</p>
-</article>
-<article class="chapter" id="c13">
-<h3><span class="ch-no">第十三章</span></h3>
-<p class="ch-text zh-simp">王孙贾问曰：“与其媚于奥，宁媚于灶，何谓也？”子曰：“不然，获罪于天，无所祷也。”</p>
-<p class="ch-text zh-trad">王孫賈問曰：「與其媚於奧，寧媚於竈，何謂也？」子曰：「不然，獲罪於天，無所禱也。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">王孙贾，卫大夫。媚，亲顺也。室西南隅为奥。灶者，五祀之一，夏所祭也。凡祭五祀，皆先设主而祭于其所，然后迎尸而祭于奥，略如祭宗庙之仪。如祀灶，则设主于灶陉，祭毕，而更设馔于奥以迎尸也。故时俗之语，因以奥有常尊，而非祭之主；灶虽卑贱，而当时用事。喻自结于君，不如阿附权臣也。贾，卫之权臣，故以此讽孔子。天，即理也；其尊无对，非奥灶之可比也。逆理，则获罪于天矣，岂媚于奥灶所能祷而免乎？言但当顺理，非特不当媚灶，亦不可媚于奥也。　谢氏曰：“圣人之言，逊而不迫。使王孙贾而知此意，不为无益；使其不知，亦非所以取祸。”</p>
-<p class="zhu-text zh-trad">王孫賈，衛大夫。媚，親順也。室西南隅為奧。竈者，五祀之一，夏所祭也。凡祭五祀，皆先設主而祭於其所，然後迎尸而祭於奧，略如祭宗廟之儀。如祀竈，則設主於竈陘，祭畢，而更設饌於奧以迎尸也。故時俗之語，因以奧有常尊，而非祭之主；竈雖卑賤，而當時用事。喻自結於君，不如阿附權臣也。賈，衛之權臣，故以此諷孔子。天，即理也；其尊無對，非奧竈之可比也。逆理，則獲罪於天矣，豈媚於奧竈所能禱而免乎？言但當順理，非特不當媚竈，亦不可媚於奧也。　謝氏曰：「聖人之言，遜而不迫。使王孫賈而知此意，不為無益；使其不知，亦非所以取禍。」</p>
-</div>
-<p class="ch-en">1. Wang-sun Chia asked, saying, 'What is the meaning of the saying, "It is better to pay court to the furnace than to the south-west corner?"' 2. The Master said, 'Not so. He who offends against Heaven has none to whom he can pray.'</p>
-</article>
-<article class="chapter" id="c14">
-<h3><span class="ch-no">第十四章</span></h3>
-<p class="ch-text zh-simp">子曰：“周监于二代，郁郁乎文哉！吾从周。”</p>
-<p class="ch-text zh-trad">子曰：「周監於二代，郁郁乎文哉！吾從周。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">郁，于六反。　监，视也。二代，夏商也。言其视二代之礼而损益之。郁郁，文盛貌。　尹氏曰：“三代之礼至周大备，夫子美其文而从之。”</p>
-<p class="zhu-text zh-trad">郁，於六反。　監，視也。二代，夏商也。言其視二代之禮而損益之。郁郁，文盛貌。　尹氏曰：「三代之禮至周大備，夫子美其文而從之。」</p>
-</div>
-<p class="ch-en">The Master said, 'Chau had the advantage of viewing the two past dynasties. How complete and elegant are its regulations! I follow Chau.'</p>
-</article>
-<article class="chapter" id="c15">
-<h3><span class="ch-no">第十五章</span></h3>
-<p class="ch-text zh-simp">子入大庙，每事问。或曰：“孰谓鄹人之子知礼乎？入大庙，每事问。”子闻之曰：“是礼也。”</p>
-<p class="ch-text zh-trad">子入大廟，每事問。或曰：「孰謂鄹人之子知禮乎？入大廟，每事問。」子聞之曰：「是禮也。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">大，音泰。鄹，侧留反。　大庙，鲁周公庙。此盖孔子始仕之时，入而助祭也。鄹，鲁邑名。孔子父叔梁纥，尝为其邑大夫。孔子自少以知礼闻，故或人因此而讥之。孔子言‘是礼’者，敬谨之至，乃所以为礼也。　尹氏曰：“礼者，敬而已矣。虽知亦问，谨之至也，其为敬莫大于此。谓之不知礼者，岂足以知孔子哉？”</p>
-<p class="zhu-text zh-trad">大，音泰。鄹，側留反。　大廟，魯周公廟。此蓋孔子始仕之時，入而助祭也。鄹，魯邑名。孔子父叔梁紇，嘗為其邑大夫。孔子自少以知禮聞，故或人因此而譏之。孔子言『是禮』者，敬謹之至，乃所以為禮也。　尹氏曰：「禮者，敬而已矣。雖知亦問，謹之至也，其為敬莫大於此。謂之不知禮者，豈足以知孔子哉？」</p>
-</div>
-<p class="ch-en">The Master, when he entered the grand temple, asked about everything. Some one said, 'Who will say that the son of the man of Tsau knows the rules of propriety! He has entered the grand temple and asks about everything.' The Master heard the remark, and said, 'This is a rule of propriety.'</p>
-</article>
-<article class="chapter" id="c16">
-<h3><span class="ch-no">第十六章</span></h3>
-<p class="ch-text zh-simp">子曰：“射不主皮，为力不同科，古之道也。”</p>
-<p class="ch-text zh-trad">子曰：「射不主皮，為力不同科，古之道也。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">为，去声。　射不主皮，乡射礼文。为力不同科，孔子解礼之意如此也。皮，革也，布侯而栖革于其中以为的，所谓鹄也。科，等也。古者射以观德，但主于中，而不主于贯革，盖以人之力有强弱，不同等也。记曰：“武王克商，散军郊射，而贯革之射息。”正谓此也。周衰，礼废，列国兵争，复尚贯革，故孔子叹之。　杨氏曰：“中可以学而能，力不可以强而至。圣人言古之道，所以正今之失。”</p>
-<p class="zhu-text zh-trad">為，去聲。　射不主皮，鄉射禮文。為力不同科，孔子解禮之意如此也。皮，革也，布侯而棲革於其中以為的，所謂鵠也。科，等也。古者射以觀德，但主於中，而不主於貫革，蓋以人之力有強弱，不同等也。記曰：「武王克商，散軍郊射，而貫革之射息。」正謂此也。周衰，禮廢，列國兵爭，復尚貫革，故孔子歎之。　楊氏曰：「中可以學而能，力不可以強而至。聖人言古之道，所以正今之失。」</p>
-</div>
-<p class="ch-en">The Master said, 'In archery it is not going through the leather which is the principal thing;-- because people's strength is not equal. This was the old way.'</p>
-</article>
-<article class="chapter" id="c17">
-<h3><span class="ch-no">第十七章</span></h3>
-<p class="ch-text zh-simp">子贡欲去告朔之饩羊。子曰：“赐也，尔爱其羊，我爱其礼。”</p>
-<p class="ch-text zh-trad">子貢欲去告朔之餼羊。子曰：「賜也，爾愛其羊，我愛其禮。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">去，起吕反。告，古笃反。饩，许气反。　告朔之礼：古者天子常以季冬，颁来岁十二月之朔于诸侯，诸侯受而藏之祖庙。月朔，则以特羊告庙，请而行之。饩，生牲也。鲁自文公始不视朔，而有司犹供此羊，故子贡欲去之。爱，犹惜也。子贡盖惜其无实而妄费。然礼虽废，羊存，犹得以识之而可复焉。若并去其羊，则此礼遂亡矣，孔子所以惜之。　杨氏曰：“告朔，诸侯所以?命于君亲，礼之大者。鲁不视朔矣，然羊存则告朔之名未泯，而其实因可举。此夫子所以惜之也。”</p>
-<p class="zhu-text zh-trad">去，起呂反。告，古篤反。餼，許氣反。　告朔之禮：古者天子常以季冬，頒來歲十二月之朔於諸侯，諸侯受而藏之祖廟。月朔，則以特羊告廟，請而行之。餼，生牲也。魯自文公始不視朔，而有司猶供此羊，故子貢欲去之。愛，猶惜也。子貢蓋惜其無實而妄費。然禮雖廢，羊存，猶得以識之而可復焉。若並去其羊，則此禮遂亡矣，孔子所以惜之。　楊氏曰：「告朔，諸侯所以?命於君親，禮之大者。魯不視朔矣，然羊存則告朔之名未泯，而其實因可舉。此夫子所以惜之也。」</p>
-</div>
-<p class="ch-en">1. Tsze-kung wished to do away with the offering of a sheep connected with the inauguration of the first day of each month. 2. The Master said, 'Ts'ze, you love the sheep; I love the ceremony.'</p>
-</article>
-<article class="chapter" id="c18">
-<h3><span class="ch-no">第十八章</span></h3>
-<p class="ch-text zh-simp">子曰：“事君尽礼，人以为谄也。”</p>
-<p class="ch-text zh-trad">子曰：「事君盡禮，人以為諂也。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">黄氏曰：“孔子于事君之礼，非有所加也，如是而后尽尔。时人不能，反以为谄。故孔子言之，以明礼之当然也。”程子曰：“圣人事君尽礼，当时以为谄。若他人言之，必曰‘我事君尽礼，小人以为谄’，而孔子之言止于如此。圣人道大德宏，此亦可见。”</p>
-<p class="zhu-text zh-trad">黃氏曰：「孔子於事君之禮，非有所加也，如是而後盡爾。時人不能，反以為諂。故孔子言之，以明禮之當然也。」程子曰：「聖人事君盡禮，當時以為諂。若他人言之，必曰『我事君盡禮，小人以為諂』，而孔子之言止於如此。聖人道大德宏，此亦可見。」</p>
-</div>
-<p class="ch-en">The Master said, 'The full observance of the rules of propriety in serving one's prince is accounted by people to be flattery.'</p>
-</article>
-<article class="chapter" id="c19">
-<h3><span class="ch-no">第十九章</span></h3>
-<p class="ch-text zh-simp">定公问：“君使臣，臣事君，如之何？”孔子对曰：“君使臣以礼，臣事君以忠。”</p>
-<p class="ch-text zh-trad">定公問：「君使臣，臣事君，如之何？」孔子對曰：「君使臣以禮，臣事君以忠。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">定公，鲁君，名宋。二者皆理之当然，各欲自尽而已。　吕氏曰：“使臣不患其不忠，患礼之不至；事君不患其无礼，患忠之不足。”尹氏曰：“君臣以义合者也。故君使臣以礼，则臣事君以忠。”</p>
-<p class="zhu-text zh-trad">定公，魯君，名宋。二者皆理之當然，各欲自盡而已。　呂氏曰：「使臣不患其不忠，患禮之不至；事君不患其無禮，患忠之不足。」尹氏曰：「君臣以義合者也。故君使臣以禮，則臣事君以忠。」</p>
-</div>
-<p class="ch-en">The Duke Ting asked how a prince should employ his ministers, and how ministers should serve their prince. Confucius replied, 'A prince should employ his minister according to according to the rules of propriety; ministers should serve their prince with faithfulness.'</p>
-</article>
-<article class="chapter" id="c20">
-<h3><span class="ch-no">第二十章</span></h3>
-<p class="ch-text zh-simp">子曰：“《关雎》，乐而不淫，哀而不伤。”</p>
-<p class="ch-text zh-trad">子曰：「《關雎》，樂而不淫，哀而不傷。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">乐，音洛。　《关雎》，《周南》《国风》《诗》之首篇也。淫者，乐之过而失其正者也。伤者，哀之过而害于和者也。《关雎》之诗，言后妃之德，宜配君子。求之未得，则不能无寤寐反侧之忧；求而得之，则宜其有琴瑟钟鼓之乐。盖其忧虽深而不害于和，其乐虽盛而不失其正，故夫子称之如此。欲学者玩其辞，审其音，而有以识其性情之正也。</p>
-<p class="zhu-text zh-trad">樂，音洛。　《關雎》，《周南》《國風》《詩》之首篇也。淫者，樂之過而失其正者也。傷者，哀之過而害於和者也。《關雎》之詩，言后妃之德，宜配君子。求之未得，則不能無寤寐反側之憂；求而得之，則宜其有琴瑟鐘鼓之樂。蓋其憂雖深而不害於和，其樂雖盛而不失其正，故夫子稱之如此。欲學者玩其辭，審其音，而有以識其性情之正也。</p>
-</div>
-<p class="ch-en">The Master said, 'The Kwan Tsu is expressive of enjoyment without being licentious, and of grief without being hurtfully excessive.'</p>
-</article>
-<article class="chapter" id="c21">
-<h3><span class="ch-no">第二十一章</span></h3>
-<p class="ch-text zh-simp">哀公问社于宰我。宰我对曰：“夏后氏以松，殷人以柏，周人以栗，曰使民战栗。”子闻之曰：“成事不说，遂事不谏，既往不咎。”</p>
-<p class="ch-text zh-trad">哀公問社於宰我。宰我對曰：「夏後氏以松，殷人以柏，周人以栗，曰使民戰慄。」子聞之曰：「成事不說，遂事不諫，既往不咎。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">宰我，孔子弟子，名予。三代之社不同者，古者立社，各树其土之所宜木以为主也。战栗，恐惧貌。宰我又言周所以用栗之意如此。岂以古者戮人于社，故附会其说与？遂事，谓事虽未成，而势不能已者。孔子以宰我所对，非立社之本意，又启时君杀伐之心，而其言已出，不可复救，故历言此以深责之，欲使谨其后也。　尹氏曰：“古者各以所宜木名其社，非取义于木也。宰我不知而妄对，故夫子责之。”</p>
-<p class="zhu-text zh-trad">宰我，孔子弟子，名予。三代之社不同者，古者立社，各樹其土之所宜木以為主也。戰慄，恐懼貌。宰我又言周所以用栗之意如此。豈以古者戮人於社，故附會其說與？遂事，謂事雖未成，而勢不能已者。孔子以宰我所對，非立社之本意，又啟時君殺伐之心，而其言已出，不可復救，故歷言此以深責之，欲使謹其後也。　尹氏曰：「古者各以所宜木名其社，非取義於木也。宰我不知而妄對，故夫子責之。」</p>
-</div>
-<p class="ch-en">1. The Duke Ai asked Tsai Wo about the altars of the spirits of the land. Tsai Wo replied, 'The Hsia sovereign planted the pine tree about them; the men of the Yin planted the cypress; and the men of the Chau planted the chestnut tree, meaning thereby to cause the people to be in awe.' 2. When the Master heard it, he said, 'Things that are done, it is needless to speak about; things that have had their course, it is needless to remonstrate about; things that are past, it is needless to blame.'</p>
-</article>
-<article class="chapter" id="c22">
-<h3><span class="ch-no">第二十二章</span></h3>
-<p class="ch-text zh-simp">子曰：“管仲之器小哉！”或曰：“管仲俭乎？”曰：“管氏有三归，官事不摄，焉得俭？”“然则管仲知礼乎？”曰：“邦君树塞门，管氏亦树塞门；邦君为两君之好，有反坫，管氏亦有反坫。管氏而知礼，孰不知礼？”</p>
-<p class="ch-text zh-trad">子曰：「管仲之器小哉！」或曰：「管仲儉乎？」曰：「管氏有三歸，官事不攝，焉得儉？」「然則管仲知禮乎？」曰：「邦君樹塞門，管氏亦樹塞門；邦君為兩君之好，有反坫，管氏亦有反坫。管氏而知禮，孰不知禮？」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">管仲，齐大夫，名夷吾，相桓公霸诸侯。器小，言其不知圣贤大学之道，故局量褊浅、规模卑狭，不能正身修德以致主于王道。焉，于虔反。　或人盖疑器小之为俭。三归，台名。事见《说苑》。摄，兼也。家臣不能具官，一人常兼数事。管仲不然，皆言其侈。好，去声。坫，丁念反。　或人又疑不俭为知礼。屏谓之树。塞，犹蔽也。设屏于门，以蔽内外也。好，谓好会。坫，在两楹之间，献酬饮毕，则反爵于其上。此皆诸侯之礼，而管仲僭之，不知礼也。愚谓孔子讥管仲之器小，其旨深矣。或人不知而疑其俭，故斥其奢以明其非俭。或又疑其知礼，故又斥其僭，以明其不知礼。盖虽不复明言小器之所以然，而其所以小者，于此亦可见矣。故程子曰：“奢而犯礼，其器之小可知。盖器大，则自知礼而无此失矣。”此言当深味也。　苏氏曰：“自修身正家以及于国，则其本深，其及者远，是谓大器。扬雄所谓‘大器犹规矩准绳’，先自治而后治人者是也。管仲三归反坫，桓公内嬖六人，而霸天下，其本固已浅矣。管仲死，桓公薨，天下不复宗齐。”杨氏曰：“夫子大管仲之功而小其器。盖非王佐之才，虽能合诸侯、正天下，其器不足称也。道学不明，而王霸之略混为一途。故闻管仲之器小，则疑其为俭，以不俭告之，则又疑其知礼。盖世方以诡遇为功，而不知为之范，则不悟其小宜矣。”</p>
-<p class="zhu-text zh-trad">管仲，齊大夫，名夷吾，相桓公霸諸侯。器小，言其不知聖賢大學之道，故局量褊淺、規模卑狹，不能正身修德以致主於王道。焉，於虔反。　或人蓋疑器小之為儉。三歸，台名。事見《說苑》。攝，兼也。家臣不能具官，一人常兼數事。管仲不然，皆言其侈。好，去聲。坫，丁念反。　或人又疑不儉為知禮。屏謂之樹。塞，猶蔽也。設屏於門，以蔽內外也。好，謂好會。坫，在兩楹之間，獻酬飲畢，則反爵於其上。此皆諸侯之禮，而管仲僭之，不知禮也。愚謂孔子譏管仲之器小，其旨深矣。或人不知而疑其儉，故斥其奢以明其非儉。或又疑其知禮，故又斥其僭，以明其不知禮。蓋雖不復明言小器之所以然，而其所以小者，於此亦可見矣。故程子曰：「奢而犯禮，其器之小可知。蓋器大，則自知禮而無此失矣。」此言當深味也。　蘇氏曰：「自修身正家以及於國，則其本深，其及者遠，是謂大器。揚雄所謂『大器猶規矩準繩』，先自治而後治人者是也。管仲三歸反坫，桓公內嬖六人，而霸天下，其本固已淺矣。管仲死，桓公薨，天下不復宗齊。」楊氏曰：「夫子大管仲之功而小其器。蓋非王佐之才，雖能合諸侯、正天下，其器不足稱也。道學不明，而王霸之略混為一途。故聞管仲之器小，則疑其為儉，以不儉告之，則又疑其知禮。蓋世方以詭遇為功，而不知為之范，則不悟其小宜矣。」</p>
-</div>
-<p class="ch-en">1. The Master said, 'Small indeed was the capacity of Kwan Chung!' 2. Some one said, 'Was Kwan Chung parsimonious?' 'Kwan,' was the reply, 'had the San Kwei, and his officers performed no double duties; how can he be considered parsimonious?' 3. 'Then, did Kwan Chung know the rules of propriety?' The Master said, 'The princes of States have a screen intercepting the view at their gates. Kwan had likewise a screen at his gate. The princes of States on any friendly meeting between two of them, had a stand on which to place their inverted cups. Kwan had also such a stand. If Kwan knew the rules of propriety, who does not know them?'</p>
-</article>
-<article class="chapter" id="c23">
-<h3><span class="ch-no">第二十三章</span></h3>
-<p class="ch-text zh-simp">子语鲁大师乐。曰：“乐其可知也：始作，翕如也；从之，纯如也，皦如也，绎如也，以成。”</p>
-<p class="ch-text zh-trad">子語魯大師樂。曰：「樂其可知也：始作，翕如也；從之，純如也，皦如也，繹如也，以成。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">语，去声。大，音泰。从，音纵。　语，告也。大师，乐官名。时音乐废缺，故孔子教之。翕，合也。从，放也。纯，和也。皦，明也。绎，相续不绝也。成，乐之一终也。　谢氏曰：“五音六律不具，不足以为乐。翕如，言其合也。五音合矣，清浊高下，如五味之相济而后和，故曰‘纯如’。合而和矣，欲其无相夺伦，故曰‘皦如’，然岂宫自宫而商自商乎？不相反而相连，如贯珠可也，故曰‘绎如’也，以成。”</p>
-<p class="zhu-text zh-trad">語，去聲。大，音泰。從，音縱。　語，告也。大師，樂官名。時音樂廢缺，故孔子教之。翕，合也。從，放也。純，和也。皦，明也。繹，相續不絕也。成，樂之一終也。　謝氏曰：「五音六律不具，不足以為樂。翕如，言其合也。五音合矣，清濁高下，如五味之相濟而後和，故曰『純如』。合而和矣，欲其無相奪倫，故曰『皦如』，然豈宮自宮而商自商乎？不相反而相連，如貫珠可也，故曰『繹如』也，以成。」</p>
-</div>
-<p class="ch-en">The Master instructing the grand music-master of Lu said, 'How to play music may be known. At the commencement of the piece, all the parts should sound together. As it proceeds, they should be in harmony while severally distinct and flowing without break, and thus on to the conclusion.'</p>
-</article>
-<article class="chapter" id="c24">
-<h3><span class="ch-no">第二十四章</span></h3>
-<p class="ch-text zh-simp">仪封人请见。曰：“君子之至于斯也，吾未尝不得见也。”从者见之。出曰：“二三子，何患于丧乎？天下之无道也久矣，天将以夫子为木铎。”</p>
-<p class="ch-text zh-trad">儀封人請見。曰：「君子之至於斯也，吾未嘗不得見也。」從者見之。出曰：「二三子，何患於喪乎？天下之無道也久矣，天將以夫子為木鐸。」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">请见、见之之见，贤遍反。从、丧，皆去声。　仪，卫邑。封人，掌封疆之官，盖贤而隐于下位者也。君子，谓当时贤者。至此皆得见之，自言其平日不见绝于贤者，而求以自通也。见之，谓通使得见。丧，谓失位去国，《礼》曰“丧欲速贫”是也。木铎，金口木舌，施政教时所振，以警众者也。言乱极当治，天必将使夫子得位设教，不久失位也。封人一见夫子而遽以是称之，其所得于观感之间者深矣。或曰：“木铎所以?于道路，言天使夫子失位，周流四方以行其教，如木铎之?于道路也。”</p>
-<p class="zhu-text zh-trad">請見、見之之見，賢遍反。從、喪，皆去聲。　儀，衛邑。封人，掌封疆之官，蓋賢而隱於下位者也。君子，謂當時賢者。至此皆得見之，自言其平日不見絕於賢者，而求以自通也。見之，謂通使得見。喪，謂失位去國，《禮》曰「喪欲速貧」是也。木鐸，金口木舌，施政教時所振，以警眾者也。言亂極當治，天必將使夫子得位設教，不久失位也。封人一見夫子而遽以是稱之，其所得於觀感之間者深矣。或曰：「木鐸所以?於道路，言天使夫子失位，周流四方以行其教，如木鐸之?於道路也。」</p>
-</div>
-<p class="ch-en">The border warden at Yi requested to be introduced to the Master, saying, 'When men of superior virtue have come to this, I have never been denied the privilege of seeing them.' The followers of the sage introduced him, and when he came out from the interview, he said, 'My friends, why are you distressed by your master's loss of office? The kingdom has long been without the principles of truth and right; Heaven is going to use your master as a bell with its wooden tongue.'</p>
-</article>
-<article class="chapter" id="c25">
-<h3><span class="ch-no">第二十五章</span></h3>
-<p class="ch-text zh-simp">子谓韶，“尽美矣，又尽善也。”谓武，“尽美矣，未尽善也”。</p>
-<p class="ch-text zh-trad">子謂韶，「盡美矣，又盡善也。」謂武，「盡美矣，未盡善也」。</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">韶，舜乐。武，武王乐。美者，声容之盛。善者，美之实也。舜绍尧致治，武王伐纣救民，其功一也，故其乐皆尽美。然舜之德，性之也，又以揖逊而有天下；武王之德，反之也，又以征诛而得天下，故其实有不同者。　程子曰：“成汤放桀，惟有惭德，武王亦然，故未尽善。尧、舜、汤、武，其揆一也。征伐非其所欲，所遇之时然尔。”</p>
-<p class="zhu-text zh-trad">韶，舜樂。武，武王樂。美者，聲容之盛。善者，美之實也。舜紹堯致治，武王伐紂救民，其功一也，故其樂皆盡美。然舜之德，性之也，又以揖遜而有天下；武王之德，反之也，又以征誅而得天下，故其實有不同者。　程子曰：「成湯放桀，惟有慚德，武王亦然，故未盡善。堯、舜、湯、武，其揆一也。征伐非其所欲，所遇之時然爾。」</p>
-</div>
-<p class="ch-en">The Master said of the Shao that it was perfectly beautiful and also perfectly good. He said of the Wu that it was perfectly beautiful but not perfectly good.</p>
-</article>
-<article class="chapter" id="c26">
-<h3><span class="ch-no">第二十六章</span></h3>
-<p class="ch-text zh-simp">子曰：“居上不宽，为礼不敬，临丧不哀，吾何以观之哉？”</p>
-<p class="ch-text zh-trad">子曰：「居上不寬，為禮不敬，臨喪不哀，吾何以觀之哉？」</p>
-<div class="ch-zhu">
-<p class="zhu-label">朱熹《论语集注》</p>
-<p class="zhu-text zh-simp">居上主于爱人，故以宽为本。为礼以敬为本，临丧以哀为本。既无其本，则以何者而观其所行之得失哉？</p>
-<p class="zhu-text zh-trad">居上主於愛人，故以寬為本。為禮以敬為本，臨喪以哀為本。既無其本，則以何者而觀其所行之得失哉？</p>
-</div>
-<p class="ch-en">The Master said, 'High station filled without indulgent generosity; ceremonies performed without reverence; mourning conducted without sorrow;-- wherewith should I contemplate such ways?'</p>
-</article>
-</div></section>
-<section class="section alt"><div class="wrap narrow">
-<div class="pian-nav"><a class="btn btn-line" href="pian02.html">← 上一篇</a><a class="btn btn-solid" href="index.html">论语目录</a><a class="btn btn-line" href="pian04.html">下一篇 →</a></div>
-</div></section>
-<footer class="foot"><div class="wrap narrow">
-      <p class="foot-brand">四书经典 · 论语 · 八佾</p>
-      <p class="foot-meta">测试版 · 更新于 2026-10-20</p>
-      <p class="foot-note">原文、朱熹集注据中华书局《四书章句集注》；英译据 James Legge《The Analects of Confucius》（公版）。本页不设白话译文与练习题，仅供学习与教学参考。</p>
-      <p class="foot-links"><a href="index.html">论语目录</a><span>·</span><a href="../index.html">四书首页</a><span>·</span><a href="https://1901151458-prog.github.io/english-materials/" rel="noopener">初中英语资料站</a></p>
-    </div></footer>
-</main>
+<section class="section" id="biblio"><div class="wrap narrow">
+  <h2 class="sec-title"><span class="en">Bibliography</span>参考书目（中华书局）</h2>
+  <ul class="biblio">
+    <li><b>朱熹《四书章句集注·论语集注》</b><span class="pub">中华书局</span><br>原文与随文小注的主要依据。</li>
+    <li><b>James Legge 英译</b><span class="pub">The Chinese Classics（公版）</span><br>英文对照，仅在横排版式显示。</li>
+  </ul>
+  <p class="source" style="margin-top:16px">说明：本页为竖排试验稿；四书其余页面仍为横排版式，待确认后统一调整。</p>
+  <div class="hero-actions center"><a class="btn btn-paper" href="../index.html">四书首页</a><button type="button" class="btn btn-paper" id="printBtn2">打印本页</button></div>
+</div></section><footer class="foot"><div class="wrap narrow">
+  <p class="foot-brand">四书经典 · 论语 · 八佾第三</p>
+  <p class="foot-meta">测试版 · 更新于 2026-10-21</p>
+  <p class="foot-note">原文、朱熹集注据中华书局《四书章句集注》；英译据 James Legge（公版）。本页不设白话译文与练习题。</p>
+  <p class="foot-links"><a href="../index.html">四书首页</a><span>·</span><a href="https://1901151458-prog.github.io/english-materials/" rel="noopener">初中英语资料站</a></p>
+</div></footer></main>
 <script src="../assets/app.js"></script>
 </body>
 </html>

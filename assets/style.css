@@ -318,3 +318,8 @@ body[data-layout="horizontal"] .v-nopunct{display:none!important}
 /* 竖排：半角空格保留（避免连续空格被折叠） */
 body[data-layout="vertical"] .mtext,
 body[data-layout="vertical"] .mzhu{white-space:pre-wrap}
+body[data-layout="vertical"] .h-only{display:none!important}
+/* 横排：合并整章文字，隐藏逐句竖排片段 */
+body[data-layout="horizontal"] .v-seg{display:none!important}
+.h-text p{margin:0 0 10px;font-size:calc(20px * var(--fs-main, 1));line-height:1.95;color:var(--ink);font-weight:600}
+.h-text p:last-child{margin-bottom:0}
