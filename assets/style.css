@@ -394,3 +394,6 @@ html{scroll-behavior:smooth}
   .topbar-actions .top-link{padding:2px 2px}
   .books{gap:12px}
 }
+
+/* 孝经注疏：疏文更小、更淡 */
+.mzhu-shu{font-size:calc(11.8px * var(--fs-zhu, 1));color:#9a866c;letter-spacing:.01em}
