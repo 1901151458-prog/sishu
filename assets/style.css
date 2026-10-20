@@ -279,7 +279,7 @@ body[data-layout="horizontal"] .mzhu::before{content:"朱熹《大学章句》�
 /* ===== 竖排随文小注 v3 ===== */
 body[data-zhu="off"] .mzhu{display:none!important}
 .fs-group{display:inline-flex;align-items:center;gap:2px}
-.vstage{width:100vw;margin-left:calc(50% - 50vw);box-sizing:border-box;overflow:hidden}
+.vstage{width:100%;box-sizing:border-box;overflow:hidden}
 .vstage-head{padding:34px 20px 6px}
 .vstage-head .sec-title{margin-bottom:8px}
 .vstage .v-tip{max-width:1000px;margin:0 0 10px}
@@ -361,3 +361,36 @@ body[data-layout="horizontal"] .vstage-short .vflow{width:auto}
 body[data-layout="vertical"] .four-lines .v-chapter:first-child .v-seg{display:block;margin:0 0 0 .2em}
 body[data-layout="vertical"] .four-lines .v-chapter:first-child .v-seg .mzhu{display:block}
 body[data-layout="vertical"] .four-lines .v-chapter:first-child{padding-right:.6em}
+
+/* ---------- 移动端整体优化 ---------- */
+.topbar-actions{min-width:0;max-width:100%}
+@media(max-width:760px){
+  .wrap{width:calc(100% - 28px)}
+  .topbar-inner{justify-content:center;text-align:center}
+  .brand{margin:0 auto}
+  .topbar-actions{width:100%;justify-content:center;gap:6px}
+  .topbar-actions .top-link{font-size:13px;padding:2px 3px}
+  .topbar-actions .icon-btn,.topbar-actions .script-btn,.topbar-actions .layout-btn{font-size:12px;padding:5px 7px}
+  .v-hero{padding:0 0 18px;display:block}
+  .v-hero-title h1{font-size:clamp(30px,10vw,46px);letter-spacing:.1em}
+  .v-hero-title h1 span{font-size:14px;letter-spacing:.28em}
+  .v-hero-side{border-left:0;padding-left:0;margin-top:20px}
+  .v-hero-hint{font-size:12px;letter-spacing:.04em;line-height:1.8}
+  .hero-actions{flex-wrap:wrap}
+  .hero-actions .btn{font-size:13px;padding:10px 16px}
+  .vstage-head{padding:22px 14px 4px}
+  .vflow{height:62vh}
+}
+
+/* ---------- 体验细节 ---------- */
+html{scroll-behavior:smooth}
+#text,#books,#biblio,#basis{scroll-margin-top:88px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+@media(max-width:760px){
+  .hero-title small{letter-spacing:.22em;line-height:2}
+  .hero-quote{padding:16px 14px}
+  .hero-quote .line{font-size:16px;line-height:1.85}
+  .hero-quote .line-tw{font-size:15px}
+  .topbar-actions .top-link{padding:2px 2px}
+  .books{gap:12px}
+}
