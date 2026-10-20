@@ -342,3 +342,6 @@ body[data-hmode="wide"][data-layout="horizontal"] .v-chapter{display:none!import
 
 /* 中英对照区不参与滚动渐显，保证截图/打印/直接可见 */
 #english .reveal{opacity:1!important;transform:none!important}
+
+/* 礼记样张：注疏来源小字 */
+.src-note{margin:8px 0 0;font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.7}
