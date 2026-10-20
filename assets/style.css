@@ -252,13 +252,13 @@ body[data-script="trad"] .zh-simp{display:none!important}
 .v-no{display:inline-block;margin:0 0 10px;color:var(--cinnabar);font-size:calc(13px * var(--fs));letter-spacing:.12em;font-weight:600}
 .mtext{font-size:calc(24px * var(--fs));font-weight:600;color:var(--ink);letter-spacing:.04em}
 .mzhu{font-size:calc(12.5px * var(--fs));color:#8a7358;font-weight:400;letter-spacing:.01em}
-.mzhu::before{content:"〔注〕";color:var(--gold);font-size:.9em;letter-spacing:.08em}
+
 .v-hint{margin:10px 0 6px;text-align:right;font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--muted)}
 body[data-layout="horizontal"] .vflow{writing-mode:horizontal-tb;height:auto;overflow:visible;padding:0;border:0}
 body[data-layout="horizontal"] .v-chapter{display:block;margin:0 0 16px;padding:22px 26px;border:1px solid var(--line);border-left:1px solid var(--line);border-radius:8px;background:var(--card)}
 body[data-layout="horizontal"] .v-no{display:block;margin-bottom:8px}
 body[data-layout="horizontal"] .mtext{display:block;margin:0 0 10px}
-body[data-layout="horizontal"] .mzhu{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:calc(14.5px * var(--fs))}
+body[data-layout="horizontal"] .mzhu{display:none!important;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:calc(14.5px * var(--fs))}
 body[data-layout="horizontal"] .mzhu::before{content:"朱熹《大学章句》　";color:var(--gold)}
 .en-block{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px 24px;margin:0 0 16px}
 .en-block h3{margin:0 0 10px;font-size:15px;letter-spacing:.1em;color:var(--cinnabar)}
@@ -279,16 +279,16 @@ body[data-layout="horizontal"] .mzhu::before{content:"朱熹《大学章句》�
 /* ===== 竖排随文小注 v3 ===== */
 body[data-zhu="off"] .mzhu{display:none!important}
 .fs-group{display:inline-flex;align-items:center;gap:2px}
-.vstage{width:100vw;margin-left:calc(50% - 50vw);box-sizing:border-box;overflow-x:auto;overflow-y:hidden}
+.vstage{width:100vw;margin-left:calc(50% - 50vw);box-sizing:border-box;overflow:hidden}
 .vstage-head{padding:34px 20px 6px}
 .vstage-head .sec-title{margin-bottom:8px}
 .vstage .v-tip{max-width:1000px;margin:0 0 10px}
-.vflow{writing-mode:vertical-rl;text-orientation:upright;width:max-content;min-width:100%;height:clamp(500px,72vh,860px);overflow:visible;padding:10px 40px 10px 24px;cursor:grab}
+.vflow{writing-mode:vertical-rl;text-orientation:upright;width:100%;max-width:100%;box-sizing:border-box;height:clamp(500px,72vh,860px);overflow-x:auto;overflow-y:hidden;padding:10px 40px 10px 24px;cursor:grab;scroll-behavior:auto}
 .v-chapter{margin:0 0 0 26px;padding:0 0 0 8px;border-left:1px solid rgba(84,63,39,.14)}
 .v-seg{display:inline}
 .mtext{font-size:calc(24px * var(--fs-main, 1));font-weight:600;color:var(--ink);letter-spacing:.04em}
-.mzhu{font-size:calc(13px * var(--fs-zhu, 1));color:#8a7358;font-weight:400;letter-spacing:.02em;margin-right:.35em}
-.mzhu::before{content:"〔注〕";color:var(--gold);font-size:.9em;letter-spacing:.08em}
+.mzhu{font-size:calc(13px * var(--fs-zhu, 1));color:#8a7358;font-weight:400;letter-spacing:.02em;margin-right:.15em}
+
 .v-no{display:inline-block;margin:0 0 12px;color:var(--cinnabar);font-size:calc(13px * var(--fs-main, 1));letter-spacing:.12em;font-weight:600}
 .v-hint{margin:6px 0 18px;text-align:right;padding-right:28px;font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--muted)}
 .vstage:fullscreen{background:var(--paper);padding:18px 0 0;display:flex;flex-direction:column;overflow-x:auto;overflow-y:hidden}
@@ -302,6 +302,6 @@ body[data-layout="horizontal"] .vflow{writing-mode:horizontal-tb;width:auto;min-
 body[data-layout="horizontal"] .v-chapter{display:block;margin:0 0 16px;padding:22px 26px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
 body[data-layout="horizontal"] .v-seg{display:block;margin:0 0 10px}
 body[data-layout="horizontal"] .mtext{display:block;margin:0 0 4px;font-size:calc(22px * var(--fs-main, 1))}
-body[data-layout="horizontal"] .mzhu{display:block;font-size:calc(14px * var(--fs-zhu, 1));color:#6b5740;margin-right:0;padding-left:14px;border-left:2px solid rgba(169,123,53,.25)}
+body[data-layout="horizontal"] .mzhu{display:none!important;font-size:calc(14px * var(--fs-zhu, 1));color:#6b5740;margin-right:0;padding-left:14px;border-left:2px solid rgba(169,123,53,.25)}
 body[data-layout="horizontal"] .vstage:fullscreen .vflow{height:auto;overflow-y:auto}
 @media(max-width:640px){.vflow{height:66vh}.vstage-head{padding:22px 14px 4px}}

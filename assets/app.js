@@ -125,14 +125,32 @@
   }
   if (fsBtn) fsBtn.addEventListener("click", toggleFs);
   if (fsBtn2) fsBtn2.addEventListener("click", function (ev) { ev.preventDefault(); toggleFs(); });
-  function positionVflow() {
-    if (!vstage || body.getAttribute("data-layout") !== "vertical") return;
-    requestAnimationFrame(function () {
-      try { vstage.scrollLeft = vstage.scrollWidth - vstage.clientWidth; } catch (e) {}
+  var vflow = document.getElementById("vflow");
+  if (vflow) {
+    // 竖排：左右拖动 + 滚轮横向滚动
+    var dragging = false, dragStartX = 0, dragStartScroll = 0;
+    vflow.addEventListener("pointerdown", function (ev) {
+      if (body.getAttribute("data-layout") !== "vertical") return;
+      dragging = true; dragStartX = ev.clientX; dragStartScroll = vflow.scrollLeft;
+      vflow.style.cursor = "grabbing";
+      if (vflow.setPointerCapture) { try { vflow.setPointerCapture(ev.pointerId); } catch (e) {} }
     });
+    vflow.addEventListener("pointermove", function (ev) {
+      if (!dragging) return;
+      vflow.scrollLeft = dragStartScroll + (ev.clientX - dragStartX);
+    });
+    function endDrag() { dragging = false; vflow.style.cursor = ""; }
+    vflow.addEventListener("pointerup", endDrag);
+    vflow.addEventListener("pointercancel", endDrag);
+    vflow.addEventListener("pointerleave", function () { if (!dragging) vflow.style.cursor = ""; });
+    vflow.addEventListener("wheel", function (ev) {
+      if (body.getAttribute("data-layout") !== "vertical") return;
+      if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
+        vflow.scrollLeft -= ev.deltaY;
+        ev.preventDefault();
+      }
+    }, { passive: false });
   }
-  positionVflow();
-  window.addEventListener("resize", positionVflow);
 
   /* ---------- 字号 ---------- */
 
