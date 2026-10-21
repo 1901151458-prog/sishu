@@ -403,3 +403,10 @@ body.no-bilingual[data-layout="horizontal"] .v-seg{display:block!important;margi
 body.no-bilingual[data-layout="horizontal"] .v-chapter{display:block;margin:0 0 16px;padding:22px 26px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
 body.no-bilingual[data-layout="horizontal"] .v-no{display:block;margin-bottom:8px}
 body.no-bilingual[data-layout="horizontal"] .vflow{writing-mode:horizontal-tb;height:auto;overflow:visible;padding:0;border-top:0}
+
+/* 论语全文朗诵版 */
+body.recite .mtext{font-size:calc(30px * var(--fs-main, 1));font-weight:500;letter-spacing:.07em}
+body.recite .v-no{font-size:calc(15px * var(--fs-main, 1));letter-spacing:.16em}
+body.recite .v-chapter{margin-left:32px;padding-left:14px}
+body.recite .vflow{height:clamp(560px,78vh,900px)}
+@media(max-width:640px){body.recite .mtext{font-size:calc(24px * var(--fs-main, 1))}}
