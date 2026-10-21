@@ -453,3 +453,5 @@ html:fullscreen .vstage-head,html:fullscreen .v-hint,html:fullscreen #biblio,
 html:fullscreen .foot,html:fullscreen .progress,html:fullscreen .layout-switch{display:none!important}
 
 html:fullscreen main > section:not(#text){display:none!important}
+
+@media print{body.recite .v-nopunct{display:inline!important}}
