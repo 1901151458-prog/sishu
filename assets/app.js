@@ -54,6 +54,23 @@
   }
 
 
+  /* ---------- 注音开关（论语全文等） ---------- */
+  var zyBtn = document.getElementById("zhuyinBtn");
+  function setZhuyin(on) {
+    body.setAttribute("data-zhuyin", on ? "on" : "off");
+    if (zyBtn) zyBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    try { localStorage.setItem("lunyu-zhuyin", on ? "on" : "off"); } catch (e) {}
+  }
+  if (zyBtn) {
+    var zyState = "off";
+    try {
+      var zyParam = new URLSearchParams(window.location.search).get("zhuyin");
+      zyState = zyParam || localStorage.getItem("lunyu-zhuyin") || "off";
+    } catch (e) {}
+    setZhuyin(zyState === "on");
+    zyBtn.addEventListener("click", function () { setZhuyin(body.getAttribute("data-zhuyin") !== "on"); });
+  }
+
   /* ---------- 竖排 / 横排切换 ---------- */
   var layoutButtons = Array.prototype.slice.call(document.querySelectorAll(".layout-switch .layout-btn"));
   function setLayout(mode) {

@@ -410,3 +410,9 @@ body.recite .v-no{font-size:calc(15px * var(--fs-main, 1));letter-spacing:.16em}
 body.recite .v-chapter{margin-left:32px;padding-left:14px}
 body.recite .vflow{height:clamp(560px,78vh,900px)}
 @media(max-width:640px){body.recite .mtext{font-size:calc(24px * var(--fs-main, 1))}}
+
+/* 论语注音（可选） */
+ruby.zy{font-size:inherit;ruby-position:over}
+ruby.zy rt{font-size:.42em;color:#8a7358;font-family:var(--sans);letter-spacing:0;line-height:1}
+body[data-zhuyin="off"] ruby.zy rt{display:none}
+body[data-zhuyin="off"] ruby.zy{font-size:inherit}
