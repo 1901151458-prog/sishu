@@ -61,19 +61,20 @@
   var pureExit = document.getElementById("pureExit");
   var vflowAuto = document.getElementById("vflow");
   if (autoBtn && vflowAuto) {
-    var autoOn = false, autoRaf = null;
+    var autoOn = false, autoTimer = null, autoPos = 0;
     var autoSpeed = 4;
     try { autoSpeed = Number(localStorage.getItem("lunyu-speed")) || 4; } catch (e) {}
     if (speedRange) speedRange.value = autoSpeed;
     function autoStep() {
       if (!autoOn) return;
-      vflowAuto.scrollLeft -= autoSpeed * 0.045;
-      autoRaf = window.requestAnimationFrame(autoStep);
+      autoPos -= autoSpeed * 0.12;
+      vflowAuto.scrollLeft = autoPos;
     }
     function setAuto(on) {
       autoOn = !!on;
       autoBtn.setAttribute("aria-pressed", autoOn ? "true" : "false");
-      if (autoOn) { autoStep(); } else if (autoRaf) { window.cancelAnimationFrame(autoRaf); autoRaf = null; }
+      if (autoOn) { autoPos = vflowAuto.scrollLeft; autoStep(); autoTimer = window.setInterval(autoStep, 50); }
+      else if (autoTimer) { window.clearInterval(autoTimer); autoTimer = null; }
     }
     autoBtn.addEventListener("click", function () { setAuto(!autoOn); });
     if (speedRange) {
