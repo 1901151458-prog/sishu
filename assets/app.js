@@ -242,15 +242,17 @@
       savedLayout = layoutParam || localStorage.getItem("sishu-layout") || body.getAttribute("data-layout") || "vertical";
     } catch (e) {}
     setLayout(savedLayout === "horizontal" ? "horizontal" : "vertical");
-    var vflowEl = document.getElementById("vflow");
-    if (vflowEl) {
-      vflowEl.addEventListener("wheel", function (ev) {
-        if (Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
-          vflowEl.scrollLeft -= ev.deltaY;
-          ev.preventDefault();
-        }
-      }, { passive: false });
-    }
+  } else {
+    setLayout("vertical");
+  }
+  var vflowEl = document.getElementById("vflow");
+  if (vflowEl) {
+    vflowEl.addEventListener("wheel", function (ev) {
+      if (body.getAttribute("data-layout") === "vertical" && Math.abs(ev.deltaY) > Math.abs(ev.deltaX)) {
+        vflowEl.scrollLeft -= ev.deltaY;
+        ev.preventDefault();
+      }
+    }, { passive: false });
   }
 
   /* ---------- 竖排：句间留半角空格（无注也不黏连） ---------- */
