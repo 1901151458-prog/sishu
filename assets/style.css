@@ -430,3 +430,5 @@ body.pure .recite .mtext{font-size:calc(34px * var(--fs-main, 1))}
 body.pure .recite .v-no{font-size:calc(16px * var(--fs-main, 1))}
 body.pure .v-chapter{margin-left:44px}
 body.pure .pure-exit{display:block;position:fixed;right:16px;bottom:16px;z-index:99;border:1px solid rgba(169,123,53,.5);background:rgba(255,250,240,.92);color:#5c4a32;border-radius:999px;padding:8px 14px;font-family:var(--sans);font-size:12px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+
+#speedVal{min-width:2.2em;text-align:right;color:#e8d6b3;font-variant-numeric:tabular-nums}

@@ -61,28 +61,71 @@
   var pureExit = document.getElementById("pureExit");
   var vflowAuto = document.getElementById("vflow");
   if (autoBtn && vflowAuto) {
-    var autoOn = false, autoTimer = null, autoPos = 0;
-    var autoSpeed = 4;
+    var autoOn = false, autoTimer = null, autoPos = 0, lastTick = 0;
+    var autoSpeed = 20, speedVal = null;
     try { autoSpeed = Number(localStorage.getItem("lunyu-speed")) || 20; } catch (e) {}
-    if (speedRange) speedRange.value = autoSpeed;
-    function autoStep() {
+    if (speedRange) {
+      speedRange.value = autoSpeed;
+      var speedWrap = speedRange.parentNode;
+      if (speedWrap) {
+        speedVal = document.createElement("span");
+        speedVal.id = "speedVal";
+        speedVal.textContent = autoSpeed;
+        speedWrap.appendChild(speedVal);
+      }
+    }
+    function autoPps() { return 2 + autoSpeed * 2.5; }
+    function autoMin() { return Math.min(0, vflowAuto.clientWidth - vflowAuto.scrollWidth); }
+    function updateSpeed() {
+      if (!speedRange) return;
+      autoSpeed = Math.min(100, Math.max(1, Number(speedRange.value) || 20));
+      if (speedVal) speedVal.textContent = autoSpeed;
+      try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (e) {}
+    }
+    function autoTick() {
       if (!autoOn) return;
-      autoPos -= autoSpeed * 0.12;
+      var now = Date.now();
+      var dt = lastTick ? Math.min(80, now - lastTick) : 16;
+      lastTick = now;
+      var min = autoMin();
+      if (autoPos <= min + 0.5) {
+        autoPos = min;
+        vflowAuto.scrollLeft = min;
+        setAuto(false);
+        return;
+      }
+      autoPos -= autoPps() * dt / 1000;
+      if (autoPos < min) autoPos = min;
       vflowAuto.scrollLeft = autoPos;
     }
     function setAuto(on) {
-      autoOn = !!on;
+      on = !!on;
+      if (on && autoOn) return;
+      autoOn = on;
       autoBtn.setAttribute("aria-pressed", autoOn ? "true" : "false");
-      if (autoOn) { autoPos = vflowAuto.scrollLeft; autoStep(); autoTimer = window.setInterval(autoStep, 50); }
-      else if (autoTimer) { window.clearInterval(autoTimer); autoTimer = null; }
+      autoBtn.textContent = autoOn ? "暂停" : "自动";
+      if (autoOn) {
+        autoPos = vflowAuto.scrollLeft;
+        lastTick = 0;
+        autoTick();
+        autoTimer = window.setInterval(autoTick, 16);
+      } else if (autoTimer) {
+        window.clearInterval(autoTimer);
+        autoTimer = null;
+      }
     }
     autoBtn.addEventListener("click", function () { setAuto(!autoOn); });
-    if (speedRange) {
-      speedRange.addEventListener("input", function () {
-        autoSpeed = Number(speedRange.value) || 20;
-        try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (e) {}
-      });
-    }
+    autoBtn.title = "自动横移（空格播放/暂停）";
+    if (speedRange) speedRange.title = "自动横移速度（↑↓ 调速）";
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden && autoOn) setAuto(false);
+    });
+    if (speedRange) speedRange.addEventListener("input", updateSpeed);
+    ["wheel", "pointerdown", "touchstart"].forEach(function (ev) {
+      vflowAuto.addEventListener(ev, function () { if (autoOn) setAuto(false); }, { passive: true });
+    });
+    var layoutWrap = document.querySelector(".layout-switch");
+    if (layoutWrap) layoutWrap.addEventListener("click", function () { if (autoOn) setAuto(false); });
     function setPure(on) {
       document.body.classList.toggle("pure", !!on);
       if (pureBtn) pureBtn.setAttribute("aria-pressed", on ? "true" : "false");
@@ -111,6 +154,7 @@
         e.preventDefault();
         autoSpeed = Math.min(100, Math.max(1, autoSpeed + (e.key === "ArrowUp" ? 5 : -5)));
         if (speedRange) speedRange.value = autoSpeed;
+        if (speedVal) speedVal.textContent = autoSpeed;
         try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (err) {}
       }
     });
