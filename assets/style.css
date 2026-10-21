@@ -455,3 +455,172 @@ html:fullscreen .foot,html:fullscreen .progress,html:fullscreen .layout-switch{d
 html:fullscreen main > section:not(#text){display:none!important}
 
 @media print{body.recite .v-nopunct{display:inline!important}}
+
+
+/* ===== 美学校准 v2：纸感、层次与阅读氛围 ===== */
+:root{
+  --paper:#f7f1e6;
+  --paper-2:#eee3d0;
+  --card:#fffaf1;
+  --gold:#a67c3d;
+  --gold-2:#d9bb80;
+  --cinnabar:#a3352f;
+  --shadow-1:0 1px 2px rgba(60,44,28,.05),0 12px 30px rgba(60,44,28,.07);
+  --shadow-2:0 2px 6px rgba(60,44,28,.07),0 22px 48px rgba(60,44,28,.13);
+}
+::selection{background:rgba(169,123,53,.28);color:#211a12}
+body{
+  background:
+    radial-gradient(1100px 560px at 12% -4%,rgba(255,255,255,.55),transparent 62%),
+    radial-gradient(900px 500px at 100% 0%,rgba(238,227,208,.5),transparent 55%),
+    linear-gradient(180deg,#f8f2e8 0%,var(--paper) 36%,#f4ecdf 100%);
+}
+body::-webkit-scrollbar{width:10px}
+body::-webkit-scrollbar-track{background:transparent}
+body::-webkit-scrollbar-thumb{background:rgba(120,95,60,.32);border-radius:999px;border:2px solid var(--paper)}
+
+/* 顶栏：更轻的玻璃层与金属质感 */
+.topbar{
+  background:linear-gradient(180deg,rgba(30,25,20,.97),rgba(18,15,12,.96));
+  border-bottom:1px solid rgba(216,184,120,.16);
+  box-shadow:0 1px 0 rgba(216,184,120,.12),0 14px 34px rgba(0,0,0,.18);
+}
+.brand-mark{
+  background:linear-gradient(145deg,#e3c88f,#a97b35 62%,#8c6429);
+  box-shadow:0 0 0 4px rgba(169,123,53,.12),inset 0 0 0 1px rgba(255,255,255,.22);
+}
+.brand-text b{letter-spacing:.16em}
+.top-link,.icon-btn,.script-btn,.layout-btn{transition:color .18s ease,border-color .18s ease,background .18s ease,transform .18s ease}
+.top-link:hover{color:#f3e5c8}
+.icon-btn:hover,.script-btn:hover,.layout-btn:hover{background:rgba(216,184,120,.16);color:#fff;transform:translateY(-1px)}
+.script-btn[aria-pressed="true"],.layout-btn[aria-pressed="true"]{
+  background:linear-gradient(180deg,#dfc28a,#b98c48);
+  color:#221a11;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3);
+}
+.chapter-nav{
+  transition:border-color .18s ease,background .18s ease,box-shadow .18s ease;
+}
+.chapter-nav:hover,.chapter-nav:focus{border-color:rgba(216,184,120,.7);background:rgba(255,250,240,.14);box-shadow:0 0 0 3px rgba(216,184,120,.1)}
+#speedVal{color:#f0dfbd}
+
+/* 首屏：内嵌细线与更柔的高光 */
+.hero,.hero-lite-v{
+  background:
+    radial-gradient(900px 520px at 50% -18%,#332b20 0%,#1a1510 58%,#0d0b09 100%);
+}
+.hero::after,.hero-lite-v::after{
+  content:"";position:absolute;inset:14px;border:1px solid rgba(216,184,120,.16);
+  pointer-events:none;border-radius:2px;
+}
+.hero-title{text-shadow:0 2px 18px rgba(0,0,0,.28)}
+.badge{
+  background:rgba(255,250,240,.04);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter:blur(4px);
+}
+.hero-quote{
+  border-top:1px solid rgba(216,184,120,.24);
+  border-bottom:1px solid rgba(216,184,120,.24);
+  box-shadow:inset 0 0 0 1px rgba(255,250,240,.035);
+  border-radius:4px;
+}
+.hero-actions .btn{transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn-solid{
+  background:linear-gradient(180deg,#e0c286,#b98c48);
+  box-shadow:0 8px 20px rgba(120,84,36,.22),inset 0 1px 0 rgba(255,255,255,.28);
+}
+.btn-solid:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(120,84,36,.28)}
+.btn-line:hover{transform:translateY(-1px)}
+.btn-paper{box-shadow:0 8px 20px rgba(120,35,32,.16)}
+.btn-paper:hover{transform:translateY(-1px)}
+
+/* 通用标题与引导 */
+.section{padding:76px 0}
+.sec-title{position:relative}
+.sec-title::after{
+  content:"";flex:1 1 auto;height:1px;margin-left:4px;align-self:center;
+  background:linear-gradient(90deg,rgba(84,63,39,.28),rgba(84,63,39,0));
+}
+.lead{color:#3c3125}
+.hero-hint,.v-hero-hint{text-shadow:0 1px 8px rgba(0,0,0,.2)}
+
+/* 书目卡片：纸卡、金线与悬浮层次 */
+.books{gap:20px}
+.book{
+  position:relative;overflow:hidden;border-radius:12px;
+  border-color:rgba(84,63,39,.2);
+  box-shadow:var(--shadow-1);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.book::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,var(--cinnabar),var(--gold),var(--gold-2));
+  transform:scaleX(.18);transform-origin:left;transition:transform .3s ease;opacity:.9;
+}
+.book:hover::before{transform:scaleX(1)}
+.book:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-2);
+  border-color:rgba(169,123,53,.42);
+}
+.book h3{letter-spacing:.14em}
+.book-tag{box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.book .book-cta{font-weight:600;letter-spacing:.08em}
+
+/* 竖排阅读区：纸面、内阴影与经卷感 */
+.vstage{
+  background:
+    radial-gradient(1200px 520px at 72% 12%,rgba(255,255,255,.42),transparent 62%),
+    linear-gradient(180deg,rgba(238,227,208,.5),rgba(247,241,230,.18));
+}
+.vflow{
+  background:linear-gradient(180deg,rgba(255,252,246,.8),rgba(250,245,234,.62));
+  box-shadow:
+    inset 14px 0 26px -20px rgba(84,63,39,.28),
+    inset -14px 0 26px -20px rgba(84,63,39,.22),
+    inset 0 1px 0 rgba(255,255,255,.5);
+}
+.v-chapter{border-left-color:rgba(168,50,45,.2)}
+.v-no{text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.mtext{text-shadow:0 1px 0 rgba(255,255,255,.38)}
+.mzhu{color:#7f6a50}
+.v-tip{
+  border-left:3px solid var(--gold);
+  background:linear-gradient(90deg,rgba(169,123,53,.1),rgba(169,123,53,.035));
+  border-radius:0 6px 6px 0;
+}
+ruby.zy rt{color:#9a7a4e;font-weight:500}
+
+/* 页脚 */
+.foot{
+  border-top:1px solid rgba(216,184,120,.18);
+  background:linear-gradient(180deg,#17130f,#100d0a);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+}
+.foot-links a{transition:color .18s ease}
+.foot-links a:hover{color:#f0dfbd;text-decoration:none}
+
+/* 纯净模式：更安静的纸面 */
+body.pure{
+  background:
+    radial-gradient(1000px 620px at 68% -10%,#fcf8ef 0%,#f3ebdb 62%,#eee3d0 100%);
+}
+body.pure .vflow{background:transparent;box-shadow:none}
+.pure-exit{
+  opacity:.62;transition:opacity .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.pure-exit:hover{opacity:1;transform:translateY(-1px);box-shadow:0 8px 22px rgba(60,44,28,.18)}
+
+/* 细节：焦点、移动端、减少动效 */
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:640px){
+  .hero,.hero-lite-v{padding-top:56px}
+  .book{padding:20px 20px}
+  .sec-title{font-size:22px;gap:10px}
+  .sec-title::after{display:none}
+  .hero::after,.hero-lite-v::after{inset:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
