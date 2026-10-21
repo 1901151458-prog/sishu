@@ -13,7 +13,8 @@
 <button type="button" class="icon-btn" id="fsBtn">全屏</button>
 <button type="button" class="icon-btn" id="zhuyinBtn" aria-pressed="false">注音</button>
 <button type="button" class="icon-btn" id="autoBtn" aria-pressed="false">自动</button>
-<label class="speed-wrap">速度<input type="range" id="speedRange" min="1" max="100" step="1" value="20"></label>
+<select id="chapterNav" class="chapter-nav" aria-label="跳转卷"></select>
+      <label class="speed-wrap">速度<input type="range" id="speedRange" min="1" max="100" step="1" value="20"></label>
 <button type="button" class="icon-btn" id="pureBtn" aria-pressed="false">纯净</button>
 <button type="button" class="icon-btn" id="printBtn">打印</button>
 <a class="top-link" href="index.html">孟子</a>
@@ -21,7 +22,7 @@
 <main>
 <section class="hero-lite-v"><div class="wrap v-hero"><div class="v-hero-title">
 <p class="badge">孟子 · 全文朗诵版</p><h1>孟子<span>七篇十四卷</span></h1>
-<p class="v-hero-hint">大字 · 无注 · 无标点空格断句 · 注音/自动/纯净可选；空格播放暂停，↑↓ 调速，Esc 退出纯净</p>
+<p class="v-hero-hint">大字 · 无注 · 无标点空格断句 · 卷目下拉可跳转 · 注音/自动/纯净可选；空格播放暂停，↑↓ 调速，Esc 退出纯净</p>
 </div><div class="v-hero-side"><p>孟子 · 朗诵版</p><p class="v-small">全文连续排布，不切章；本页仅经文，注音可选（人工校订难字）</p>
 <div class="hero-actions"><a class="btn btn-solid" href="#text">开始朗诵</a><a class="btn btn-line" id="fsBtn2" href="#text">全屏朗诵</a></div></div></div></section>
 <section class="section alt" id="text"><div class="vstage" id="vstage">

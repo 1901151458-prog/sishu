@@ -126,6 +126,49 @@
     });
     var layoutWrap = document.querySelector(".layout-switch");
     if (layoutWrap) layoutWrap.addEventListener("click", function () { if (autoOn) setAuto(false); });
+    var chapterNav = document.getElementById("chapterNav");
+    var chapterList = vflowAuto.querySelectorAll(".v-chapter");
+    if (chapterNav && chapterList.length) {
+      for (var ci = 0; ci < chapterList.length; ci++) {
+        var labelEl = chapterList[ci].querySelector(".v-no");
+        var opt = document.createElement("option");
+        opt.value = ci;
+        opt.textContent = labelEl ? labelEl.textContent.replace(/\s+/g, " ").trim() : ("第" + (ci + 1) + "章");
+        chapterNav.appendChild(opt);
+      }
+      chapterNav.addEventListener("change", function () {
+        var ch = chapterList[Number(chapterNav.value)];
+        if (!ch) return;
+        if (autoOn) setAuto(false);
+        if (document.body.getAttribute("data-layout") === "vertical") {
+          var f = vflowAuto.getBoundingClientRect();
+          var r = ch.getBoundingClientRect();
+          var target = vflowAuto.scrollLeft + (r.right - f.right) + 24;
+          if (target > 0) target = 0;
+          var mn = autoMin();
+          if (target < mn) target = mn;
+          vflowAuto.scrollTo({ left: target, behavior: "auto" });
+        } else {
+          ch.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+      var navSync = null;
+      vflowAuto.addEventListener("scroll", function () {
+        if (navSync) return;
+        navSync = window.setTimeout(function () {
+          navSync = null;
+          var f = vflowAuto.getBoundingClientRect();
+          var best = 0, bestDist = 1e9;
+          for (var k = 0; k < chapterList.length; k++) {
+            var rr = chapterList[k].getBoundingClientRect();
+            var d = Math.abs(rr.right - f.right);
+            if (d < bestDist) { bestDist = d; best = k; }
+          }
+          chapterNav.value = best;
+        }, 120);
+      });
+    }
+
     function setPure(on) {
       document.body.classList.toggle("pure", !!on);
       if (pureBtn) pureBtn.setAttribute("aria-pressed", on ? "true" : "false");
@@ -255,9 +298,9 @@
   var fsBtn2 = document.getElementById("fsBtn2");
   var vstage = document.getElementById("vstage");
   function toggleFs() {
-    if (!vstage) return;
     if (!document.fullscreenElement) {
-      if (vstage.requestFullscreen) vstage.requestFullscreen();
+      var target = document.documentElement;
+      if (target.requestFullscreen) target.requestFullscreen();
     } else if (document.exitFullscreen) {
       document.exitFullscreen();
     }

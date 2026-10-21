@@ -432,3 +432,10 @@ body.pure .v-chapter{margin-left:44px}
 body.pure .pure-exit{display:block;position:fixed;right:16px;bottom:16px;z-index:99;border:1px solid rgba(169,123,53,.5);background:rgba(255,250,240,.92);color:#5c4a32;border-radius:999px;padding:8px 14px;font-family:var(--sans);font-size:12px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.12)}
 
 #speedVal{min-width:2.2em;text-align:right;color:#e8d6b3;font-variant-numeric:tabular-nums}
+
+/* 朗诵页：章节目录 */
+.chapter-nav{max-width:9.5em;background:rgba(255,250,240,.08);color:#e8d6b3;border:1px solid rgba(216,184,120,.35);border-radius:6px;padding:5px 8px;font-family:var(--sans);font-size:12px;line-height:1.2;cursor:pointer}
+.chapter-nav option{background:#fffaf0;color:#3b2f22}
+html:fullscreen{background:var(--paper)}
+html:fullscreen body{min-height:100vh}
+@media(max-width:760px){.chapter-nav{max-width:8em;font-size:12px}}
