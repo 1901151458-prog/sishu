@@ -54,6 +54,70 @@
   }
 
 
+  /* ---------- 自动横移 / 纯净模式（论语全文朗诵） ---------- */
+  var autoBtn = document.getElementById("autoBtn");
+  var pureBtn = document.getElementById("pureBtn");
+  var speedRange = document.getElementById("speedRange");
+  var pureExit = document.getElementById("pureExit");
+  var vflowAuto = document.getElementById("vflow");
+  if (autoBtn && vflowAuto) {
+    var autoOn = false, autoRaf = null;
+    var autoSpeed = 4;
+    try { autoSpeed = Number(localStorage.getItem("lunyu-speed")) || 4; } catch (e) {}
+    if (speedRange) speedRange.value = autoSpeed;
+    function autoStep() {
+      if (!autoOn) return;
+      vflowAuto.scrollLeft -= autoSpeed * 0.045;
+      autoRaf = window.requestAnimationFrame(autoStep);
+    }
+    function setAuto(on) {
+      autoOn = !!on;
+      autoBtn.setAttribute("aria-pressed", autoOn ? "true" : "false");
+      if (autoOn) { autoStep(); } else if (autoRaf) { window.cancelAnimationFrame(autoRaf); autoRaf = null; }
+    }
+    autoBtn.addEventListener("click", function () { setAuto(!autoOn); });
+    if (speedRange) {
+      speedRange.addEventListener("input", function () {
+        autoSpeed = Number(speedRange.value) || 4;
+        try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (e) {}
+      });
+    }
+    function setPure(on) {
+      document.body.classList.toggle("pure", !!on);
+      if (pureBtn) pureBtn.setAttribute("aria-pressed", on ? "true" : "false");
+      if (on) {
+        var stage = document.getElementById("vstage");
+        if (stage && stage.requestFullscreen) {
+          try { stage.requestFullscreen().catch(function () {}); } catch (e) {}
+        }
+      } else if (document.fullscreenElement) {
+        try { document.exitFullscreen(); } catch (e) {}
+      }
+    }
+    if (pureBtn) {
+      pureBtn.addEventListener("click", function () { setPure(!document.body.classList.contains("pure")); });
+    }
+    if (pureExit) pureExit.addEventListener("click", function () { setPure(false); });
+    document.addEventListener("fullscreenchange", function () {
+      if (!document.fullscreenElement) document.body.classList.remove("pure");
+      if (pureBtn) pureBtn.setAttribute("aria-pressed", document.body.classList.contains("pure") ? "true" : "false");
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
+      if (e.code === "Space") { e.preventDefault(); setAuto(!autoOn); }
+      else if (e.key === "Escape") { setPure(false); }
+      else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        autoSpeed = Math.min(10, Math.max(1, autoSpeed + (e.key === "ArrowUp" ? 1 : -1)));
+        if (speedRange) speedRange.value = autoSpeed;
+        try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (err) {}
+      }
+    });
+    try {
+      if (new URLSearchParams(window.location.search).get("pure") === "1") setPure(true);
+    } catch (e) {}
+  }
+
   /* ---------- 注音开关（论语全文等） ---------- */
   var zyBtn = document.getElementById("zhuyinBtn");
   function setZhuyin(on) {

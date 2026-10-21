@@ -416,3 +416,17 @@ ruby.zy{font-size:inherit;ruby-position:over}
 ruby.zy rt{font-size:.42em;color:#8a7358;font-family:var(--sans);letter-spacing:0;line-height:1}
 body[data-zhuyin="off"] ruby.zy rt{display:none}
 body[data-zhuyin="off"] ruby.zy{font-size:inherit}
+
+/* 朗诵：自动横移 / 纯净模式 */
+.speed-wrap{display:flex;align-items:center;gap:6px;color:#d9cbb0;font-family:var(--sans);font-size:12px;letter-spacing:.05em}
+.speed-wrap input[type="range"]{width:86px;accent-color:#c9a35a}
+.pure-exit{display:none}
+body.pure .topbar,body.pure .hero-lite-v,body.pure .vstage-head,body.pure .v-hint,body.pure .section:not(#text),body.pure .foot,body.pure .skip-link{display:none!important}
+body.pure{overflow:hidden;background:var(--paper)}
+body.pure main,body.pure .section.alt,body.pure .vstage,body.pure .vflow{height:100vh;width:100%;margin:0;padding:0;border:0}
+body.pure .vstage{overflow:hidden}
+body.pure .vflow{height:100vh;padding:20px 32px;border:0}
+body.pure .recite .mtext{font-size:calc(34px * var(--fs-main, 1))}
+body.pure .recite .v-no{font-size:calc(16px * var(--fs-main, 1))}
+body.pure .v-chapter{margin-left:44px}
+body.pure .pure-exit{display:block;position:fixed;right:16px;bottom:16px;z-index:99;border:1px solid rgba(169,123,53,.5);background:rgba(255,250,240,.92);color:#5c4a32;border-radius:999px;padding:8px 14px;font-family:var(--sans);font-size:12px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.12)}
