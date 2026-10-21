@@ -63,7 +63,7 @@
   if (autoBtn && vflowAuto) {
     var autoOn = false, autoTimer = null, autoPos = 0;
     var autoSpeed = 4;
-    try { autoSpeed = Number(localStorage.getItem("lunyu-speed")) || 4; } catch (e) {}
+    try { autoSpeed = Number(localStorage.getItem("lunyu-speed")) || 20; } catch (e) {}
     if (speedRange) speedRange.value = autoSpeed;
     function autoStep() {
       if (!autoOn) return;
@@ -79,7 +79,7 @@
     autoBtn.addEventListener("click", function () { setAuto(!autoOn); });
     if (speedRange) {
       speedRange.addEventListener("input", function () {
-        autoSpeed = Number(speedRange.value) || 4;
+        autoSpeed = Number(speedRange.value) || 20;
         try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (e) {}
       });
     }
@@ -109,7 +109,7 @@
       else if (e.key === "Escape") { setPure(false); }
       else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
         e.preventDefault();
-        autoSpeed = Math.min(10, Math.max(1, autoSpeed + (e.key === "ArrowUp" ? 1 : -1)));
+        autoSpeed = Math.min(100, Math.max(1, autoSpeed + (e.key === "ArrowUp" ? 5 : -5)));
         if (speedRange) speedRange.value = autoSpeed;
         try { localStorage.setItem("lunyu-speed", autoSpeed); } catch (err) {}
       }
