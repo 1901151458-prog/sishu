@@ -649,3 +649,11 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(
 .vn-t{font-size:15px;flex:1}
 .vn-a{color:var(--gold);font-size:18px}
 @media(max-width:600px){.chuan-tools{align-items:stretch}.chuan-nav{width:100%}.chuan-nav .btn-sm{flex:1;justify-content:center}}
+
+/* 继续上次阅读 */
+.continue-read{display:flex;align-items:center;gap:12px;max-width:1100px;margin:18px auto 0;padding:14px 20px;border:1px solid rgba(201,161,92,.35);border-radius:12px;background:linear-gradient(135deg,rgba(201,161,92,.10),rgba(201,161,92,.03));color:var(--ink);text-decoration:none;transition:border-color .18s ease,transform .18s ease}
+.continue-read:hover{border-color:var(--gold);transform:translateY(-2px)}
+.continue-read .cr-k{font-size:11px;letter-spacing:.12em;color:var(--gold);white-space:nowrap}
+.continue-read b{font-weight:500;font-size:14px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.continue-read .cr-a{color:var(--gold);font-size:18px}
+@media(max-width:600px){.continue-read{margin:14px 16px 0}.continue-read b{font-size:13px}}

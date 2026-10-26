@@ -467,4 +467,16 @@
       else startPaint();
     });
   }
+
+  /* ---------- 阅读进度 ---------- */
+  function recordRead() {
+    try {
+      var u = location.pathname + location.search + location.hash;
+      if (!u || /\/sishu\/(?:index\.html)?$/.test(u)) return;
+      localStorage.setItem('sishu-last-read', JSON.stringify({ t: document.title, u: u, ts: Date.now() }));
+    } catch (e) {}
+  }
+  window.addEventListener('load', recordRead);
+  document.addEventListener('visibilitychange', function () { if (document.hidden) recordRead(); });
+
 })();
