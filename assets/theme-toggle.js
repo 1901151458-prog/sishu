@@ -1,9 +1,10 @@
 /* 四书经典 · 深色 / 纸色背景切换 */
 (function () {
-  var KEY = 'sishu-theme';
+  var KEY = 'dsh-theme';
+  var OLD = 'sishu-theme';
   var html = document.documentElement;
   var saved = 'dark';
-  try { saved = localStorage.getItem(KEY) || 'dark'; } catch (e) {}
+  try { saved = localStorage.getItem(KEY) || localStorage.getItem(OLD) || 'dark'; } catch (e) {}
   if (saved !== 'light' && saved !== 'dark') saved = 'dark';
   html.setAttribute('data-theme', saved);
   html.style.colorScheme = saved === 'dark' ? 'dark' : 'light';
@@ -20,7 +21,7 @@
   function set(theme) {
     html.setAttribute('data-theme', theme);
     html.style.colorScheme = theme === 'dark' ? 'dark' : 'light';
-    try { localStorage.setItem(KEY, theme); } catch (e) {}
+    try { localStorage.setItem(KEY, theme); try { localStorage.setItem(OLD, theme); } catch (e) {} } catch (e) {}
     document.querySelectorAll('.theme-toggle').forEach(update);
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute('content', theme === 'dark' ? '#12100d' : '#141210');
