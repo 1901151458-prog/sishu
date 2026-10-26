@@ -419,8 +419,10 @@
           vx: (Math.random() - 0.5) * 0.12 * DPR, a: Math.random() * 0.45 + 0.12 });
       }
     }
+    var rafId = 0, active = true;
     function paint() {
-      if (!canvas.isConnected) return;
+      if (!active || !canvas.isConnected) return;
+      rafId = 0;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (var i = 0; i < dots.length; i++) {
         var d = dots[i];
@@ -436,10 +438,29 @@
         ctx.arc(d.x, d.y, d.r * 5, 0, Math.PI * 2);
         ctx.fill();
       }
-      window.requestAnimationFrame(paint);
+      rafId = window.requestAnimationFrame(paint);
+    }
+    function startPaint() {
+      if (!rafId && active) rafId = window.requestAnimationFrame(paint);
+    }
+    function stopPaint() {
+      active = false;
+      if (rafId) { window.cancelAnimationFrame(rafId); rafId = 0; }
     }
     resize();
-    window.addEventListener("resize", resize);
-    window.requestAnimationFrame(paint);
+    window.addEventListener("resize", resize, { passive: true });
+    if ("IntersectionObserver" in window) {
+      var heroIO = new IntersectionObserver(function (entries) {
+        var visible = entries.some(function (en) { return en.isIntersecting; });
+        if (visible) { active = true; startPaint(); } else { stopPaint(); }
+      }, { threshold: 0.01 });
+      heroIO.observe(canvas);
+    } else {
+      startPaint();
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stopPaint();
+      else startPaint();
+    });
   }
 })();
