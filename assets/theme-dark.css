@@ -1,71 +1,105 @@
-/* 四书经典 · 深色 / 纸色模式 */
+/* 四书经典 · 深色：墨拓 / 石刻风格
+   黑石拓本底、白字、金线、朱砂印；浅色仍为原纸色。 */
 @media screen {
   html[data-theme="dark"] {
-    --ink: #eadcc2;
-    --ink-2: #d8c8ae;
-    --paper: #12100d;
-    --paper-2: #18140f;
-    --card: #1c1813;
-    --line: rgba(216, 184, 120, .18);
-    --line-strong: rgba(216, 184, 120, .3);
-    --text: #d6c6ae;
-    --muted: #a08c70;
-    --cinnabar: #d06a5e;
+    --ink: #f3efe5;
+    --ink-2: #e3dbcb;
+    --paper: #0c0b09;
+    --paper-2: #12100d;
+    --card: #181511;
+    --line: rgba(214, 199, 169, .16);
+    --line-strong: rgba(225, 207, 171, .32);
+    --text: #d9d1c3;
+    --muted: #9b8e79;
+    --cinnabar: #c65d50;
     --gold: #c9a15c;
-    --gold-2: #e0c28a;
+    --gold-2: #e5c78f;
+  }
+
+  html[data-theme="dark"] {
+    background-color: #0c0b09;
   }
   html[data-theme="dark"] body {
-    background: var(--paper);
+    background:
+      radial-gradient(1100px 640px at 18% -8%, rgba(255, 255, 255, .045), transparent 62%),
+      radial-gradient(900px 560px at 100% 6%, rgba(0, 0, 0, .55), transparent 60%),
+      repeating-linear-gradient(107deg, rgba(255, 255, 255, .013) 0 1px, transparent 1px 7px),
+      repeating-linear-gradient(19deg, rgba(0, 0, 0, .3) 0 2px, transparent 2px 9px),
+      #0c0b09;
+    background-attachment: fixed;
     color: var(--text);
   }
-  html[data-theme="dark"] .section.alt {
-    background: linear-gradient(180deg, #18140f, #12100d);
-  }
+  html[data-theme="dark"] ::selection { background: rgba(198, 93, 80, .4); color: #fff; }
+
+  /* 顶栏：黑石碑额 */
   html[data-theme="dark"] .topbar {
-    background: rgba(13, 11, 9, .96);
-    border-bottom-color: rgba(216, 184, 120, .22);
+    background: rgba(8, 7, 6, .97);
+    border-bottom: 1px solid rgba(201, 161, 92, .3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
   }
+  html[data-theme="dark"] .brand { color: #efe3cd; }
+  html[data-theme="dark"] .brand-text small { color: #a99a82; }
+  html[data-theme="dark"] .brand-mark {
+    background: #c9a15c;
+    color: #17120c;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 0 0 1px rgba(0, 0, 0, .5);
+  }
+  html[data-theme="dark"] .lang-switch button,
+  html[data-theme="dark"] .icon-btn,
+  html[data-theme="dark"] .top-link { color: #cfc3ae; }
+  html[data-theme="dark"] .icon-btn { border-color: rgba(201, 161, 92, .32); }
+  html[data-theme="dark"] .icon-btn:hover,
+  html[data-theme="dark"] .script-btn:hover,
+  html[data-theme="dark"] .layout-btn:hover {
+    background: rgba(201, 161, 92, .13);
+    color: #fff;
+  }
+
+  /* 首屏：摩崖石刻 */
   html[data-theme="dark"] .hero,
   html[data-theme="dark"] .hero-lite,
   html[data-theme="dark"] .hero-lite-v,
   html[data-theme="dark"] .essay-hero,
   html[data-theme="dark"] .sdg-hero {
-    background: radial-gradient(1200px 600px at 50% -10%, #2b241b 0%, #17130f 55%, #0f0c0a 100%);
-    color: #f1e6d2;
+    background:
+      radial-gradient(1000px 560px at 50% -12%, rgba(255, 255, 255, .08), transparent 62%),
+      repeating-linear-gradient(112deg, rgba(255, 255, 255, .018) 0 1px, transparent 1px 8px),
+      linear-gradient(160deg, #1c1813 0%, #0f0d0a 58%, #090807 100%) !important;
+    border-bottom: 1px solid rgba(201, 161, 92, .2);
   }
-  html[data-theme="dark"] .sec-title,
-  html[data-theme="dark"] .book h3,
-  html[data-theme="dark"] .line-cn,
-  html[data-theme="dark"] .mtext,
-  html[data-theme="dark"] .v-hero-title h1,
-  html[data-theme="dark"] .hero-title {
-    color: var(--ink);
+  html[data-theme="dark"] .hero-title,
+  html[data-theme="dark"] .v-hero-title h1 {
+    color: #f7f1e4;
+    text-shadow: 0 1px 0 #000, 0 0 26px rgba(255, 255, 255, .12), 0 0 2px rgba(255, 255, 255, .3);
   }
-  html[data-theme="dark"] .intro-card,
-  html[data-theme="dark"] .text-card,
-  html[data-theme="dark"] .line-card,
-  html[data-theme="dark"] .panel,
-  html[data-theme="dark"] .tasks li,
-  html[data-theme="dark"] .biblio li,
-  html[data-theme="dark"] .preamble,
-  html[data-theme="dark"] .chapter,
-  html[data-theme="dark"] .en-chapter,
-  html[data-theme="dark"] .pian-list a,
-  html[data-theme="dark"] .vwrap,
-  html[data-theme="dark"] .v-chapter,
-  html[data-theme="dark"] .en-block,
-  html[data-theme="dark"] .book,
-  html[data-theme="dark"] .source-card,
-  html[data-theme="dark"] .model-card,
-  html[data-theme="dark"] .summary-box {
-    background: var(--card) !important;
-    border-color: var(--line-strong) !important;
-    color: var(--text) !important;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, .28) !important;
+  html[data-theme="dark"] .hero-title small,
+  html[data-theme="dark"] .v-hero-title h1 span {
+    color: #c7b18b;
+    text-shadow: 0 1px 0 #000;
   }
-  html[data-theme="dark"] .book:hover {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .4) !important;
+  html[data-theme="dark"] .hero-en,
+  html[data-theme="dark"] .v-hero-hint,
+  html[data-theme="dark"] .hero-hint { color: #a4937b; }
+  html[data-theme="dark"] .hero-quote {
+    background: rgba(0, 0, 0, .25);
+    border-color: rgba(201, 161, 92, .3);
   }
+  html[data-theme="dark"] .hero-quote .line,
+  html[data-theme="dark"] .hero-quote .line-cn,
+  html[data-theme="dark"] .hero-quote .line-tw { color: #f0e9db; }
+  html[data-theme="dark"] .hero-quote .line-en { color: #bdb19e; }
+  html[data-theme="dark"] .hero-quote footer { color: #a4937b; }
+
+  /* 正文底：墨色拓纸 */
+  html[data-theme="dark"] .section,
+  html[data-theme="dark"] .section.alt {
+    background: transparent !important;
+  }
+  html[data-theme="dark"] .sec-title {
+    color: #f2ede2;
+    text-shadow: 0 1px 0 #000, 0 0 2px rgba(255, 255, 255, .08);
+  }
+  html[data-theme="dark"] .sec-title .en { color: #b99355; }
   html[data-theme="dark"] p,
   html[data-theme="dark"] li,
   html[data-theme="dark"] dd,
@@ -86,91 +120,163 @@
   html[data-theme="dark"] .text-meta,
   html[data-theme="dark"] .v-tip,
   html[data-theme="dark"] .v-hint,
-  html[data-theme="dark"] .test-note,
-  html[data-theme="dark"] .lead,
-  html[data-theme="dark"] .intro-card p {
-    color: #c8b9a3 !important;
+  html[data-theme="dark"] .test-note {
+    color: #cfc7b9 !important;
   }
   html[data-theme="dark"] .muted,
   html[data-theme="dark"] .book-tag.soon,
   html[data-theme="dark"] .foot-meta,
-  html[data-theme="dark"] .foot-note {
-    color: var(--muted) !important;
-  }
+  html[data-theme="dark"] .foot-note { color: #9b8e79 !important; }
   html[data-theme="dark"] .book .en-name,
-  html[data-theme="dark"] .sec-title .en,
   html[data-theme="dark"] .tri-label,
-  html[data-theme="dark"] .chapter-nav,
-  html[data-theme="dark"] .v-no {
-    color: var(--gold) !important;
-  }
+  html[data-theme="dark"] .v-no { color: #c9a15c !important; }
   html[data-theme="dark"] .book .book-cta,
-  html[data-theme="dark"] a {
-    color: var(--cinnabar);
+  html[data-theme="dark"] a { color: #d16e61; }
+  html[data-theme="dark"] a:hover { color: #f0a294; }
+
+  /* 碑刻卡片：厚石、内凹、金线 */
+  html[data-theme="dark"] .intro-card,
+  html[data-theme="dark"] .text-card,
+  html[data-theme="dark"] .line-card,
+  html[data-theme="dark"] .panel,
+  html[data-theme="dark"] .tasks li,
+  html[data-theme="dark"] .biblio li,
+  html[data-theme="dark"] .preamble,
+  html[data-theme="dark"] .chapter,
+  html[data-theme="dark"] .en-chapter,
+  html[data-theme="dark"] .pian-list a,
+  html[data-theme="dark"] .vwrap,
+  html[data-theme="dark"] .v-chapter,
+  html[data-theme="dark"] .en-block,
+  html[data-theme="dark"] .book,
+  html[data-theme="dark"] .source-card,
+  html[data-theme="dark"] .model-card,
+  html[data-theme="dark"] .summary-box {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, .038), transparent 28%),
+      repeating-linear-gradient(104deg, rgba(255, 255, 255, .012) 0 1px, transparent 1px 6px),
+      #181511 !important;
+    border-radius: 3px !important;
+    border: 1px solid #3b352b !important;
+    color: #d9d1c3 !important;
+    box-shadow:
+      inset 0 0 0 1px #0c0b09,
+      inset 0 1px 0 rgba(255, 255, 255, .06),
+      0 2px 0 #050504,
+      0 18px 42px rgba(0, 0, 0, .42) !important;
   }
-  html[data-theme="dark"] .foot {
-    background: #0c0a08 !important;
-    color: #c9bca6;
-    border-top-color: rgba(216, 184, 120, .18);
+  html[data-theme="dark"] .book:hover,
+  html[data-theme="dark"] .pian-list a:hover {
+    border-color: rgba(201, 161, 92, .5) !important;
+    box-shadow:
+      inset 0 0 0 1px #0c0b09,
+      inset 0 1px 0 rgba(255, 255, 255, .09),
+      0 2px 0 #050504,
+      0 24px 52px rgba(0, 0, 0, .5) !important;
   }
-  html[data-theme="dark"] .foot-brand { color: #eadcc2; }
-  html[data-theme="dark"] .foot-meta,
-  html[data-theme="dark"] .foot-note { color: #99886d !important; }
-  html[data-theme="dark"] .foot-links a { color: #d8c6a6; }
-  html[data-theme="dark"] .skip-link {
-    background: #0c0a08;
-    color: #fff;
+  html[data-theme="dark"] .book h3,
+  html[data-theme="dark"] .line-cn,
+  html[data-theme="dark"] .mtext {
+    color: #f6f1e6 !important;
+    text-shadow: 0 1px 0 #000, 0 0 4px rgba(255, 255, 255, .1);
   }
+  html[data-theme="dark"] .mtext {
+    font-weight: 650;
+  }
+  html[data-theme="dark"] .line-no { color: rgba(198, 93, 80, .28); }
+  html[data-theme="dark"] .tag,
+  html[data-theme="dark"] .book-tag {
+    background: #a84338;
+    color: #fff8ed;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12);
+  }
+  html[data-theme="dark"] .tag.ghost {
+    background: transparent;
+    color: #b5a992;
+    border-color: #3b352b;
+    box-shadow: none;
+  }
+  html[data-theme="dark"] .tri-row,
+  html[data-theme="dark"] .text-meta,
+  html[data-theme="dark"] .line-body,
+  html[data-theme="dark"] .mzhu { border-color: rgba(214, 199, 169, .18); }
+  html[data-theme="dark"] .trans b,
+  html[data-theme="dark"] .note b {
+    color: #d88375;
+    border-color: rgba(198, 93, 80, .45);
+  }
+  html[data-theme="dark"] .mzhu,
+  html[data-theme="dark"] .source { color: #b5a992; }
+
+  /* 竖排/横排阅读区 */
+  html[data-theme="dark"] .vstage,
+  html[data-theme="dark"] .vflow { background: transparent; }
   html[data-theme="dark"] .vstage:fullscreen,
-  html[data-theme="dark"] html:fullscreen {
-    background: var(--paper);
+  html[data-theme="dark"] html:fullscreen { background: #0c0b09; }
+  html[data-theme="dark"] .v-chapter { border-left-color: rgba(201, 161, 92, .32) !important; }
+  html[data-theme="dark"] .v-no { color: #c9a15c !important; }
+  html[data-theme="dark"] .v-tip { color: #a89a83 !important; }
+  html[data-theme="dark"] .chapter-nav {
+    background: rgba(24, 21, 17, .9);
+    color: #d9cbb0;
+    border-color: rgba(201, 161, 92, .35);
   }
-  html[data-theme="dark"] .chapter-nav option {
-    background: #1c1813;
-    color: #d6c6ae;
-  }
+  html[data-theme="dark"] .chapter-nav option { background: #181511; color: #d9d1c3; }
   html[data-theme="dark"] .pure-exit {
-    background: rgba(28, 24, 19, .94) !important;
-    color: #d6c6ae !important;
-    border-color: rgba(216, 184, 120, .45) !important;
-  }
-  html[data-theme="dark"] .btn-line {
-    color: #e6d8bc;
-    border-color: rgba(216, 184, 120, .45);
-  }
-  html[data-theme="dark"] .btn-line:hover {
-    background: rgba(216, 184, 120, .12);
-    color: #fff;
-  }
-  html[data-theme="dark"] .btn-paper {
-    background: var(--cinnabar);
-    color: #fff7ec;
-    border-color: var(--cinnabar);
+    background: rgba(24, 21, 17, .96) !important;
+    color: #d9d1c3 !important;
+    border-color: rgba(201, 161, 92, .45) !important;
   }
   html[data-theme="dark"] .chuan-tools select,
   html[data-theme="dark"] select,
   html[data-theme="dark"] input,
   html[data-theme="dark"] textarea {
-    background: #1c1813;
-    color: #d6c6ae;
-    border-color: rgba(216, 184, 120, .3);
+    background: #181511;
+    color: #d9d1c3;
+    border-color: #3b352b;
   }
   html[data-theme="dark"] .chuan-toc-list a,
-  html[data-theme="dark"] .detail-list summary {
-    color: #c9bca6;
+  html[data-theme="dark"] .detail-list summary { color: #c9bda8; }
+
+  /* 页脚：碑座 */
+  html[data-theme="dark"] .foot {
+    background: #080706 !important;
+    color: #b8ab96;
+    border-top: 1px solid rgba(201, 161, 92, .25);
+  }
+  html[data-theme="dark"] .foot-brand { color: #eadcc2; }
+  html[data-theme="dark"] .foot-meta,
+  html[data-theme="dark"] .foot-note { color: #94866f !important; }
+  html[data-theme="dark"] .foot-links a { color: #cbb894; }
+  html[data-theme="dark"] .skip-link { background: #080706; color: #fff; }
+
+  /* 按钮 */
+  html[data-theme="dark"] .btn-line {
+    color: #e7dcc8;
+    border-color: rgba(201, 161, 92, .45);
+  }
+  html[data-theme="dark"] .btn-line:hover {
+    background: rgba(201, 161, 92, .14);
+    color: #fff;
+  }
+  html[data-theme="dark"] .btn-paper {
+    background: #a84338;
+    color: #fff8ed;
+    border-color: #a84338;
   }
   html[data-theme="dark"] .theme-toggle {
-    border: 1px solid rgba(216, 184, 120, .4);
-    background: rgba(216, 184, 120, .1);
-    color: #e6d8bc;
+    border: 1px solid rgba(201, 161, 92, .42);
+    background: rgba(201, 161, 92, .08);
+    color: #e0d2b9;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .5);
   }
   html[data-theme="dark"] .theme-toggle:hover {
-    background: rgba(216, 184, 120, .2);
+    background: rgba(201, 161, 92, .18);
     color: #fff;
   }
 }
 
-/* 浅色模式下按钮 */
+/* 浅色模式按钮（原纸色） */
 .theme-toggle {
   background: transparent;
   border: 1px solid rgba(216, 184, 120, .35);
@@ -189,4 +295,7 @@
 }
 @media (max-width: 640px) {
   .theme-toggle { padding: 4px 9px; font-size: 12px; }
+}
+@media print {
+  .theme-toggle { display: none !important; }
 }

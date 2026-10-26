@@ -11,9 +11,9 @@
   function update(btn) {
     if (!btn) return;
     var dark = html.getAttribute('data-theme') === 'dark';
-    btn.textContent = dark ? '☀ 浅色' : '☾ 深色';
-    btn.setAttribute('aria-label', dark ? '切换到纸色浅色模式' : '切换到深色模式');
-    btn.setAttribute('title', dark ? '切换到纸色浅色模式' : '切换到深色模式');
+    btn.textContent = dark ? '☀ 纸色' : '☾ 拓印';
+    btn.setAttribute('aria-label', dark ? '切换到纸色浅色模式' : '切换到深色拓印模式');
+    btn.setAttribute('title', dark ? '切换到纸色浅色模式' : '切换到深色拓印模式');
     btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
   }
 
