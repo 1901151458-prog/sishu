@@ -479,4 +479,38 @@
   window.addEventListener('load', recordRead);
   document.addEventListener('visibilitychange', function () { if (document.hidden) recordRead(); });
 
+
+  /* ---------- 书签 ---------- */
+  function getBookmarks() {
+    try { var a = JSON.parse(localStorage.getItem('sishu-bookmarks') || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; }
+  }
+  function initBookmark() {
+    var path = location.pathname;
+    if (/\/sishu\/(?:index\.html)?$/.test(path)) return;
+    var foot = document.querySelector('.foot-links');
+    if (!foot) return;
+    var list = getBookmarks();
+    var here = path + location.search + location.hash;
+    var b = document.createElement('a');
+    b.type = 'button'; b.className = 'bookmark-toggle'; b.href = '#';
+    function paint() {
+      var has = getBookmarks().some(function (x) { return x && x.u === here; });
+      b.textContent = has ? '★ 已书签' : '☆ 书签';
+      b.setAttribute('aria-pressed', has ? 'true' : 'false');
+      b.title = has ? '取消当前页书签' : '收藏当前页';
+    }
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var arr = getBookmarks().filter(function (x) { return x && x.u !== here; });
+      var has = getBookmarks().some(function (x) { return x && x.u === here; });
+      if (!has) arr.unshift({ u: here, t: document.title, ts: Date.now() });
+      try { localStorage.setItem('sishu-bookmarks', JSON.stringify(arr.slice(0, 50))); } catch (err) {}
+      paint();
+    });
+    paint();
+    foot.insertBefore(document.createTextNode(' '), foot.firstChild);
+    foot.insertBefore(b, foot.firstChild);
+  }
+  window.addEventListener('load', initBookmark);
+
 })();
