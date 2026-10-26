@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>搜索 · 四书经典</title>
+<meta name="description" content="搜索四书经典篇名、传习录篇目与原文名句。">
+<meta name="theme-color" content="#12100d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.min.css?v=2">
+<link rel="stylesheet" href="assets/theme-dark.min.css?v=2">
+<link rel="stylesheet" href="/search-widget.css?v=1">
+<script src="assets/theme-toggle.min.js?v=2"></script>
+<script src="/sw-register.js?v=3" defer></script>
+<link rel="manifest" href="/sishu/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-inner">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">经</span><span class="brand-text"><b>四书经典</b><small>中华经典 · 中华书局版本</small></span></a>
+  <div class="topbar-actions"><a class="top-link" href="lunyu/index.html">论语</a><a class="top-link" href="mengzi/index.html">孟子</a><a class="top-link" href="chuanxilu/index.html">传习录</a><a class="top-link" href="jinsilu/index.html">近思录</a><a class="top-link" href="index.html">首页</a></div>
+</div></header>
+<main class="wrap narrow" style="padding:40px 0 80px">
+  <h1 style="font-size:clamp(28px,4vw,44px);margin:0 0 10px">搜索篇名 · 名句</h1>
+  <p style="color:var(--muted);max-width:640px;line-height:1.9;margin:0 0 22px">输入篇名、章节名或原文中的一句话；结果会跳到对应篇目。</p>
+  <div class="dsh-page">
+    <div class="dsh-search"><form role="search"><input class="dsh-input" id="ssSearch" type="search" placeholder="例如：知行合一、传习录、学而时习之…" aria-label="搜索四书经典"><button class="dsh-btn" type="submit">搜索</button></form>
+    <div class="dsh-results dsh-results--page" id="ssResults" hidden></div></div>
+  </div>
+</main>
+<footer class="foot"><div class="wrap narrow"><p class="foot-brand">四书经典 · 搜索</p><p class="foot-links"><a href="index.html">返回首页</a><span>·</span><a href="chuanxilu/index.html">传习录目录</a></p></div></footer>
+<script src="/search-widget.js?v=1"></script>
+<script>DshSearch.init({input:'#ssSearch',results:'#ssResults',index:'/sishu/assets/search-index.json',closeOnClick:false,limit:30});</script>
+</body>
+</html>
