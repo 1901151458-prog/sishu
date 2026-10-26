@@ -1,0 +1,192 @@
+/* 四书经典 · 深色 / 纸色模式 */
+@media screen {
+  html[data-theme="dark"] {
+    --ink: #eadcc2;
+    --ink-2: #d8c8ae;
+    --paper: #12100d;
+    --paper-2: #18140f;
+    --card: #1c1813;
+    --line: rgba(216, 184, 120, .18);
+    --line-strong: rgba(216, 184, 120, .3);
+    --text: #d6c6ae;
+    --muted: #a08c70;
+    --cinnabar: #d06a5e;
+    --gold: #c9a15c;
+    --gold-2: #e0c28a;
+  }
+  html[data-theme="dark"] body {
+    background: var(--paper);
+    color: var(--text);
+  }
+  html[data-theme="dark"] .section.alt {
+    background: linear-gradient(180deg, #18140f, #12100d);
+  }
+  html[data-theme="dark"] .topbar {
+    background: rgba(13, 11, 9, .96);
+    border-bottom-color: rgba(216, 184, 120, .22);
+  }
+  html[data-theme="dark"] .hero,
+  html[data-theme="dark"] .hero-lite,
+  html[data-theme="dark"] .hero-lite-v,
+  html[data-theme="dark"] .essay-hero,
+  html[data-theme="dark"] .sdg-hero {
+    background: radial-gradient(1200px 600px at 50% -10%, #2b241b 0%, #17130f 55%, #0f0c0a 100%);
+    color: #f1e6d2;
+  }
+  html[data-theme="dark"] .sec-title,
+  html[data-theme="dark"] .book h3,
+  html[data-theme="dark"] .line-cn,
+  html[data-theme="dark"] .mtext,
+  html[data-theme="dark"] .v-hero-title h1,
+  html[data-theme="dark"] .hero-title {
+    color: var(--ink);
+  }
+  html[data-theme="dark"] .intro-card,
+  html[data-theme="dark"] .text-card,
+  html[data-theme="dark"] .line-card,
+  html[data-theme="dark"] .panel,
+  html[data-theme="dark"] .tasks li,
+  html[data-theme="dark"] .biblio li,
+  html[data-theme="dark"] .preamble,
+  html[data-theme="dark"] .chapter,
+  html[data-theme="dark"] .en-chapter,
+  html[data-theme="dark"] .pian-list a,
+  html[data-theme="dark"] .vwrap,
+  html[data-theme="dark"] .v-chapter,
+  html[data-theme="dark"] .en-block,
+  html[data-theme="dark"] .book,
+  html[data-theme="dark"] .source-card,
+  html[data-theme="dark"] .model-card,
+  html[data-theme="dark"] .summary-box {
+    background: var(--card) !important;
+    border-color: var(--line-strong) !important;
+    color: var(--text) !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, .28) !important;
+  }
+  html[data-theme="dark"] .book:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .4) !important;
+  }
+  html[data-theme="dark"] p,
+  html[data-theme="dark"] li,
+  html[data-theme="dark"] dd,
+  html[data-theme="dark"] dt,
+  html[data-theme="dark"] td,
+  html[data-theme="dark"] .lead,
+  html[data-theme="dark"] .sub,
+  html[data-theme="dark"] .book p,
+  html[data-theme="dark"] .tasks li,
+  html[data-theme="dark"] .biblio li,
+  html[data-theme="dark"] .tri-row p,
+  html[data-theme="dark"] .line-tw,
+  html[data-theme="dark"] .line-en,
+  html[data-theme="dark"] .trans,
+  html[data-theme="dark"] .note,
+  html[data-theme="dark"] .preamble,
+  html[data-theme="dark"] .source,
+  html[data-theme="dark"] .text-meta,
+  html[data-theme="dark"] .v-tip,
+  html[data-theme="dark"] .v-hint,
+  html[data-theme="dark"] .test-note,
+  html[data-theme="dark"] .lead,
+  html[data-theme="dark"] .intro-card p {
+    color: #c8b9a3 !important;
+  }
+  html[data-theme="dark"] .muted,
+  html[data-theme="dark"] .book-tag.soon,
+  html[data-theme="dark"] .foot-meta,
+  html[data-theme="dark"] .foot-note {
+    color: var(--muted) !important;
+  }
+  html[data-theme="dark"] .book .en-name,
+  html[data-theme="dark"] .sec-title .en,
+  html[data-theme="dark"] .tri-label,
+  html[data-theme="dark"] .chapter-nav,
+  html[data-theme="dark"] .v-no {
+    color: var(--gold) !important;
+  }
+  html[data-theme="dark"] .book .book-cta,
+  html[data-theme="dark"] a {
+    color: var(--cinnabar);
+  }
+  html[data-theme="dark"] .foot {
+    background: #0c0a08 !important;
+    color: #c9bca6;
+    border-top-color: rgba(216, 184, 120, .18);
+  }
+  html[data-theme="dark"] .foot-brand { color: #eadcc2; }
+  html[data-theme="dark"] .foot-meta,
+  html[data-theme="dark"] .foot-note { color: #99886d !important; }
+  html[data-theme="dark"] .foot-links a { color: #d8c6a6; }
+  html[data-theme="dark"] .skip-link {
+    background: #0c0a08;
+    color: #fff;
+  }
+  html[data-theme="dark"] .vstage:fullscreen,
+  html[data-theme="dark"] html:fullscreen {
+    background: var(--paper);
+  }
+  html[data-theme="dark"] .chapter-nav option {
+    background: #1c1813;
+    color: #d6c6ae;
+  }
+  html[data-theme="dark"] .pure-exit {
+    background: rgba(28, 24, 19, .94) !important;
+    color: #d6c6ae !important;
+    border-color: rgba(216, 184, 120, .45) !important;
+  }
+  html[data-theme="dark"] .btn-line {
+    color: #e6d8bc;
+    border-color: rgba(216, 184, 120, .45);
+  }
+  html[data-theme="dark"] .btn-line:hover {
+    background: rgba(216, 184, 120, .12);
+    color: #fff;
+  }
+  html[data-theme="dark"] .btn-paper {
+    background: var(--cinnabar);
+    color: #fff7ec;
+    border-color: var(--cinnabar);
+  }
+  html[data-theme="dark"] .chuan-tools select,
+  html[data-theme="dark"] select,
+  html[data-theme="dark"] input,
+  html[data-theme="dark"] textarea {
+    background: #1c1813;
+    color: #d6c6ae;
+    border-color: rgba(216, 184, 120, .3);
+  }
+  html[data-theme="dark"] .chuan-toc-list a,
+  html[data-theme="dark"] .detail-list summary {
+    color: #c9bca6;
+  }
+  html[data-theme="dark"] .theme-toggle {
+    border: 1px solid rgba(216, 184, 120, .4);
+    background: rgba(216, 184, 120, .1);
+    color: #e6d8bc;
+  }
+  html[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(216, 184, 120, .2);
+    color: #fff;
+  }
+}
+
+/* 浅色模式下按钮 */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid rgba(216, 184, 120, .35);
+  color: #d9cbb0;
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  letter-spacing: .05em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.theme-toggle:hover {
+  background: rgba(216, 184, 120, .14);
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .theme-toggle { padding: 4px 9px; font-size: 12px; }
+}
