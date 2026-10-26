@@ -293,3 +293,7 @@
 @media print {
   .theme-toggle { display: none !important; }
 }
+
+/* 细节：焦点环与选区 */
+::selection{background:rgba(201,161,92,.28);color:#fff}
+a:focus-visible,button:focus-visible,.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
