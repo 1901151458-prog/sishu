@@ -211,13 +211,13 @@
   function setZhuyin(on) {
     body.setAttribute("data-zhuyin", on ? "on" : "off");
     if (zyBtn) zyBtn.setAttribute("aria-pressed", on ? "true" : "false");
-    try { localStorage.setItem("lunyu-zhuyin", on ? "on" : "off"); } catch (e) {}
+    try { localStorage.setItem("sishu-zhuyin", on ? "on" : "off"); localStorage.setItem("lunyu-zhuyin", on ? "on" : "off"); } catch (e) {}
   }
   if (zyBtn) {
     var zyState = "off";
     try {
       var zyParam = new URLSearchParams(window.location.search).get("zhuyin");
-      zyState = zyParam || localStorage.getItem("lunyu-zhuyin") || "off";
+      zyState = zyParam || localStorage.getItem("sishu-zhuyin") || localStorage.getItem("lunyu-zhuyin") || "off";
     } catch (e) {}
     setZhuyin(zyState === "on");
     zyBtn.addEventListener("click", function () { setZhuyin(body.getAttribute("data-zhuyin") !== "on"); });
@@ -274,15 +274,16 @@
   function setZhu(on) {
     body.setAttribute("data-zhu", on ? "on" : "off");
     if (zhuBtn) zhuBtn.setAttribute("aria-pressed", on ? "true" : "false");
-    try { localStorage.setItem("daxue-zhu", on ? "on" : "off"); } catch (e) {}
+    try { localStorage.setItem("sishu-zhu", on ? "on" : "off"); localStorage.setItem("daxue-zhu", on ? "on" : "off"); } catch (e) {}
   }
   if (zhuBtn) {
     var zhuState = "on";
-    try { zhuState = localStorage.getItem("daxue-zhu") || "on"; } catch (e) {}
+    try { zhuState = localStorage.getItem("sishu-zhu") || localStorage.getItem("daxue-zhu") || "on"; } catch (e) {}
     setZhu(zhuState !== "off");
     zhuBtn.addEventListener("click", function () { setZhu(body.getAttribute("data-zhu") !== "on"); });
   }
   var scaleMain = 1, scaleZhu = 1;
+  try { scaleMain = Number(localStorage.getItem("sishu-main-size")) || 1; scaleZhu = Number(localStorage.getItem("sishu-zhu-size")) || 1; } catch (e) {}
   function applyScales() {
     document.documentElement.style.setProperty("--fs-main", scaleMain.toFixed(2));
     document.documentElement.style.setProperty("--fs-zhu", scaleZhu.toFixed(2));
@@ -294,6 +295,7 @@
       if (cfg[1] === "main") scaleMain = Math.min(1.6, Math.max(0.8, scaleMain + cfg[2]*0.08));
       else scaleZhu = Math.min(1.6, Math.max(0.75, scaleZhu + cfg[2]*0.08));
       applyScales();
+      try { localStorage.setItem("sishu-main-size", scaleMain); localStorage.setItem("sishu-zhu-size", scaleZhu); } catch (e) {}
     });
   });
   var fsBtn = document.getElementById("fsBtn");
@@ -341,11 +343,13 @@
 
 
   var fs = 1;
+  try { fs = Math.min(1.28, Math.max(0.88, Number(localStorage.getItem("sishu-font")) || 1)); } catch (e) {}
   function applyFs() { document.documentElement.style.setProperty("--fs", fs.toFixed(2)); }
+  applyFs();
   var fMinus = document.getElementById("fontMinus");
   var fPlus = document.getElementById("fontPlus");
-  if (fMinus) fMinus.addEventListener("click", function () { fs = Math.max(0.88, fs - 0.06); applyFs(); });
-  if (fPlus) fPlus.addEventListener("click", function () { fs = Math.min(1.28, fs + 0.06); applyFs(); });
+  if (fMinus) fMinus.addEventListener("click", function () { fs = Math.max(0.88, fs - 0.06); applyFs(); try { localStorage.setItem("sishu-font", fs); } catch (e) {} });
+  if (fPlus) fPlus.addEventListener("click", function () { fs = Math.min(1.28, fs + 0.06); applyFs(); try { localStorage.setItem("sishu-font", fs); } catch (e) {} });
 
   /* ---------- 打印 ---------- */
   ["printBtn", "printBtn2"].forEach(function (id) {

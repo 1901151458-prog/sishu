@@ -1,0 +1,29 @@
+{
+  "name": "四书经典",
+  "short_name": "四书经典",
+  "description": "四书经典 · 离线可读",
+  "lang": "zh-CN",
+  "start_url": "/sishu/",
+  "scope": "/sishu/",
+  "display": "standalone",
+  "background_color": "#12100d",
+  "theme_color": "#12100d",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
