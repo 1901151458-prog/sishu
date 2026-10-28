@@ -296,4 +296,15 @@
 
 /* 细节：焦点环与选区 */
 ::selection{background:rgba(201,161,92,.28);color:#fff}
-a:focus-visible,button:focus-visible,.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
+a:focus-visible,button:focus-visible,.theme-toggle:focus-visible{
+  outline:3px solid var(--gold);outline-offset:2px;border-radius:8px;
+}
+
+/* 对比度：金色按钮文字必须压过全局 a 颜色；书卡 CTA 提亮 */
+html[data-theme="dark"] .btn-solid,
+html[data-theme="dark"] .btn-solid:hover { color: #1d1812; }
+html[data-theme="dark"] a { color: #e08a7d; }
+html[data-theme="dark"] a:hover { color: #f2b3a6; }
+html[data-theme="dark"] .book .book-cta { color: #e39a8b; }
+html[data-theme="dark"] .book-tag,
+html[data-theme="dark"] .tag { color: #fff8ed; }
