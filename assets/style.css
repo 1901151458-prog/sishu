@@ -664,3 +664,6 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(
 .bookmark-list b{display:block;font-size:11px;letter-spacing:.12em;color:var(--gold);margin-bottom:4px}
 .bookmark-list a{color:var(--ink);display:inline-block;margin:2px 12px 2px 0}
 .bookmark-list a:hover{color:var(--gold)}
+
+/* hidden 必须压过 .continue-read/.bookmark-list 等 display 规则 */
+[hidden]{display:none!important}
