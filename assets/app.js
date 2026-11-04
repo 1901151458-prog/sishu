@@ -2,6 +2,12 @@
 (function () {
   "use strict";
   var body = document.body;
+  var vflowEl = document.getElementById("vflow");
+  if (vflowEl && !vflowEl.hasAttribute("tabindex")) {
+    vflowEl.setAttribute("tabindex", "0");
+    vflowEl.setAttribute("role", "region");
+    vflowEl.setAttribute("aria-label", "经典原文阅读区");
+  }
 
   /* ---------- 原文显示语言 ---------- */
   var langButtons = Array.prototype.slice.call(document.querySelectorAll(".lang-switch button"));
@@ -491,8 +497,8 @@
     if (!foot) return;
     var list = getBookmarks();
     var here = path + location.search + location.hash;
-    var b = document.createElement('a');
-    b.type = 'button'; b.className = 'bookmark-toggle'; b.href = '#';
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'bookmark-toggle';
     function paint() {
       var has = getBookmarks().some(function (x) { return x && x.u === here; });
       b.textContent = has ? '★ 已书签' : '☆ 书签';
