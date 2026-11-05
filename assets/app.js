@@ -58,6 +58,10 @@
     try { saved = localStorage.getItem("sishu-script") || "simp"; } catch (e) {}
     setScript(saved === "trad" ? "trad" : "simp");
   }
+  /* 简体模式下繁体整段文本不参与渲染，减少长文页布局开销；
+     切到繁体时由 data-script 属性自动恢复显示 */
+  var vf = document.getElementById("vflow");
+  if (vf) vf.classList.add("vflow-lazy");
 
 
   /* ---------- 自动横移 / 纯净模式（论语全文朗诵） ---------- */

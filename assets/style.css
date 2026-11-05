@@ -667,3 +667,7 @@ a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(
 
 /* hidden 必须压过 .continue-read/.bookmark-list 等 display 规则 */
 [hidden]{display:none!important}
+
+/* 长文页：简体模式下不渲染隐藏的繁体段，降低首次布局成本 */
+.vflow-lazy .zh-trad{content-visibility:hidden;contain-intrinsic-size:auto 1px}
+body[data-script="trad"] .vflow-lazy .zh-trad{content-visibility:visible}
